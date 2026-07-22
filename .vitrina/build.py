@@ -105,10 +105,22 @@ def main():
     html = pagina.construir_pagina(doc, hoy=ahora_co.strftime("%d/%m/%Y · %H:%M"))
 
     salida = _opt("--salida", os.path.join(repo, "index.html"))
+
+    # No reescribir si lo ÚNICO que cambiaría es la hora del pie: si no, el cron diario generaria
+    # un commit basura cada dia sin cambio real de contenido.
+    import re
+    def _sin_hora(s):
+        return re.sub(r"actualizado [0-9/]+ . [0-9:]+", "actualizado X", s or "")
+    previo = ""
+    if os.path.isfile(salida):
+        with open(salida, encoding="utf-8") as f:
+            previo = f.read()
+    t = doc["totales"]
+    if _sin_hora(previo) == _sin_hora(html):
+        print(f"build.py — {t['galerias']} galerias · {t['experiencias']} experiencias: sin cambios reales")
+        return
     with open(salida, "w", encoding="utf-8") as f:
         f.write(html)
-
-    t = doc["totales"]
     print(f"build.py — {t['galerias']} galerias · {t['experiencias']} experiencias -> {salida}")
     if doc["sin_ficha"]:
         print(f"  OJO: {len(doc['sin_ficha'])} sin ficha meta.json: {', '.join(doc['sin_ficha'][:8])}")
