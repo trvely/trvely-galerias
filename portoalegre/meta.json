@@ -8,5 +8,6 @@
   "video": false,
   "portada": "trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_088",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-07-22"
+  "generado": "2026-07-22",
+  "destino_media": "san-andres"
 }
