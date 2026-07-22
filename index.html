@@ -87,15 +87,15 @@
                   font-size:10.5px; font-weight:700; letter-spacing:.06em; padding:5px 9px;
                   border-radius:20px; backdrop-filter:blur(4px); }
   .ficha-foto.exp { display:grid; place-content:center; text-align:center; gap:4px; color:#fff;
-                     background:linear-gradient(135deg,var(--burg) 0%,var(--burg-hondo) 100%);
-                     background-size:cover; background-position:center; }
+                     background-color:var(--burg-hondo); background-size:cover; background-position:center; }
   .ficha-foto.exp::before { content:''; position:absolute; inset:0;
-                     background:linear-gradient(165deg,rgba(180,18,65,.38) 0%,rgba(124,12,44,.72) 100%); }
+                     background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.05) 42%,rgba(0,0,0,.55) 100%); }
+  .ficha-foto.exp { place-content:end center; padding-bottom:14px; }
   .ficha-foto.exp > * { position:relative; z-index:1;
-                     text-shadow:0 2px 4px rgba(0,0,0,.55), 0 6px 24px rgba(0,0,0,.5); }
-  .ficha:hover .ficha-foto.exp::before { background:linear-gradient(165deg,rgba(180,18,65,.26) 0%,rgba(124,12,44,.6) 100%); }
-  .exp-rotulo { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--beige);
-                 font-weight:700; }
+                     text-shadow:0 2px 5px rgba(0,0,0,.7), 0 8px 26px rgba(0,0,0,.55); }
+  .ficha:hover .ficha-foto.exp::before { background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,.48) 100%); }
+  .exp-rotulo { font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#fff;
+                 font-weight:700; opacity:.95; }
   .exp-destino { font-family:'Extenda','Montserrat',sans-serif; font-weight:400; font-size:30px;
                   line-height:1.2; letter-spacing:1px; padding:0 10px; }
   .ficha-cuerpo { padding:13px 15px 15px; display:flex; flex-direction:column; gap:8px; flex:1; }
@@ -117,11 +117,19 @@
   .nada { display:none; text-align:center; padding:56px 0; color:var(--gris); }
   .nada strong { display:block; font-size:17px; color:var(--tinta); margin-bottom:5px; }
 
-  footer { background:var(--burg-hondo); color:var(--beige); text-align:center;
-            padding:34px 22px 40px; }
-  footer .firma-pie { font-family:'WhiteStar','Segoe Script',cursive; font-size:27px; color:#fff;
-                       margin-bottom:7px; }
-  footer p { font-size:12px; opacity:.82; line-height:1.7; }
+  /* Footer del Figma (FooterWEB): cielo real del diseno + su escala rosada->burgundy.
+     La foto de la chica vive quemada dentro de la imagen del Figma, no hay archivo suelto. */
+  footer { margin-top:20px; color:#fff; text-align:center; border-radius:30px 30px 0 0;
+            background:linear-gradient(180deg,rgba(228,19,70,0) 0,rgba(228,19,70,.55) 210px,#E41346 330px,#DF0B43 52%,#BD073B 78%,#A90635 100%),
+                       url('assets/cielo-footer.webp') top center/cover no-repeat, #E41346;
+            padding:74px 22px 26px; }
+  footer h2 { font-family:'Extenda','Montserrat',sans-serif; font-weight:400; line-height:1.14;
+               font-size:clamp(28px,4.6vw,50px); letter-spacing:1px; max-width:760px; margin:0 auto;
+               text-shadow:0 3px 22px rgba(0,0,0,.28); }
+  .pie-legal { max-width:1180px; margin:0 auto; border-top:1px solid rgba(255,255,255,.28);
+                padding-top:16px; display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:space-between;
+                font-size:11.5px; opacity:.9; text-align:left; }
+  .pie-sede { font-size:12.5px; opacity:.95; margin:54px 0 14px; }
 
   @media (max-width:760px) {
     .hero-caja { grid-template-columns:1fr; padding-bottom:38px; }
@@ -161,7 +169,7 @@
   </div>
 </header>
 
-<div class="filtros">
+<div class="filtros" id="filtros">
   <div class="filtros-caja">
     <div class="chips" role="group" aria-label="Filtrar por destino">
       <button class="chip activo" data-filtro-destino="todos">Todos <span>78</span></button>
@@ -196,7 +204,7 @@
       <div class="rejilla">
       <article class="ficha ficha-exp" data-buscar="experiencias cartagena cartagena"
         data-destino="cartagena" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/cartagena/_hero/ciudad-amurallada-soleada)">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor/experiencias/cartagena/_hero/ciudad-amurallada-soleada)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Cartagena</span>
         </a>
         <div class="ficha-cuerpo">
@@ -210,7 +218,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias leticia leticia"
         data-destino="leticia" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/leticia/_hero/amazonas)">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor/experiencias/leticia/_hero/amazonas)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Leticia</span>
         </a>
         <div class="ficha-cuerpo">
@@ -224,7 +232,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias medellín medellin"
         data-destino="medellin" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/medellin/_hero/medellin)">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor/experiencias/medellin/_hero/medellin)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Medellín</span>
         </a>
         <div class="ficha-cuerpo">
@@ -238,7 +246,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias perú peru"
         data-destino="peru" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/peru/machu-picchu-circuito-2/imagenes/01-portada)">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor/experiencias/peru/machu-picchu-circuito-2/imagenes/01-portada)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Perú</span>
         </a>
         <div class="ficha-cuerpo">
@@ -1199,9 +1207,13 @@
 </main>
 
 <footer>
-  <p class="firma-pie">Viaja Fácil, Viaja Trvely</p>
-  <p>74 galerías de hoteles · 4 destinos de experiencias · actualizado 22/07/2026 · 11:42<br>
-  Material comercial interno — no compartir esta página con clientes.</p>
+  <h2>¡AQUÍ COMIENZAN TUS MÁS GRANDES AVENTURAS!</h2>
+  <p class="pie-sede">Bogotá, Colombia</p>
+  <div class="pie-legal">
+    <span>Trvely S.A.S. · NIT: 901902687-9</span>
+    <span>74 galerías · 4 destinos de experiencias · actualizado 22/07/2026 · 12:12</span>
+    <span>Copyright © 2026. Todos los derechos reservados.</span>
+  </div>
 </footer>
 
 <script>
