@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sauces-del-estadio",
+  "titulo": "SAUCES DEL ESTADIO",
+  "destino": "medellin",
+  "cloudinary": "sauces-del-estadio",
+  "fotos": 63,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_061",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

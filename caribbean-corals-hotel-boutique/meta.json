@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "caribbean-corals-hotel-boutique",
+  "titulo": "Caribbean Corals Hotel Boutique",
+  "destino": "san-andres",
+  "cloudinary": "caribbean-corals-hotel-boutique",
+  "fotos": 57,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/caribbean-corals-hotel-boutique/imagenes/caribbean-corals-hotel-boutique_005",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

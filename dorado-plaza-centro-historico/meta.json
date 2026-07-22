@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dorado-plaza-centro-historico",
+  "titulo": "DORADO PLAZA CENTRO HISTÓRICO",
+  "destino": "cartagena",
+  "cloudinary": "dorado-plaza-centro-historico",
+  "fotos": 51,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/dorado-plaza-centro-historico/imagenes/dorado-plaza-centro-historico_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

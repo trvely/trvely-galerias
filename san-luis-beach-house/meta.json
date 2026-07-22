@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "san-luis-beach-house",
+  "titulo": "San Luis Beach House",
+  "destino": "san-andres",
+  "cloudinary": "san-luis-beach",
+  "fotos": 62,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_049",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

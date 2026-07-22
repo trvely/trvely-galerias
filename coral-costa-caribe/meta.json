@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "coral-costa-caribe",
+  "titulo": "CORAL COSTA CARIBE",
+  "destino": "juan-dolio",
+  "cloudinary": "coral-costa-caribe",
+  "fotos": 90,
+  "video": false,
+  "portada": "trvely/hoteles/juan-dolio/coral-costa-caribe/imagenes/coral-costa-caribe_002",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

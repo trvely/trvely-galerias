@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "on-vacation-tower",
+  "titulo": "On Vacation Tower",
+  "destino": "san-andres",
+  "cloudinary": "on-vacation-tower",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/on-vacation-tower/imagenes/on-vacation-tower_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

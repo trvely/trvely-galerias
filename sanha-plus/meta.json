@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sanha-plus",
+  "titulo": "SANHA PLUS",
+  "destino": "santa-marta",
+  "cloudinary": "sanha-plus",
+  "fotos": 7,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_004",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

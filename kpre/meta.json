@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "kpre",
+  "titulo": "KPRE",
+  "destino": "covenas",
+  "cloudinary": "kpre",
+  "fotos": 5,
+  "video": false,
+  "portada": "trvely/hoteles/covenas/kpre/imagenes/kpre_003",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

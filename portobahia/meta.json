@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "portobahia",
+  "titulo": "PORTOBAHIA",
+  "destino": "santa-marta",
+  "cloudinary": "portobahia",
+  "fotos": 8,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_008",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

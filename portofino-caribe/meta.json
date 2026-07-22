@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "portofino-caribe",
+  "titulo": "PORTOFINO CARIBE",
+  "destino": "san-andres",
+  "cloudinary": "portofino-caribe",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/portofino-caribe/imagenes/portofino-caribe_009",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

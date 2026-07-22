@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "los-veleros",
+  "titulo": "LOS VELEROS",
+  "destino": "santa-marta",
+  "cloudinary": "los-veleros",
+  "fotos": 48,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/los-veleros/imagenes/los-veleros_004",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

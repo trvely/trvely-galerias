@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "portobelo-convention-center",
+  "titulo": "Portobelo Convention Center",
+  "destino": "san-andres",
+  "cloudinary": "portobelo-convention-center",
+  "fotos": 34,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_007",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

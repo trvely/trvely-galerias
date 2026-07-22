@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bahia-cartagena",
+  "titulo": "BAHÍA CARTAGENA",
+  "destino": "cartagena",
+  "cloudinary": "bahia-cartagena",
+  "fotos": 15,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/bahia-cartagena/imagenes/bahia-cartagena_003",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

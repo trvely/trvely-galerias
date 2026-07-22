@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "utuane",
+  "titulo": "UTUANE",
+  "destino": "leticia",
+  "cloudinary": "utuane",
+  "fotos": 64,
+  "video": false,
+  "portada": "trvely/hoteles/leticia/utuane/imagenes/utuane_007",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

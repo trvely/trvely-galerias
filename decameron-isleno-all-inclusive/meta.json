@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-isleno-all-inclusive",
+  "titulo": "Decameron Isleño - All Inclusive",
+  "destino": "san-andres",
+  "cloudinary": "decameron-isleno-all-inclusive",
+  "fotos": 59,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/decameron-isleno-all-inclusive/imagenes/decameron-isleno-all-inclusive_014",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

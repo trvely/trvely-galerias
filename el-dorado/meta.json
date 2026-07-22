@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "el-dorado",
+  "titulo": "EL DORADO",
+  "destino": "san-andres",
+  "cloudinary": "el-dorado",
+  "fotos": 71,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/el-dorado/imagenes/el-dorado_013",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

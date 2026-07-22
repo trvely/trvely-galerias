@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "verde-mar",
+  "titulo": "VERDE MAR",
+  "destino": "san-andres",
+  "cloudinary": "verde-mar",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_036",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

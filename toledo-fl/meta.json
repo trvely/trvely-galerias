@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "toledo-fl",
+  "titulo": "TOLEDO FL",
+  "destino": "cartagena",
+  "cloudinary": "toledo-fl",
+  "fotos": 27,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_015",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

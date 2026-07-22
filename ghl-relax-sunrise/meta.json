@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ghl-relax-sunrise",
+  "titulo": "GHL RELAX SUNRISE",
+  "destino": "san-andres",
+  "cloudinary": "ghl-relax-sunrise",
+  "fotos": 52,
+  "video": true,
+  "portada": "trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_047",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

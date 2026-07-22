@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "atlantic-lux",
+  "titulo": "ATLANTIC LUX",
+  "destino": "cartagena",
+  "cloudinary": "atlantic-lux",
+  "fotos": 34,
+  "video": true,
+  "portada": "trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_017",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

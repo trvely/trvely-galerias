@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "delfin",
+  "titulo": "DELFIN",
+  "destino": "santa-marta",
+  "cloudinary": "delfin",
+  "fotos": 15,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/delfin/imagenes/delfin_007",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

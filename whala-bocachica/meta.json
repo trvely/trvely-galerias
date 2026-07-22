@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "slug": "whala-bocachica",
+  "titulo": "WHALA BOCACHICA",
+  "destino": "santo-domingo",
+  "cloudinary": "whala-bocachica",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/bocachica/whala-bocachica/imagenes/whala-bocachica_005",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22",
+  "destino_media": "bocachica"
+}

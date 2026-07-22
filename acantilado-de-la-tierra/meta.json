@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "acantilado-de-la-tierra",
+  "titulo": "Acantilado de la Tierra",
+  "destino": "san-andres",
+  "cloudinary": "acantilado-de-la-tierra",
+  "fotos": 42,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/acantilado-de-la-tierra/imagenes/acantilado-de-la-tierra_012",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

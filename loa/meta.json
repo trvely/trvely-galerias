@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "loa",
+  "titulo": "LOA",
+  "destino": "tolu",
+  "cloudinary": "loa",
+  "fotos": 204,
+  "video": false,
+  "portada": "trvely/hoteles/tolu/loa/imagenes/loa_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

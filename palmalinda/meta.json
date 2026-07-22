@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "palmalinda",
+  "titulo": "PALMALINDA",
+  "destino": "covenas",
+  "cloudinary": "palmalinda",
+  "fotos": 5,
+  "video": false,
+  "portada": "trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_004",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

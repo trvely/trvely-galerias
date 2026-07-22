@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "arena-beach",
+  "titulo": "ARENA BEACH",
+  "destino": "cartagena",
+  "cloudinary": "arena-beach",
+  "fotos": 51,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/arena-beach/imagenes/arena-beach_011",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

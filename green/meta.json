@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "green",
+  "titulo": "GREEN",
+  "destino": "covenas",
+  "cloudinary": "green",
+  "fotos": 39,
+  "video": false,
+  "portada": "trvely/hoteles/covenas/green/imagenes/green_002",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

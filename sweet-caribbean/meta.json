@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sweet-caribbean",
+  "titulo": "Sweet Caribbean",
+  "destino": "san-andres",
+  "cloudinary": "sweet-caribbean",
+  "fotos": 23,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/sweet-caribbean/imagenes/sweet-caribbean_008",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

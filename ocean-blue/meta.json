@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ocean-blue",
+  "titulo": "OCEAN BLUE",
+  "destino": "san-andres",
+  "cloudinary": "ocean-blue",
+  "fotos": 28,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/ocean-blue/imagenes/ocean-blue_012",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

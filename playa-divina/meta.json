@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "playa-divina",
+  "titulo": "PLAYA DIVINA",
+  "destino": "covenas",
+  "cloudinary": "playa-divina",
+  "fotos": 118,
+  "video": false,
+  "portada": "trvely/hoteles/covenas/playa-divina/imagenes/playa-divina_002",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

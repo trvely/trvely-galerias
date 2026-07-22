@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sol-caribe-campo",
+  "titulo": "SOL CARIBE CAMPO",
+  "destino": "san-andres",
+  "cloudinary": "sol-caribe-campo",
+  "fotos": 37,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/sol-caribe-campo/imagenes/sol-caribe-campo_005",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

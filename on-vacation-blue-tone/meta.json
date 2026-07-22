@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "on-vacation-blue-tone",
+  "titulo": "On Vacation Blue Tone",
+  "destino": "san-andres",
+  "cloudinary": "on-vacation-blue-tone",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/on-vacation-blue-tone/imagenes/on-vacation-blue-tone_012",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

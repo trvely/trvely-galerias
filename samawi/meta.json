@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "samawi",
+  "titulo": "Samawi",
+  "destino": "san-andres",
+  "cloudinary": "samawi",
+  "fotos": 91,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/samawi/imagenes/samawi_011",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

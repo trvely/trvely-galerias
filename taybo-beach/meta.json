@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "taybo-beach",
+  "titulo": "TAYBO BEACH",
+  "destino": "santa-marta",
+  "cloudinary": "taybo-beach",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_039",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

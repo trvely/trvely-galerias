@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "koray",
+  "titulo": "Koray",
+  "destino": "san-andres",
+  "cloudinary": "koray",
+  "fotos": 53,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/koray/imagenes/koray_013",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

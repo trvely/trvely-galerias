@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "anaconda",
+  "titulo": "ANACONDA",
+  "destino": "leticia",
+  "cloudinary": "anaconda",
+  "fotos": 85,
+  "video": false,
+  "portada": "trvely/hoteles/leticia/anaconda/imagenes/anaconda_005",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

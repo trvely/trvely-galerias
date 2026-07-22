@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "reina-del-mar",
+  "titulo": "REINA DEL MAR",
+  "destino": "san-andres",
+  "cloudinary": "reina-del-mar",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/reina-del-mar/imagenes/reina-del-mar_010",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dorado-plaza-bocagrande",
+  "titulo": "DORADO PLAZA BOCAGRANDE",
+  "destino": "cartagena",
+  "cloudinary": "dorado-plaza-bocagrande",
+  "fotos": 83,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_068",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}
