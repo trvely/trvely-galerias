@@ -111,7 +111,7 @@ def tarjeta_hotel(g, destino, curadas=None):
           <p class="kicker">{html.escape(kicker)}</p>
           <h3><a href="{g['url']}" target="_blank" rel="noopener">{t}</a></h3>
           <div class="acciones">
-            <button class="btn-copiar" data-url="{g['url']}">Copiar enlace</button>
+            <button class="btn-copiar" data-url="{g['url']}" data-nombre="{html.escape(titulo_parejo(g['titulo']))}" data-msg="hotel">Copiar mensaje</button>
             <a class="btn-abrir" href="{g['url']}" target="_blank" rel="noopener">Abrir</a>
           </div>
         </div>
@@ -132,7 +132,7 @@ def tarjeta_exp(e):
           <p class="kicker">Tours y planes</p>
           <h3><a href="{e['url']}" target="_blank" rel="noopener">Experiencias {html.escape(d)}</a></h3>
           <div class="acciones">
-            <button class="btn-copiar" data-url="{e['url']}">Copiar enlace</button>
+            <button class="btn-copiar" data-url="{e['url']}" data-nombre="{html.escape(d)}" data-msg="experiencia">Copiar mensaje</button>
             <a class="btn-abrir" href="{e['url']}" target="_blank" rel="noopener">Abrir</a>
           </div>
         </div>
@@ -444,13 +444,32 @@ def construir_pagina(doc, hoy=None):
     }}
     return Promise.resolve(porElMetodoViejo(txt));
   }}
+  // El mensaje listo para WhatsApp: el asesor lo pega tal cual. La plantilla vive UNA vez aquí
+  // (no repetida en cada tarjeta) y se arma con el nombre y el enlace de la tarjeta.
+  function armarMensaje(b) {{
+    var nombre = (b.dataset.nombre || '').toUpperCase(), url = b.dataset.url;
+    if (b.dataset.msg === 'experiencia') {{
+      return '✨ EXPERIENCIAS ' + nombre + ' ✨\\n\\n'
+           + '¡Vive ' + (b.dataset.nombre || '') + ' al máximo! 📸\\n'
+           + 'Descubre aquí todos los planes y experiencias 👇\\n\\n'
+           + url + '\\n\\n'
+           + '¿Cuál te antoja? Escríbeme y lo armamos 😍\\n\\n'
+           + 'Viaja fácil, viaja Trvely ✈️';
+    }}
+    return '🏝️ ' + nombre + ' ✨\\n\\n'
+         + '¡Conoce este hotel antes de viajar! 📸\\n'
+         + 'Mira aquí la galería completa con todas sus fotos 👇\\n\\n'
+         + url + '\\n\\n'
+         + '¿Te gustó? Escríbeme y armamos tu viaje 😍\\n\\n'
+         + 'Viaja fácil, viaja Trvely ✈️';
+  }}
   document.addEventListener('click', function (e) {{
     var b = e.target.closest('.btn-copiar');
     if (!b) return;
     var antes = b.dataset.antes || b.textContent;
     b.dataset.antes = antes;
-    copiar(b.dataset.url).then(function (ok) {{
-      b.textContent = ok ? '¡Copiado!' : 'Copia el enlace del título';
+    copiar(armarMensaje(b)).then(function (ok) {{
+      b.textContent = ok ? '¡Mensaje copiado!' : 'No pude copiar';
       b.classList.toggle('ok', ok); b.classList.toggle('falla', !ok);
       setTimeout(function () {{
         b.textContent = antes; b.classList.remove('ok', 'falla');
