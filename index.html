@@ -1,754 +1,1255 @@
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#B41241">
 <title>Vitrina Trvely · hoteles y experiencias</title>
 <style>
-  :root { --burg:#B41241; --beige:#F4E5D2; }
+  @font-face { font-family:'Extenda'; src:url('assets/extenda.ttf') format('truetype'); font-display:swap; }
+  @font-face { font-family:'WhiteStar'; src:url('assets/whitestar.otf') format('opentype'); font-display:swap; }
+  :root {
+    --burg:#B41241; --burg-hondo:#7C0C2C; --beige:#F4E5D2; --crema:#FAF7F2;
+    --tinta:#1C1B1A; --gris:#8C8681; --linea:#E9DFD4;
+    --sombra:0 1px 2px rgba(28,27,26,.06), 0 8px 24px rgba(28,27,26,.07);
+    --sombra-alta:0 2px 4px rgba(28,27,26,.08), 0 18px 40px rgba(124,12,44,.16);
+  }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'Montserrat','Segoe UI',system-ui,sans-serif; background:#faf7f2; color:#222; }
-  header { background:var(--burg); color:#fff; padding:26px 16px 20px; text-align:center; }
-  header h1 { font-size:23px; letter-spacing:.5px; }
-  header p { color:var(--beige); font-size:13px; margin-top:5px; }
-  .buscador { position:sticky; top:0; z-index:5; background:#faf7f2; padding:14px 16px;
-               box-shadow:0 2px 10px rgba(0,0,0,.06); }
-  .buscador input { display:block; width:100%; max-width:620px; margin:0 auto; padding:13px 18px;
-    font-size:16px; font-family:inherit; border:2px solid #e6ddd2; border-radius:28px; outline:none; }
-  .buscador input:focus { border-color:var(--burg); }
-  main { max-width:1180px; margin:0 auto; padding:8px 14px 50px; }
-  .destino h2 { font-size:19px; color:var(--burg); margin:26px 0 12px; border-bottom:2px solid var(--beige);
-                 padding-bottom:7px; }
-  .destino h2 .n { font-size:12px; color:#999; font-weight:400; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; }
-  .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.07);
-           display:flex; flex-direction:column; }
-  .card .foto { display:block; aspect-ratio:3/2; background:#eee; }
-  .card img { width:100%; height:100%; object-fit:cover; display:block; }
-  .sinfoto { width:100%; height:100%; display:flex; align-items:center; justify-content:center;
-              background:var(--beige); color:var(--burg); font-weight:700; }
-  .txt { padding:11px 12px 13px; display:flex; flex-direction:column; gap:7px; flex:1; }
-  .txt h3 { font-size:14px; line-height:1.3; }
-  .txt h3 a { color:#222; text-decoration:none; }
-  .txt h3 a:hover { color:var(--burg); }
-  .meta { font-size:12px; color:#8a8a8a; flex:1; }
-  .copiar { background:var(--burg); color:#fff; border:0; border-radius:22px; padding:10px;
-             font-size:13px; font-weight:700; font-family:inherit; cursor:pointer; }
-  .copiar:hover { filter:brightness(1.1); }
-  .copiar.ok { background:#1f8a4c; }
-  .vacio { text-align:center; color:#999; padding:40px 0; display:none; }
-  footer { text-align:center; color:#999; font-size:12px; padding:26px 16px 40px; }
-  @media (max-width:520px) { .grid { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px; } }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Montserrat','Segoe UI',system-ui,sans-serif; background:var(--crema);
+          color:var(--tinta); -webkit-font-smoothing:antialiased; }
+  a { color:inherit; }
+  ::selection { background:var(--beige); }
+
+  /* ---------- HERO: la banda de marca, con Triana asomando ---------- */
+  .hero { position:relative; background:linear-gradient(115deg,var(--burg-hondo) 0%,var(--burg) 62%);
+           color:#fff; overflow:hidden; }
+  .hero::after { content:''; position:absolute; inset:auto 0 -1px 0; height:34px; background:var(--crema);
+                  border-radius:34px 34px 0 0; }
+  .hero-caja { max-width:1220px; margin:0 auto; padding:26px 22px 58px; display:grid;
+                grid-template-columns:minmax(0,1fr) 300px; gap:16px; align-items:end; }
+  .logo { height:44px; opacity:.97; }
+  .eyebrow { margin:30px 0 10px; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+              color:var(--beige); font-weight:700; }
+  /* Extenda es una display muy alta: con line-height < 1 los remates se cortan arriba. */
+  .hero h1 { font-family:'Extenda','Montserrat',sans-serif; font-weight:400;
+              font-size:clamp(44px,7.4vw,84px); line-height:1.06; letter-spacing:1.5px; }
+  .firma { font-family:'WhiteStar','Segoe Script',cursive; color:var(--beige);
+            font-size:clamp(26px,3.6vw,40px); line-height:1; margin:2px 0 0 4px; }
+  .buscar { position:relative; margin-top:24px; max-width:520px; }
+  .buscar input { width:100%; padding:15px 20px 15px 48px; border:0; border-radius:30px;
+                   font:inherit; font-size:15.5px; color:var(--tinta); background:#fff;
+                   box-shadow:0 10px 30px rgba(0,0,0,.16); }
+  .buscar input:focus { outline:3px solid var(--beige); outline-offset:2px; }
+  .buscar .lupa { position:absolute; left:19px; top:50%; transform:translateY(-50%); opacity:.45; }
+  .triana { align-self:end; justify-self:end; margin-bottom:-58px; width:300px; max-width:100%;
+             filter:drop-shadow(0 22px 34px rgba(0,0,0,.3)); }
+
+  /* ---------- FILTROS ---------- */
+  .filtros { position:sticky; top:0; z-index:20; background:rgba(250,247,242,.94);
+              backdrop-filter:blur(10px); border-bottom:1px solid var(--linea); }
+  .filtros-caja { max-width:1220px; margin:0 auto; padding:12px 22px; }
+  .chips { display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }
+  .chips::-webkit-scrollbar { display:none; }
+  .chip { flex:0 0 auto; border:1.5px solid var(--linea); background:#fff; color:var(--tinta);
+           border-radius:22px; padding:9px 15px; font:inherit; font-size:13px; font-weight:700;
+           cursor:pointer; transition:background .18s, color .18s, border-color .18s; }
+  .chip span { font-weight:600; opacity:.5; font-size:11.5px; margin-left:3px; }
+  .chip:hover { border-color:var(--burg); color:var(--burg); }
+  .chip.activo { background:var(--burg); border-color:var(--burg); color:#fff; }
+  .chip.activo span { opacity:.72; }
+  .afinar { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:10px;
+             font-size:12.5px; color:var(--gris); }
+  .interruptor { display:inline-flex; align-items:center; gap:7px; cursor:pointer; font-weight:600; }
+  .interruptor input { accent-color:var(--burg); width:16px; height:16px; }
+  .orden { margin-left:auto; display:inline-flex; align-items:center; gap:7px; font-weight:600; }
+  .orden select { font:inherit; font-size:12.5px; font-weight:700; color:var(--tinta);
+                   border:1.5px solid var(--linea); background:#fff; border-radius:16px;
+                   padding:6px 10px; cursor:pointer; }
+
+  /* ---------- CONTENIDO ---------- */
+  main { max-width:1220px; margin:0 auto; padding:6px 22px 60px; }
+  .titulo-bloque { font-family:'Extenda','Montserrat',sans-serif; font-weight:400; font-size:28px;
+                    letter-spacing:1px; line-height:1.2; color:var(--burg); margin:38px 0 16px;
+                    display:flex; align-items:baseline; gap:10px; }
+  .titulo-bloque .cuenta { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700;
+                            color:var(--gris); }
+  .rejilla { display:grid; grid-template-columns:repeat(auto-fill,minmax(248px,1fr)); gap:20px; }
+  .ficha { background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--sombra);
+            display:flex; flex-direction:column; transition:transform .22s ease, box-shadow .22s ease; }
+  .ficha:hover { transform:translateY(-5px); box-shadow:var(--sombra-alta); }
+  .ficha-foto { position:relative; display:block; aspect-ratio:4/3; background:var(--beige);
+                 overflow:hidden; text-decoration:none; }
+  .ficha-foto img { width:100%; height:100%; object-fit:cover; display:block;
+                     transition:transform .5s cubic-bezier(.2,.7,.3,1); }
+  .ficha:hover .ficha-foto img { transform:scale(1.05); }
+  .sin-foto { position:absolute; inset:0; display:grid; place-items:center; color:var(--burg);
+               font-weight:800; letter-spacing:.08em; }
+  .marca-video { position:absolute; left:10px; bottom:10px; background:rgba(28,27,26,.72); color:#fff;
+                  font-size:10.5px; font-weight:700; letter-spacing:.06em; padding:5px 9px;
+                  border-radius:20px; backdrop-filter:blur(4px); }
+  .ficha-foto.exp { display:grid; place-content:center; text-align:center; gap:4px;
+                     background:linear-gradient(135deg,var(--burg) 0%,var(--burg-hondo) 100%); color:#fff; }
+  .exp-rotulo { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--beige);
+                 font-weight:700; }
+  .exp-destino { font-family:'Extenda','Montserrat',sans-serif; font-weight:400; font-size:30px;
+                  line-height:1.2; letter-spacing:1px; padding:0 10px; }
+  .ficha-cuerpo { padding:13px 15px 15px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .kicker { font-size:10.5px; letter-spacing:.11em; text-transform:uppercase; color:var(--burg);
+             font-weight:700; }
+  .ficha h3 { font-size:14.5px; line-height:1.32; font-weight:800; flex:1; }
+  .ficha h3 a { text-decoration:none; }
+  .ficha h3 a:hover { color:var(--burg); }
+  .acciones { display:flex; gap:8px; }
+  .btn-copiar { flex:1; background:var(--burg); color:#fff; border:0; border-radius:22px;
+                 padding:10px 8px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+                 transition:filter .15s, background .2s; }
+  .btn-copiar:hover { filter:brightness(1.09); }
+  .btn-copiar.ok { background:#1C7C4A; }
+  .btn-copiar.falla { background:#8a6d1f; }
+  .btn-abrir { border:1.5px solid var(--linea); border-radius:22px; padding:9px 13px; font-size:12.5px;
+                font-weight:700; text-decoration:none; color:var(--gris); }
+  .btn-abrir:hover { border-color:var(--burg); color:var(--burg); }
+  .nada { display:none; text-align:center; padding:56px 0; color:var(--gris); }
+  .nada strong { display:block; font-size:17px; color:var(--tinta); margin-bottom:5px; }
+
+  footer { background:var(--burg-hondo); color:var(--beige); text-align:center;
+            padding:34px 22px 40px; }
+  footer .firma-pie { font-family:'WhiteStar','Segoe Script',cursive; font-size:27px; color:#fff;
+                       margin-bottom:7px; }
+  footer p { font-size:12px; opacity:.82; line-height:1.7; }
+
+  @media (max-width:760px) {
+    .hero-caja { grid-template-columns:1fr; padding-bottom:38px; }
+    .triana { display:none; }
+    main { padding-left:16px; padding-right:16px; }
+    /* 148px (no 158) para que quepan DOS columnas en un celular de 390px: con 158 se caia a una */
+    .rejilla { grid-template-columns:repeat(auto-fill,minmax(148px,1fr)); gap:12px; }
+    .ficha-cuerpo { padding:11px 12px 13px; }
+    /* 44px de alto: el minimo comodo para el pulgar */
+    .btn-copiar { min-height:44px; font-size:13px; }
+    .btn-abrir { min-height:44px; display:grid; place-items:center; }
+    .orden { margin-left:0; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    * { transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+  }
 </style></head>
 <body>
-<header>
-  <h1>Vitrina Trvely</h1>
-  <p>Galerías de hoteles y experiencias · copia el enlace y compártelo</p>
+
+<header class="hero">
+  <div class="hero-caja">
+    <div>
+      <img class="logo" src="assets/logo-trvely.png" alt="Trvely">
+      <p class="eyebrow">74 galerías · 4 destinos de experiencias · 3,436 fotos</p>
+      <h1>VITRINA</h1>
+      <p class="firma">todo lo que puedes mostrar</p>
+      <div class="buscar">
+        <span class="lupa">🔍</span>
+        <input id="q" type="search" placeholder="Busca un hotel o un destino…" autocomplete="off"
+               aria-label="Buscar hotel, destino o experiencia">
+      </div>
+    </div>
+    <picture>
+      <source srcset="assets/triana.webp" type="image/webp">
+      <img class="triana" src="assets/triana.png" alt="Triana, asesora Trvely" width="300">
+    </picture>
+  </div>
 </header>
-<div class="buscador"><input id="q" type="search" placeholder="Buscar hotel, destino o experiencia…" autocomplete="off"></div>
+
+<div class="filtros">
+  <div class="filtros-caja">
+    <div class="chips" role="group" aria-label="Filtrar por destino">
+      <button class="chip activo" data-filtro-destino="todos">Todos <span>78</span></button>
+      <button class="chip" data-filtro-destino="experiencias">Experiencias <span>4</span></button>
+      <button class="chip" data-filtro-destino="san-andres">San Andrés <span>39</span></button>
+      <button class="chip" data-filtro-destino="cartagena">Cartagena <span>10</span></button>
+      <button class="chip" data-filtro-destino="santa-marta">Santa Marta <span>8</span></button>
+      <button class="chip" data-filtro-destino="covenas">Coveñas <span>7</span></button>
+      <button class="chip" data-filtro-destino="leticia">Leticia <span>2</span></button>
+      <button class="chip" data-filtro-destino="punta-cana">Punta Cana <span>2</span></button>
+      <button class="chip" data-filtro-destino="tolu">Tolú <span>2</span></button>
+      <button class="chip" data-filtro-destino="juan-dolio">Juan Dolio <span>1</span></button>
+      <button class="chip" data-filtro-destino="medellin">Medellín <span>1</span></button>
+      <button class="chip" data-filtro-destino="riohacha">Riohacha <span>1</span></button>
+      <button class="chip" data-filtro-destino="santo-domingo">Santo Domingo <span>1</span></button>
+    </div>
+    <div class="afinar">
+      <label class="interruptor"><input type="checkbox" id="solo-video"> Solo con video</label>
+      <label class="orden">Ordenar
+        <select id="orden">
+          <option value="az">A · Z</option>
+          <option value="fotos">Más fotos primero</option>
+        </select>
+      </label>
+    </div>
+  </div>
+</div>
+
 <main>
-    <section class="destino" data-destino="experiencias">
-      <h2>Experiencias <span class="n">4</span></h2>
-      <div class="grid">
-      <article class="card exp" data-buscar="experiencias cartagena">
-        <div class="txt">
+    <section class="bloque" data-seccion="experiencias">
+      <h2 class="titulo-bloque">Experiencias <span class="cuenta">4</span></h2>
+      <div class="rejilla">
+      <article class="ficha ficha-exp" data-buscar="experiencias cartagena cartagena"
+        data-destino="cartagena" data-tipo="experiencia" data-video="0" data-fotos="999">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener">
+          <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Cartagena</span>
+        </a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tours y planes</p>
           <h3><a href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener">Experiencias Cartagena</a></h3>
-          <p class="meta">tours y planes</p>
-          <button class="copiar" data-url="https://experiencias.trvely.com.co/cartagena/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://experiencias.trvely.com.co/cartagena/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card exp" data-buscar="experiencias leticia">
-        <div class="txt">
+      <article class="ficha ficha-exp" data-buscar="experiencias leticia leticia"
+        data-destino="leticia" data-tipo="experiencia" data-video="0" data-fotos="999">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener">
+          <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Leticia</span>
+        </a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tours y planes</p>
           <h3><a href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener">Experiencias Leticia</a></h3>
-          <p class="meta">tours y planes</p>
-          <button class="copiar" data-url="https://experiencias.trvely.com.co/leticia/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://experiencias.trvely.com.co/leticia/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card exp" data-buscar="experiencias medellin">
-        <div class="txt">
+      <article class="ficha ficha-exp" data-buscar="experiencias medellín medellin"
+        data-destino="medellin" data-tipo="experiencia" data-video="0" data-fotos="999">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener">
+          <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Medellín</span>
+        </a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tours y planes</p>
           <h3><a href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener">Experiencias Medellín</a></h3>
-          <p class="meta">tours y planes</p>
-          <button class="copiar" data-url="https://experiencias.trvely.com.co/medellin/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://experiencias.trvely.com.co/medellin/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card exp" data-buscar="experiencias peru">
-        <div class="txt">
+      <article class="ficha ficha-exp" data-buscar="experiencias perú peru"
+        data-destino="peru" data-tipo="experiencia" data-video="0" data-fotos="999">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener">
+          <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Perú</span>
+        </a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tours y planes</p>
           <h3><a href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener">Experiencias Perú</a></h3>
-          <p class="meta">tours y planes</p>
-          <button class="copiar" data-url="https://experiencias.trvely.com.co/peru/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://experiencias.trvely.com.co/peru/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="san andrés">
-      <h2>San Andrés <span class="n">39</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="acantilado de la tierra acantilado-de-la-tierra">
-        <a class="foto" href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/acantilado-de-la-tierra/imagenes/acantilado-de-la-tierra_001" alt="Acantilado de la Tierra"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="san-andres">
+      <h2 class="titulo-bloque">San Andrés <span class="cuenta">39</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="acantilado de la tierra acantilado-de-la-tierra san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="42">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/acantilado-de-la-tierra/imagenes/acantilado-de-la-tierra_001" alt="Acantilado de la Tierra"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener">Acantilado de la Tierra</a></h3>
-          <p class="meta">42 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/acantilado-de-la-tierra/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/acantilado-de-la-tierra/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="apartamentos turísticos faviles apartamentos-turisticos-faviles">
-        <a class="foto" href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/apartamentos-turisticos-faviles/imagenes/apartamentos-turisticos-faviles_001" alt="Apartamentos Turísticos Faviles"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="apartamentos turísticos faviles apartamentos-turisticos-faviles san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="13">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/apartamentos-turisticos-faviles/imagenes/apartamentos-turisticos-faviles_001" alt="Apartamentos Turísticos Faviles"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 13 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener">Apartamentos Turísticos Faviles</a></h3>
-          <p class="meta">13 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="aquamare aquamare">
-        <a class="foto" href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/aquamare/imagenes/aquamare_001" alt="Aquamare"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="aquamare aquamare san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="55">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/aquamare/imagenes/aquamare_001" alt="Aquamare"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 55 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener">Aquamare</a></h3>
-          <p class="meta">55 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/aquamare/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/aquamare/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="arena blanca arena-blanca">
-        <a class="foto" href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/arena-blanca/imagenes/arena-blanca_001" alt="Arena Blanca"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="arena blanca arena-blanca san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/arena-blanca/imagenes/arena-blanca_001" alt="Arena Blanca"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener">Arena Blanca</a></h3>
-          <p class="meta">36 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/arena-blanca/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/arena-blanca/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="azure lofts &amp; pool azure-lofts-pool">
-        <a class="foto" href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/azure-lofts-pool/imagenes/azure-lofts-pool_001" alt="Azure Lofts &amp; Pool"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="azure lofts &amp; pool azure-lofts-pool san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="46">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/azure-lofts-pool/imagenes/azure-lofts-pool_001" alt="Azure Lofts &amp; Pool"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 46 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener">Azure Lofts &amp; Pool</a></h3>
-          <p class="meta">46 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/azure-lofts-pool/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/azure-lofts-pool/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="blue cove by on vacation blue-cove-by-on-vacation">
-        <a class="foto" href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/blue-cove-by-on-vacation/imagenes/blue-cove-by-on-vacation_001" alt="Blue Cove by On Vacation"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="blue cove by on vacation blue-cove-by-on-vacation san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="40">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-cove-by-on-vacation/imagenes/blue-cove-by-on-vacation_001" alt="Blue Cove by On Vacation"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 40 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener">Blue Cove by On Vacation</a></h3>
-          <p class="meta">40 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/blue-cove-by-on-vacation/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/blue-cove-by-on-vacation/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="blue island hotel blue-island-hotel">
-        <a class="foto" href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/blue-island-hotel/imagenes/blue-island-hotel_001" alt="Blue Island Hotel"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="blue island hotel blue-island-hotel san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="13">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-island-hotel/imagenes/blue-island-hotel_001" alt="Blue Island Hotel"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 13 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener">Blue Island Hotel</a></h3>
-          <p class="meta">13 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/blue-island-hotel/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/blue-island-hotel/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="blue reef blue-reef">
-        <a class="foto" href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/blue-reef/imagenes/blue-reef_001" alt="Blue Reef"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="blue reef blue-reef san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="26">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-reef/imagenes/blue-reef_001" alt="Blue Reef"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 26 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener">Blue Reef</a></h3>
-          <p class="meta">26 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/blue-reef/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/blue-reef/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="calypso beach calipso">
-        <a class="foto" href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/calipso/imagenes/calipso_003" alt="Calypso Beach"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="calypso beach calipso san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="45">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/calipso/imagenes/calipso_003" alt="Calypso Beach"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener">Calypso Beach</a></h3>
-          <p class="meta">45 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/calipso/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/calipso/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="caribbean corals hotel boutique caribbean-corals-hotel-boutique">
-        <a class="foto" href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/caribbean-corals-hotel-boutique/imagenes/caribbean-corals-hotel-boutique_001" alt="Caribbean Corals Hotel Boutique"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="caribbean corals hotel boutique caribbean-corals-hotel-boutique san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="57">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/caribbean-corals-hotel-boutique/imagenes/caribbean-corals-hotel-boutique_001" alt="Caribbean Corals Hotel Boutique"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 57 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener">Caribbean Corals Hotel Boutique</a></h3>
-          <p class="meta">57 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="decameron aquarium - all inclusive decameron-aquarium-all-inclusive">
-        <a class="foto" href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/decameron-aquarium-all-inclusive/imagenes/decameron-aquarium-all-inclusive_001" alt="Decameron Aquarium - All Inclusive"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="decameron aquarium - all inclusive decameron-aquarium-all-inclusive san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-aquarium-all-inclusive/imagenes/decameron-aquarium-all-inclusive_001" alt="Decameron Aquarium - All Inclusive"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener">Decameron Aquarium - All Inclusive</a></h3>
-          <p class="meta">36 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="decameron isleño - all inclusive decameron-isleno-all-inclusive">
-        <a class="foto" href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/decameron-isleno-all-inclusive/imagenes/decameron-isleno-all-inclusive_001" alt="Decameron Isleño - All Inclusive"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="decameron isleño - all inclusive decameron-isleno-all-inclusive san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="59">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-isleno-all-inclusive/imagenes/decameron-isleno-all-inclusive_001" alt="Decameron Isleño - All Inclusive"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 59 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener">Decameron Isleño - All Inclusive</a></h3>
-          <p class="meta">59 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="decameron los delfines - all inclusive decameron-los-delfines-all-inclusive">
-        <a class="foto" href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/decameron-los-delfines-all-inclusive/imagenes/decameron-los-delfines-all-inclusive_001" alt="Decameron Los Delfines - All Inclusive"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="decameron los delfines - all inclusive decameron-los-delfines-all-inclusive san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="30">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-los-delfines-all-inclusive/imagenes/decameron-los-delfines-all-inclusive_001" alt="Decameron Los Delfines - All Inclusive"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 30 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener">Decameron Los Delfines - All Inclusive</a></h3>
-          <p class="meta">30 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="decameron marazul - all inclusive decameron-marazul-all-inclusive">
-        <a class="foto" href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/decameron-marazul-all-inclusive/imagenes/decameron-marazul-all-inclusive_001" alt="Decameron Marazul - All Inclusive"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="decameron marazul - all inclusive decameron-marazul-all-inclusive san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="45">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-marazul-all-inclusive/imagenes/decameron-marazul-all-inclusive_001" alt="Decameron Marazul - All Inclusive"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener">Decameron Marazul - All Inclusive</a></h3>
-          <p class="meta">45 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="decameron san luis - all inclusive decameron-san-luis-all-inclusive">
-        <a class="foto" href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/decameron-san-luis-all-inclusive/imagenes/decameron-san-luis-all-inclusive_001" alt="Decameron San Luis - All Inclusive"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="decameron san luis - all inclusive decameron-san-luis-all-inclusive san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="32">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-san-luis-all-inclusive/imagenes/decameron-san-luis-all-inclusive_001" alt="Decameron San Luis - All Inclusive"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 32 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener">Decameron San Luis - All Inclusive</a></h3>
-          <p class="meta">32 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="el dorado el-dorado">
-        <a class="foto" href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/el-dorado/imagenes/el-dorado_001" alt="El Dorado"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="el dorado el-dorado san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="71">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/el-dorado/imagenes/el-dorado_001" alt="El Dorado"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 71 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener">El Dorado</a></h3>
-          <p class="meta">71 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/el-dorado/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/el-dorado/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="ghl relax sunrise ghl-relax-sunrise">
-        <a class="foto" href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_001" alt="GHL Relax Sunrise"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="ghl relax sunrise ghl-relax-sunrise san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="1" data-fotos="52">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_001" alt="GHL Relax Sunrise"><span class="marca-video">▶ video</span></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 52 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener">GHL Relax Sunrise</a></h3>
-          <p class="meta">52 fotos · 🎬 video</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/ghl-relax-sunrise/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/ghl-relax-sunrise/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="grand sirenis san andrés grand-sirenis-san-andres">
-        <a class="foto" href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/grand-sirenis-san-andres/imagenes/grand-sirenis-san-andres_001" alt="Grand Sirenis San Andrés"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="grand sirenis san andrés grand-sirenis-san-andres san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="48">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/grand-sirenis-san-andres/imagenes/grand-sirenis-san-andres_001" alt="Grand Sirenis San Andrés"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 48 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener">Grand Sirenis San Andrés</a></h3>
-          <p class="meta">48 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/grand-sirenis-san-andres/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/grand-sirenis-san-andres/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="henry by portofino henry-by-portofino">
-        <a class="foto" href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/henry-by-portofino/imagenes/henry-by-portofino_001" alt="Henry By Portofino"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="henry by portofino henry-by-portofino san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="27">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/henry-by-portofino/imagenes/henry-by-portofino_001" alt="Henry By Portofino"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener">Henry By Portofino</a></h3>
-          <p class="meta">27 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/henry-by-portofino/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/henry-by-portofino/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="hostería mar y sol hosteria-mar-y-sol">
-        <a class="foto" href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/hosteria-mar-y-sol/imagenes/hosteria-mar-y-sol_001" alt="Hostería Mar y Sol"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="hostería mar y sol hosteria-mar-y-sol san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="157">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/hosteria-mar-y-sol/imagenes/hosteria-mar-y-sol_001" alt="Hostería Mar y Sol"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 157 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener">Hostería Mar y Sol</a></h3>
-          <p class="meta">157 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/hosteria-mar-y-sol/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/hosteria-mar-y-sol/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="isla bonita isla-bonita">
-        <a class="foto" href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/isla-bonita/imagenes/isla-bonita_001" alt="Isla Bonita"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="isla bonita isla-bonita san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="42">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/isla-bonita/imagenes/isla-bonita_001" alt="Isla Bonita"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener">Isla Bonita</a></h3>
-          <p class="meta">42 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/isla-bonita/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/isla-bonita/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="koray koray">
-        <a class="foto" href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/koray/imagenes/koray_001" alt="Koray"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="koray koray san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="53">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/koray/imagenes/koray_001" alt="Koray"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 53 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener">Koray</a></h3>
-          <p class="meta">53 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/koray/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/koray/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="lord pierre lord-pierre">
-        <a class="foto" href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/lord-pierre/imagenes/lord-pierre_001" alt="Lord Pierre"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="lord pierre lord-pierre san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="27">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/lord-pierre/imagenes/lord-pierre_001" alt="Lord Pierre"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener">Lord Pierre</a></h3>
-          <p class="meta">27 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/lord-pierre/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/lord-pierre/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="ocean blue ocean-blue">
-        <a class="foto" href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/ocean-blue/imagenes/ocean-blue_002" alt="Ocean Blue"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="ocean blue ocean-blue san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="28">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ocean-blue/imagenes/ocean-blue_002" alt="Ocean Blue"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 28 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener">Ocean Blue</a></h3>
-          <p class="meta">28 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/ocean-blue/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/ocean-blue/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="on vacation blue tone on-vacation-blue-tone">
-        <a class="foto" href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-blue-tone/imagenes/on-vacation-blue-tone_001" alt="On Vacation Blue Tone"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="on vacation blue tone on-vacation-blue-tone san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="22">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-blue-tone/imagenes/on-vacation-blue-tone_001" alt="On Vacation Blue Tone"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 22 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener">On Vacation Blue Tone</a></h3>
-          <p class="meta">22 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/on-vacation-blue-tone/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/on-vacation-blue-tone/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="on vacation tower on-vacation-tower">
-        <a class="foto" href="https://galerias.trvely.com.co/on-vacation-tower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-tower/imagenes/on-vacation-tower_001" alt="On Vacation Tower"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="on vacation tower on-vacation-tower san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="30">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/on-vacation-tower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-tower/imagenes/on-vacation-tower_001" alt="On Vacation Tower"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 30 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/on-vacation-tower/" target="_blank" rel="noopener">On Vacation Tower</a></h3>
-          <p class="meta">30 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/on-vacation-tower/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/on-vacation-tower/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/on-vacation-tower/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="portobelo convention center portobelo-convention-center">
-        <a class="foto" href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_001" alt="Portobelo Convention Center"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="portobelo convention center portobelo-convention-center san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="34">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_001" alt="Portobelo Convention Center"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 34 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener">Portobelo Convention Center</a></h3>
-          <p class="meta">34 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/portobelo-convention-center/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/portobelo-convention-center/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="portobelo plaza de las américas portobelo-plaza-de-las-americas">
-        <a class="foto" href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-plaza-de-las-americas/imagenes/portobelo-plaza-de-las-americas_001" alt="Portobelo Plaza de las Américas"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="portobelo plaza de las américas portobelo-plaza-de-las-americas san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="34">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-plaza-de-las-americas/imagenes/portobelo-plaza-de-las-americas_001" alt="Portobelo Plaza de las Américas"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 34 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener">Portobelo Plaza de las Américas</a></h3>
-          <p class="meta">34 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="portofino caribe portofino-caribe">
-        <a class="foto" href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/portofino-caribe/imagenes/portofino-caribe_001" alt="Portofino Caribe"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="portofino caribe portofino-caribe san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="50">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portofino-caribe/imagenes/portofino-caribe_001" alt="Portofino Caribe"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 50 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener">Portofino Caribe</a></h3>
-          <p class="meta">50 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/portofino-caribe/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/portofino-caribe/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="posada magic hill on vacation posada-magic-hill-on-vacation">
-        <a class="foto" href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/posada-magic-hill-on-vacation/imagenes/posada-magic-hill-on-vacation_001" alt="Posada Magic Hill On Vacation"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="posada magic hill on vacation posada-magic-hill-on-vacation san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="33">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/posada-magic-hill-on-vacation/imagenes/posada-magic-hill-on-vacation_001" alt="Posada Magic Hill On Vacation"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 33 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener">Posada Magic Hill On Vacation</a></h3>
-          <p class="meta">33 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="reina del mar reina-del-mar">
-        <a class="foto" href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/reina-del-mar/imagenes/reina-del-mar_001" alt="Reina del Mar"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="reina del mar reina-del-mar san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="20">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/reina-del-mar/imagenes/reina-del-mar_001" alt="Reina del Mar"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 20 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener">Reina del Mar</a></h3>
-          <p class="meta">20 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/reina-del-mar/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/reina-del-mar/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="samawi samawi">
-        <a class="foto" href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/samawi/imagenes/samawi_001" alt="Samawi"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="samawi samawi san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="91">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/samawi/imagenes/samawi_001" alt="Samawi"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 91 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener">Samawi</a></h3>
-          <p class="meta">91 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/samawi/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/samawi/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="san luis beach house san-luis-beach-house">
-        <a class="foto" href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_001" alt="San Luis Beach House"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="san luis beach house san-luis-beach-house san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="62">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_001" alt="San Luis Beach House"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 62 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener">San Luis Beach House</a></h3>
-          <p class="meta">62 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/san-luis-beach-house/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/san-luis-beach-house/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sol caribe campo sol-caribe-campo">
-        <a class="foto" href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-campo/imagenes/sol-caribe-campo_001" alt="Sol Caribe Campo"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sol caribe campo sol-caribe-campo san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="37">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-campo/imagenes/sol-caribe-campo_001" alt="Sol Caribe Campo"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 37 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener">Sol Caribe Campo</a></h3>
-          <p class="meta">37 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sol-caribe-campo/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sol-caribe-campo/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sol caribe centro sol-caribe-centro">
-        <a class="foto" href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-centro/imagenes/sol-caribe-centro_001" alt="Sol Caribe Centro"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sol caribe centro sol-caribe-centro san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="26">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-centro/imagenes/sol-caribe-centro_001" alt="Sol Caribe Centro"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 26 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener">Sol Caribe Centro</a></h3>
-          <p class="meta">26 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sol-caribe-centro/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sol-caribe-centro/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sol caribe sea flower sol-caribe-sea-flower">
-        <a class="foto" href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-sea-flower/imagenes/sol-caribe-sea-flower_001" alt="Sol Caribe Sea Flower"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sol caribe sea flower sol-caribe-sea-flower san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="28">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-sea-flower/imagenes/sol-caribe-sea-flower_001" alt="Sol Caribe Sea Flower"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 28 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener">Sol Caribe Sea Flower</a></h3>
-          <p class="meta">28 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sol-caribe-sea-flower/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sol-caribe-sea-flower/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sweet caribbean sweet-caribbean">
-        <a class="foto" href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/sweet-caribbean/imagenes/sweet-caribbean_001" alt="Sweet Caribbean"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sweet caribbean sweet-caribbean san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="23">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sweet-caribbean/imagenes/sweet-caribbean_001" alt="Sweet Caribbean"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 23 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener">Sweet Caribbean</a></h3>
-          <p class="meta">23 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sweet-caribbean/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sweet-caribbean/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="tiuna tiuna">
-        <a class="foto" href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/tiuna/imagenes/tiuna_001" alt="Tiuna"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="tiuna tiuna san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/tiuna/imagenes/tiuna_001" alt="Tiuna"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener">Tiuna</a></h3>
-          <p class="meta">36 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/tiuna/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/tiuna/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="verde mar verde-mar">
-        <a class="foto" href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_001" alt="Verde Mar"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="verde mar verde-mar san andrés"
+        data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="46">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_001" alt="Verde Mar"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">San Andrés · 46 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener">Verde Mar</a></h3>
-          <p class="meta">46 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/verde-mar/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/verde-mar/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="cartagena">
-      <h2>Cartagena <span class="n">10</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="arena beach arena-beach">
-        <a class="foto" href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/arena-beach/imagenes/arena-beach_001" alt="Arena Beach"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="cartagena">
+      <h2 class="titulo-bloque">Cartagena <span class="cuenta">10</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="arena beach arena-beach cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="51">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/arena-beach/imagenes/arena-beach_001" alt="Arena Beach"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 51 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener">Arena Beach</a></h3>
-          <p class="meta">51 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/arena-beach/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/arena-beach/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="atlantic lux atlantic-lux">
-        <a class="foto" href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_001" alt="Atlantic Lux"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="atlantic lux atlantic-lux cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="34">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_001" alt="Atlantic Lux"><span class="marca-video">▶ video</span></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 34 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener">Atlantic Lux</a></h3>
-          <p class="meta">34 fotos · 🎬 video</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/atlantic-lux/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/atlantic-lux/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="bahía cartagena bahia-cartagena">
-        <a class="foto" href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/bahia-cartagena/imagenes/bahia-cartagena_001" alt="Bahía Cartagena"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="bahía cartagena bahia-cartagena cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="15">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/bahia-cartagena/imagenes/bahia-cartagena_001" alt="Bahía Cartagena"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 15 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener">Bahía Cartagena</a></h3>
-          <p class="meta">15 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/bahia-cartagena/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/bahia-cartagena/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="cartagena dubai cartagena-dubai">
-        <a class="foto" href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-dubai/imagenes/cartagena-dubai_002" alt="Cartagena Dubai"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="cartagena dubai cartagena-dubai cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="56">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-dubai/imagenes/cartagena-dubai_002" alt="Cartagena Dubai"><span class="marca-video">▶ video</span></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 56 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener">Cartagena Dubai</a></h3>
-          <p class="meta">56 fotos · 🎬 video</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/cartagena-dubai/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/cartagena-dubai/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="cartagena premium cartagena-premium">
-        <a class="foto" href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-premium/imagenes/cartagena-premium_001" alt="Cartagena Premium"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="cartagena premium cartagena-premium cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="45">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-premium/imagenes/cartagena-premium_001" alt="Cartagena Premium"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener">Cartagena Premium</a></h3>
-          <p class="meta">45 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/cartagena-premium/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/cartagena-premium/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="corales de indias corales-de-indias">
-        <a class="foto" href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/corales-de-indias/imagenes/corales-de-indias_001" alt="Corales de Indias"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="corales de indias corales-de-indias cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="23">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/corales-de-indias/imagenes/corales-de-indias_001" alt="Corales de Indias"><span class="marca-video">▶ video</span></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 23 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener">Corales de Indias</a></h3>
-          <p class="meta">23 fotos · 🎬 video</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/corales-de-indias/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/corales-de-indias/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="costa del sol costa-del-sol">
-        <a class="foto" href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/costa-del-sol/imagenes/costa-del-sol_001" alt="Costa del Sol"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="costa del sol costa-del-sol cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="71">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/costa-del-sol/imagenes/costa-del-sol_001" alt="Costa del Sol"><span class="marca-video">▶ video</span></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 71 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener">Costa del Sol</a></h3>
-          <p class="meta">71 fotos · 🎬 video</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/costa-del-sol/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/costa-del-sol/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="dorado plaza bocagrande dorado-plaza-bocagrande">
-        <a class="foto" href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_001" alt="Dorado Plaza Bocagrande"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="dorado plaza bocagrande dorado-plaza-bocagrande cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="83">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_001" alt="Dorado Plaza Bocagrande"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 83 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener">Dorado Plaza Bocagrande</a></h3>
-          <p class="meta">83 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/dorado-plaza-bocagrande/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/dorado-plaza-bocagrande/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="dorado plaza centro histórico dorado-plaza-centro-historico">
-        <a class="foto" href="https://galerias.trvely.com.co/dorado-plaza-centro-historico/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-centro-historico/imagenes/dorado-plaza-centro-historico_001" alt="Dorado Plaza Centro Histórico"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="dorado plaza centro histórico dorado-plaza-centro-historico cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="51">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/dorado-plaza-centro-historico/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-centro-historico/imagenes/dorado-plaza-centro-historico_001" alt="Dorado Plaza Centro Histórico"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 51 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/dorado-plaza-centro-historico/" target="_blank" rel="noopener">Dorado Plaza Centro Histórico</a></h3>
-          <p class="meta">51 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/dorado-plaza-centro-historico/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/dorado-plaza-centro-historico/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/dorado-plaza-centro-historico/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="toledo fl toledo-fl">
-        <a class="foto" href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_001" alt="Toledo Fl"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="toledo fl toledo-fl cartagena"
+        data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="27">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_001" alt="Toledo Fl"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Cartagena · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener">Toledo Fl</a></h3>
-          <p class="meta">27 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/toledo-fl/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/toledo-fl/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="santa marta">
-      <h2>Santa Marta <span class="n">8</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="delfin delfin">
-        <a class="foto" href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/delfin/imagenes/delfin_001" alt="Delfin"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="santa-marta">
+      <h2 class="titulo-bloque">Santa Marta <span class="cuenta">8</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="delfin delfin santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="15">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/delfin/imagenes/delfin_001" alt="Delfin"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 15 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener">Delfin</a></h3>
-          <p class="meta">15 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/delfin/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/delfin/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="los veleros los-veleros">
-        <a class="foto" href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/los-veleros/imagenes/los-veleros_001" alt="Los Veleros"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="los veleros los-veleros santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="48">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/los-veleros/imagenes/los-veleros_001" alt="Los Veleros"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 48 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener">Los Veleros</a></h3>
-          <p class="meta">48 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/los-veleros/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/los-veleros/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="medellin rodadero medellin-rodadero">
-        <a class="foto" href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/medellin-rodadero/imagenes/medellin-rodadero_001" alt="Medellin Rodadero"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="medellin rodadero medellin-rodadero santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="36">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/medellin-rodadero/imagenes/medellin-rodadero_001" alt="Medellin Rodadero"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener">Medellin Rodadero</a></h3>
-          <p class="meta">36 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/medellin-rodadero/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/medellin-rodadero/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="portobahia portobahia">
-        <a class="foto" href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_001" alt="Portobahia"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="portobahia portobahia santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="8">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_001" alt="Portobahia"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 8 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener">Portobahia</a></h3>
-          <p class="meta">8 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/portobahia/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/portobahia/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sanha plus sanha-plus">
-        <a class="foto" href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_002" alt="Sanha Plus"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sanha plus sanha-plus santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="7">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_002" alt="Sanha Plus"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 7 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener">Sanha Plus</a></h3>
-          <p class="meta">7 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sanha-plus/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sanha-plus/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="sansiraka sansiraka">
-        <a class="foto" href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/sansiraka/imagenes/sansiraka_001" alt="Sansiraka"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="sansiraka sansiraka santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="61">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sansiraka/imagenes/sansiraka_001" alt="Sansiraka"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 61 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener">Sansiraka</a></h3>
-          <p class="meta">61 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sansiraka/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sansiraka/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="taybo beach taybo-beach">
-        <a class="foto" href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_001" alt="Taybo Beach"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="taybo beach taybo-beach santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="50">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_001" alt="Taybo Beach"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 50 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener">Taybo Beach</a></h3>
-          <p class="meta">50 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/taybo-beach/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/taybo-beach/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="vadamar vadamar">
-        <a class="foto" href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/santa-marta/vadamar/imagenes/vadamar_001" alt="Vadamar"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="vadamar vadamar santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="20">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/vadamar/imagenes/vadamar_001" alt="Vadamar"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 20 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener">Vadamar</a></h3>
-          <p class="meta">20 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/vadamar/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/vadamar/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="coveñas">
-      <h2>Coveñas <span class="n">7</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="green green">
-        <a class="foto" href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/green/imagenes/green_001" alt="Green"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="covenas">
+      <h2 class="titulo-bloque">Coveñas <span class="cuenta">7</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="green green coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="39">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/green/imagenes/green_001" alt="Green"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 39 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener">Green</a></h3>
-          <p class="meta">39 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/green/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/green/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="kpre kpre">
-        <a class="foto" href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/kpre/imagenes/kpre_002" alt="Kpre"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="kpre kpre coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="5">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/kpre/imagenes/kpre_002" alt="Kpre"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 5 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener">Kpre</a></h3>
-          <p class="meta">5 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/kpre/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/kpre/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="marbelo marbelo">
-        <a class="foto" href="https://galerias.trvely.com.co/marbelo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/marbelo/imagenes/marbelo_001" alt="Marbelo"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="marbelo marbelo coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="8">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/marbelo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/marbelo/imagenes/marbelo_001" alt="Marbelo"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 8 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/marbelo/" target="_blank" rel="noopener">Marbelo</a></h3>
-          <p class="meta">8 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/marbelo/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/marbelo/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/marbelo/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="palmalinda palmalinda">
-        <a class="foto" href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_001" alt="Palmalinda"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="palmalinda palmalinda coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="5">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_001" alt="Palmalinda"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 5 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener">Palmalinda</a></h3>
-          <p class="meta">5 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/palmalinda/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/palmalinda/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="playa divina playa-divina">
-        <a class="foto" href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/playa-divina/imagenes/playa-divina_001" alt="Playa Divina"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="playa divina playa-divina coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="118">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/playa-divina/imagenes/playa-divina_001" alt="Playa Divina"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 118 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener">Playa Divina</a></h3>
-          <p class="meta">118 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/playa-divina/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/playa-divina/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="poblado poblado">
-        <a class="foto" href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/covenas/poblado/imagenes/poblado_001" alt="Poblado"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="poblado poblado coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="88">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/poblado/imagenes/poblado_001" alt="Poblado"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 88 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener">Poblado</a></h3>
-          <p class="meta">88 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/poblado/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/poblado/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="portoalegre portoalegre">
-        <a class="foto" href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_001" alt="Portoalegre"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="portoalegre portoalegre coveñas"
+        data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="141">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_001" alt="Portoalegre"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Coveñas · 141 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener">Portoalegre</a></h3>
-          <p class="meta">141 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/portoalegre/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/portoalegre/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="leticia">
-      <h2>Leticia <span class="n">2</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="anaconda anaconda">
-        <a class="foto" href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/leticia/anaconda/imagenes/anaconda_001" alt="Anaconda"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="leticia">
+      <h2 class="titulo-bloque">Leticia <span class="cuenta">2</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="anaconda anaconda leticia"
+        data-destino="leticia" data-tipo="hotel" data-video="0" data-fotos="85">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/anaconda/imagenes/anaconda_001" alt="Anaconda"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Leticia · 85 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener">Anaconda</a></h3>
-          <p class="meta">85 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/anaconda/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/anaconda/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="utuane utuane">
-        <a class="foto" href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/leticia/utuane/imagenes/utuane_001" alt="Utuane"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="utuane utuane leticia"
+        data-destino="leticia" data-tipo="hotel" data-video="0" data-fotos="64">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/utuane/imagenes/utuane_001" alt="Utuane"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Leticia · 64 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener">Utuane</a></h3>
-          <p class="meta">64 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/utuane/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/utuane/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="punta cana">
-      <h2>Punta Cana <span class="n">2</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="hm alma de bayahibe hm-alma-de-bayahibe">
-        <a class="foto" href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_001" alt="HM Alma de Bayahibe"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="punta-cana">
+      <h2 class="titulo-bloque">Punta Cana <span class="cuenta">2</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="hm alma de bayahibe hm-alma-de-bayahibe punta cana"
+        data-destino="punta-cana" data-tipo="hotel" data-video="0" data-fotos="11">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_001" alt="HM Alma de Bayahibe"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Punta Cana · 11 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener">HM Alma de Bayahibe</a></h3>
-          <p class="meta">11 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/hm-alma-de-bayahibe/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/hm-alma-de-bayahibe/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="whala bavaro whala-bavaro">
-        <a class="foto" href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/punta-cana/whala-bavaro/imagenes/whala-bavaro_001" alt="Whala Bavaro"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="whala bavaro whala-bavaro punta cana"
+        data-destino="punta-cana" data-tipo="hotel" data-video="0" data-fotos="55">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/punta-cana/whala-bavaro/imagenes/whala-bavaro_001" alt="Whala Bavaro"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Punta Cana · 55 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener">Whala Bavaro</a></h3>
-          <p class="meta">55 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/whala-bavaro/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/whala-bavaro/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="tolú">
-      <h2>Tolú <span class="n">2</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="kevins kevins">
-        <a class="foto" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/tolu/kevins/imagenes/kevins_001" alt="Kevins"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="tolu">
+      <h2 class="titulo-bloque">Tolú <span class="cuenta">2</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="kevins kevins tolú"
+        data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="42">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/tolu/kevins/imagenes/kevins_001" alt="Kevins"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tolú · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener">Kevins</a></h3>
-          <p class="meta">42 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/kevins/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/kevins/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
-      <article class="card" data-buscar="loa loa">
-        <a class="foto" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/tolu/loa/imagenes/loa_001" alt="Loa"></a>
-        <div class="txt">
+      <article class="ficha" data-buscar="loa loa tolú"
+        data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="204">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/tolu/loa/imagenes/loa_001" alt="Loa"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tolú · 204 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Loa</a></h3>
-          <p class="meta">204 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/loa/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/loa/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="juan dolio">
-      <h2>Juan Dolio <span class="n">1</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="coral costa caribe coral-costa-caribe">
-        <a class="foto" href="https://galerias.trvely.com.co/coral-costa-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/juan-dolio/coral-costa-caribe/imagenes/coral-costa-caribe_002" alt="Coral Costa Caribe"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="juan-dolio">
+      <h2 class="titulo-bloque">Juan Dolio <span class="cuenta">1</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="coral costa caribe coral-costa-caribe juan dolio"
+        data-destino="juan-dolio" data-tipo="hotel" data-video="0" data-fotos="90">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/coral-costa-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/juan-dolio/coral-costa-caribe/imagenes/coral-costa-caribe_002" alt="Coral Costa Caribe"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Juan Dolio · 90 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/coral-costa-caribe/" target="_blank" rel="noopener">Coral Costa Caribe</a></h3>
-          <p class="meta">90 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/coral-costa-caribe/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/coral-costa-caribe/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/coral-costa-caribe/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="medellín">
-      <h2>Medellín <span class="n">1</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="sauces del estadio sauces-del-estadio">
-        <a class="foto" href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_002" alt="Sauces del Estadio"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="medellin">
+      <h2 class="titulo-bloque">Medellín <span class="cuenta">1</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="sauces del estadio sauces-del-estadio medellín"
+        data-destino="medellin" data-tipo="hotel" data-video="0" data-fotos="63">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_002" alt="Sauces del Estadio"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Medellín · 63 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener">Sauces del Estadio</a></h3>
-          <p class="meta">63 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/sauces-del-estadio/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sauces-del-estadio/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="riohacha">
-      <h2>Riohacha <span class="n">1</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="gimaura gimaura">
-        <a class="foto" href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/riohacha/gimaura/imagenes/gimaura_001" alt="Gimaura"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="riohacha">
+      <h2 class="titulo-bloque">Riohacha <span class="cuenta">1</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="gimaura gimaura riohacha"
+        data-destino="riohacha" data-tipo="hotel" data-video="0" data-fotos="18">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/riohacha/gimaura/imagenes/gimaura_001" alt="Gimaura"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Riohacha · 18 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener">Gimaura</a></h3>
-          <p class="meta">18 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/gimaura/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/gimaura/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-    <section class="destino" data-destino="santo domingo">
-      <h2>Santo Domingo <span class="n">1</span></h2>
-      <div class="grid">
-      <article class="card" data-buscar="whala bocachica whala-bocachica">
-        <a class="foto" href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,w_480,h_320,q_auto,f_auto/trvely/hoteles/bocachica/whala-bocachica/imagenes/whala-bocachica_001" alt="Whala Bocachica"></a>
-        <div class="txt">
+    <section class="bloque" data-seccion="santo-domingo">
+      <h2 class="titulo-bloque">Santo Domingo <span class="cuenta">1</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="whala bocachica whala-bocachica santo domingo"
+        data-destino="santo-domingo" data-tipo="hotel" data-video="0" data-fotos="47">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bocachica/whala-bocachica/imagenes/whala-bocachica_001" alt="Whala Bocachica"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santo Domingo · 47 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener">Whala Bocachica</a></h3>
-          <p class="meta">47 fotos</p>
-          <button class="copiar" data-url="https://galerias.trvely.com.co/whala-bocachica/">📋 Copiar enlace</button>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/whala-bocachica/">Copiar enlace</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       </article>
       </div>
     </section>
-  <p class="vacio" id="vacio">No encontré nada con ese nombre.</p>
+  <p class="nada" id="nada"><strong>Sin resultados</strong>Prueba con otro nombre o quita los filtros.</p>
 </main>
-<footer>74 galerías · 4 destinos de experiencias · actualizado 22/07/2026 09:53<br>
-Material comercial interno · Viaja Fácil, Viaja Trvely.</footer>
+
+<footer>
+  <p class="firma-pie">Viaja Fácil, Viaja Trvely</p>
+  <p>74 galerías de hoteles · 4 destinos de experiencias · actualizado 22/07/2026 · 10:54<br>
+  Material comercial interno — no compartir esta página con clientes.</p>
+</footer>
+
 <script>
-  var q = document.getElementById('q'), vacio = document.getElementById('vacio');
-  q.addEventListener('input', function () {
-    var t = q.value.trim().toLowerCase(), hay = 0;
-    document.querySelectorAll('.destino').forEach(function (sec) {
-      var dest = sec.dataset.destino || '', vis = 0;
-      sec.querySelectorAll('.card').forEach(function (c) {
-        var ok = !t || c.dataset.buscar.indexOf(t) > -1 || dest.indexOf(t) > -1;
-        c.style.display = ok ? '' : 'none';
+  var q = document.getElementById('q'), nada = document.getElementById('nada');
+  var soloVideo = document.getElementById('solo-video'), selOrden = document.getElementById('orden');
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var destino = 'todos';
+
+  function aplicar() {
+    var t = q.value.trim().toLowerCase(), video = soloVideo.checked, visibles = 0;
+    document.querySelectorAll('.bloque').forEach(function (sec) {
+      var deSeccion = sec.dataset.seccion, vis = 0;
+      sec.querySelectorAll('.ficha').forEach(function (f) {
+        var ok = (destino === 'todos' || destino === deSeccion)
+              && (!t || f.dataset.buscar.indexOf(t) > -1)
+              && (!video || f.dataset.video === '1');
+        f.hidden = !ok;
         if (ok) vis++;
       });
-      sec.style.display = vis ? '' : 'none';
-      var n = sec.querySelector('h2 .n');
-      if (n) n.textContent = vis;        // el contador dice lo que se ve, no el total de siempre
-      hay += vis;
+      sec.hidden = !vis;
+      var c = sec.querySelector('.cuenta');
+      if (c) c.textContent = vis;
+      visibles += vis;
     });
-    vacio.style.display = hay ? 'none' : 'block';
+    nada.style.display = visibles ? 'none' : 'block';
+  }
+
+  function ordenar() {
+    var porFotos = selOrden.value === 'fotos';
+    document.querySelectorAll('.rejilla').forEach(function (r) {
+      [].slice.call(r.children)
+        .sort(function (a, b) {
+          if (porFotos) return (+b.dataset.fotos) - (+a.dataset.fotos);
+          return a.dataset.buscar.localeCompare(b.dataset.buscar, 'es');
+        })
+        .forEach(function (f) { r.appendChild(f); });
+    });
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (o) { o.classList.remove('activo'); });
+      c.classList.add('activo');
+      destino = c.dataset.filtroDestino;
+      aplicar();
+      window.scrollTo({ top: document.querySelector('.filtros').offsetTop - 4, behavior: 'smooth' });
+    });
   });
+  q.addEventListener('input', aplicar);
+  soloVideo.addEventListener('change', aplicar);
+  selOrden.addEventListener('change', function () { ordenar(); aplicar(); });
+
   // Copiar con RESPALDO: si el navegador bloquea la API moderna (sin foco, permiso, contexto no
-  // seguro), se usa el metodo viejo. El asesor SIEMPRE recibe una respuesta: nunca un boton mudo.
+  // seguro), se usa el metodo viejo. El asesor SIEMPRE recibe respuesta: nunca un boton mudo.
   function porElMetodoViejo(txt) {
     var ta = document.createElement('textarea');
     ta.value = txt; ta.setAttribute('readonly', '');
@@ -767,14 +1268,16 @@ Material comercial interno · Viaja Fácil, Viaja Trvely.</footer>
     return Promise.resolve(porElMetodoViejo(txt));
   }
   document.addEventListener('click', function (e) {
-    var b = e.target.closest('.copiar');
+    var b = e.target.closest('.btn-copiar');
     if (!b) return;
     var antes = b.dataset.antes || b.textContent;
     b.dataset.antes = antes;
     copiar(b.dataset.url).then(function (ok) {
-      b.textContent = ok ? '✅ ¡Copiado!' : '⚠️ Copia el enlace del título';
-      b.classList.toggle('ok', ok);
-      setTimeout(function () { b.textContent = antes; b.classList.remove('ok'); }, 1700);
+      b.textContent = ok ? '¡Copiado!' : 'Copia el enlace del título';
+      b.classList.toggle('ok', ok); b.classList.toggle('falla', !ok);
+      setTimeout(function () {
+        b.textContent = antes; b.classList.remove('ok', 'falla');
+      }, 1700);
     });
   });
 </script>
