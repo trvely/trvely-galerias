@@ -1,0 +1,172 @@
+{
+  "ac-by-marriott-santa-marta": {
+    "destino": "santa-marta",
+    "titulo": "AC BY MARRIOTT SANTA MARTA",
+    "actual": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_001",
+    "propuesta": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_016",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_016",
+        "puntos": 81.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_021",
+        "puntos": 79.0
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_028",
+        "puntos": 79.0
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_042",
+        "puntos": 78.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_011",
+        "puntos": 72.9
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_039",
+        "puntos": 72.2
+      }
+    ],
+    "puntos_actual": 69.0
+  },
+  "edmar-santa-marta": {
+    "destino": "santa-marta",
+    "titulo": "EDMAR SANTA MARTA",
+    "actual": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_001",
+    "propuesta": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_013",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_013",
+        "puntos": 76.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_006",
+        "puntos": 73.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_011",
+        "puntos": 73.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_015",
+        "puntos": 69.0
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_001",
+        "puntos": 68.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_010",
+        "puntos": 67.6
+      }
+    ],
+    "puntos_actual": 68.5
+  },
+  "hilton-garden-inn-santa-marta": {
+    "destino": "santa-marta",
+    "titulo": "HILTON GARDEN INN SANTA MARTA",
+    "actual": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_001",
+    "propuesta": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_013",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_013",
+        "puntos": 84.0
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_049",
+        "puntos": 80.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_011",
+        "puntos": 74.1
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_042",
+        "puntos": 71.1
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_004",
+        "puntos": 70.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_052",
+        "puntos": 69.8
+      }
+    ],
+    "puntos_actual": 69.6
+  },
+  "irotama-resort": {
+    "destino": "santa-marta",
+    "titulo": "IROTAMA RESORT",
+    "actual": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_001",
+    "propuesta": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_004",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_004",
+        "puntos": 70.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_008",
+        "puntos": 64.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_003",
+        "puntos": 61.9
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_001",
+        "puntos": 59.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_006",
+        "puntos": 58.7
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_009",
+        "puntos": 49.4
+      }
+    ],
+    "puntos_actual": 59.6
+  },
+  "mercure-santa-marta-emile": {
+    "destino": "santa-marta",
+    "titulo": "MERCURE SANTA MARTA EMILE",
+    "actual": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_001",
+    "propuesta": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
+        "puntos": 73.9
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_026",
+        "puntos": 66.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_017",
+        "puntos": 63.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_008",
+        "puntos": 63.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_039",
+        "puntos": 62.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_042",
+        "puntos": 61.9
+      }
+    ],
+    "puntos_actual": 53.6
+  }
+}

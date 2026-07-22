@@ -1,0 +1,69 @@
+{
+  "_comentario": "Tabla unica de destinos de la Vitrina. slug = como se agrupa; nombre = como se ve; prod = como se llama en la base. Agregar un destino nuevo aqui NO requiere tocar codigo.",
+  "destinos": {
+    "san-andres": {
+      "nombre": "San Andrés",
+      "prod": "SAN_ANDRES"
+    },
+    "cartagena": {
+      "nombre": "Cartagena",
+      "prod": "CARTAGENA"
+    },
+    "santa-marta": {
+      "nombre": "Santa Marta",
+      "prod": "SANTA_MARTA"
+    },
+    "covenas": {
+      "nombre": "Coveñas",
+      "prod": "COVEÑAS"
+    },
+    "tolu": {
+      "nombre": "Tolú",
+      "prod": "TOLÚ"
+    },
+    "leticia": {
+      "nombre": "Leticia",
+      "prod": "LETICIA"
+    },
+    "medellin": {
+      "nombre": "Medellín",
+      "prod": "MEDELLIN"
+    },
+    "riohacha": {
+      "nombre": "Riohacha",
+      "prod": "RIOHACHA"
+    },
+    "punta-cana": {
+      "nombre": "Punta Cana",
+      "prod": "PUNTA_CANA"
+    },
+    "juan-dolio": {
+      "nombre": "Juan Dolio",
+      "prod": "JUAN_DOLIO"
+    },
+    "santo-domingo": {
+      "nombre": "Santo Domingo",
+      "prod": "SANTO_DOMINGO"
+    },
+    "bayahibe": {
+      "nombre": "Bayahíbe",
+      "prod": null
+    },
+    "bocachica": {
+      "nombre": "Bocachica",
+      "prod": null
+    },
+    "peru": {
+      "nombre": "Perú",
+      "prod": "PERU"
+    },
+    "cusco": {
+      "nombre": "Cusco",
+      "prod": "CUSCO"
+    },
+    "lima": {
+      "nombre": "Lima",
+      "prod": "LIMA"
+    }
+  }
+}

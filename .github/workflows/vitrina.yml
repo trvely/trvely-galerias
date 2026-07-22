@@ -1,0 +1,57 @@
+# .github/workflows/vitrina.yml — arma la Vitrina sola cuando entra una galería nueva.
+#
+# SIN UN SOLO SECRETO: build.py lee solo el repo (las fichas meta.json traen destino, fotos,
+# portada). No toca Cloudinary ni PROD. Ese es el candado del Bloque 3.
+#
+# Este archivo NO vive aquí en producción: goal_vitrina lo publica como
+# .github/workflows/vitrina.yml dentro del repo trvely-galerias. Aquí está la fuente.
+
+name: Vitrina
+
+on:
+  push:
+    branches: [main]
+    # NO reaccionar a lo que el propio workflow escribe (index.html) ni a los assets:
+    # así se evita el bucle de "push -> workflow -> push -> workflow".
+    paths-ignore:
+      - 'index.html'
+      - 'assets/**'
+      - '.vitrina/**'
+  # reloj diario 12:00 UTC (07:00 Colombia): recoge lo que el push no cubre,
+  # sobre todo las experiencias (viven en OTRO repo y no pueden disparar este sin otro secreto).
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch: {}   # botón manual, por si acaso
+
+# dos publicaciones seguidas no se pisan el push entre sí
+concurrency:
+  group: vitrina
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # para hacer commit del index.html de vuelta
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Armar la Vitrina (sin llaves, solo el repo)
+        run: python .vitrina/build.py --repo .
+
+      - name: Publicar si cambió
+        run: |
+          if [ -n "$(git status --porcelain index.html)" ]; then
+            git config user.name  "vitrina-bot"
+            git config user.email "vitrina-bot@users.noreply.github.com"
+            git add index.html
+            git commit -m "Vitrina al dia (GitHub Actions)"
+            # el push va con GITHUB_TOKEN: por diseño NO dispara otros workflows -> sin bucle
+            git push
+          else
+            echo "La Vitrina ya estaba al dia: nada que publicar."
+          fi

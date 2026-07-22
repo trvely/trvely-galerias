@@ -1,0 +1,152 @@
+{
+  "atlantic-lux": {
+    "pid": "trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_017",
+    "por_que": "piscina con vista a la ciudad (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "cartagena-dubai": {
+    "pid": "trvely/hoteles/cartagena/cartagena-dubai/imagenes/cartagena-dubai_045",
+    "por_que": "piscina infinita sobre Bocagrande (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "ghl-relax-sunrise": {
+    "pid": "trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_047",
+    "por_que": "vista aerea con la piscina (era un salon de eventos)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "medellin-rodadero": {
+    "pid": "trvely/hoteles/santa-marta/medellin-rodadero/imagenes/medellin-rodadero_019",
+    "por_que": "balcon con vista verde (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "on-vacation-tower": {
+    "pid": "trvely/hoteles/san-andres/on-vacation-tower/imagenes/on-vacation-tower_001",
+    "por_que": "restaurante con mural de color (era un pasillo)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "portoalegre": {
+    "pid": "trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_088",
+    "por_que": "piscina y fachada frente al mar (era una habitacion blanca)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "portobahia": {
+    "pid": "trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_037",
+    "por_que": "el bar de diseno (la mejor puntuada eran unos coteles)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "portobelo-convention-center": {
+    "pid": "trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_007",
+    "por_que": "piscina con palmeras (era una cama)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "sauces-del-estadio": {
+    "pid": "trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_061",
+    "por_que": "habitacion luminosa (era un pasillo exterior)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "san-luis-beach-house": {
+    "pid": "trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_049",
+    "por_que": "bar de playa del hotel (la mejor puntuada era un BANO)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "taybo-beach": {
+    "pid": "trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_039",
+    "por_que": "la habitacion mas luminosa (no hay exteriores en la galeria)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "toledo-fl": {
+    "pid": "trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_015",
+    "por_que": "piscina (eran camas rojas)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "tiuna": {
+    "pid": "trvely/hoteles/san-andres/tiuna/imagenes/tiuna_025",
+    "por_que": "vista aerea de la playa con el hotel (era una habitacion verde)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "verde-mar": {
+    "pid": "trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_036",
+    "por_que": "mar turquesa desde el balcon (era el comedor)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "dorado-plaza-bocagrande": {
+    "pid": "trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_068",
+    "por_que": "piscina del hotel (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "blu-by-tamaca": {
+    "pid": "trvely/hoteles/santa-marta/blu-by-tamaca/imagenes/blu-by-tamaca_024",
+    "por_que": "lounge con vista (las demas son interiores cerrados)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "delfin": {
+    "pid": "trvely/hoteles/santa-marta/delfin/imagenes/delfin_024",
+    "por_que": "la piscina, unica foto de exteriores",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "del-mar-santa-marta": {
+    "pid": "trvely/hoteles/santa-marta/del-mar-santa-marta/imagenes/del-mar-santa-marta_001",
+    "por_que": "piscina con la fachada (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "porto-horizonte": {
+    "pid": "trvely/hoteles/santa-marta/porto-horizonte/imagenes/porto-horizonte_022",
+    "por_que": "piscina con vista al mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "rodadero-dorado": {
+    "pid": "trvely/hoteles/santa-marta/rodadero-dorado/imagenes/rodadero-dorado_014",
+    "por_que": "terraza con jacuzzi (el resto son comedores)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "sanha-plus": {
+    "pid": "trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_010",
+    "por_que": "la piscina grande",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "tamaca-beach-resort": {
+    "pid": "trvely/hoteles/santa-marta/tamaca-beach-resort/imagenes/tamaca-beach-resort_026",
+    "por_que": "el hotel con flores y el mar detras (la mejor puntuada era un coffee break)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "tama-santa-marta": {
+    "pid": "trvely/hoteles/santa-marta/tama-santa-marta/imagenes/tama-santa-marta_029",
+    "por_que": "la piscina del hotel (el atardecer es mas lindo pero no muestra el hotel)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "tayrona-del-mar": {
+    "pid": "trvely/hoteles/santa-marta/tayrona-del-mar/imagenes/tayrona-del-mar_024",
+    "por_que": "piscina con vista a la ciudad y el mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "vadamar": {
+    "pid": "trvely/hoteles/santa-marta/vadamar/imagenes/vadamar_014",
+    "por_que": "fachada con la piscina (la mejor puntuada se veia encerrada)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "edmar-santa-marta": {
+    "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_013",
+    "por_que": "piscina del hotel (era una habitacion)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "irotama-resort": {
+    "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_004",
+    "por_que": "vista aerea del resort con la piscina y el mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "ac-by-marriott-santa-marta": {
+    "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_016",
+    "por_que": "piscina en azotea al atardecer sobre la bahia",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "hilton-garden-inn-santa-marta": {
+    "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_013",
+    "por_que": "terraza-piscina con vista al mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "mercure-santa-marta-emile": {
+    "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
+    "por_que": "piscina infinita frente al mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  }
+}

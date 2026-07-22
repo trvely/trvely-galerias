@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "cartagena",
+    "url": "https://experiencias.trvely.com.co/cartagena/",
+    "fondo": "experiencias/cartagena/_hero/ciudad-amurallada-soleada",
+    "titulo": "Experiencias Cartagena",
+    "http": 200,
+    "vivo": true
+  },
+  {
+    "slug": "leticia",
+    "url": "https://experiencias.trvely.com.co/leticia/",
+    "fondo": "experiencias/leticia/_hero/amazonas",
+    "titulo": "Experiencias Leticia",
+    "http": 200,
+    "vivo": true
+  },
+  {
+    "slug": "medellin",
+    "url": "https://experiencias.trvely.com.co/medellin/",
+    "fondo": "experiencias/medellin/_hero/medellin",
+    "titulo": "Experiencias Medellín",
+    "http": 200,
+    "vivo": true
+  },
+  {
+    "slug": "peru",
+    "url": "https://experiencias.trvely.com.co/peru/",
+    "fondo": "experiencias/peru/machu-picchu-circuito-2/imagenes/01-portada",
+    "titulo": "Experiencias Perú",
+    "http": 200,
+    "vivo": true
+  }
+]
