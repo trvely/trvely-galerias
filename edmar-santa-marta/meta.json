@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "edmar-santa-marta",
+  "titulo": "EDMAR SANTA MARTA",
+  "destino": "santa-marta",
+  "cloudinary": "edmar-santa-marta",
+  "fotos": 21,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

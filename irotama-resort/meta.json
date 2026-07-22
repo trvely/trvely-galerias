@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "irotama-resort",
+  "titulo": "IROTAMA RESORT",
+  "destino": "santa-marta",
+  "cloudinary": "irotama-resort",
+  "fotos": 11,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}
