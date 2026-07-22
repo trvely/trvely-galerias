@@ -8,5 +8,8 @@
   "video": false,
   "portada": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_001",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-07-22"
+  "generado": "2026-07-22",
+  "conservado_de_ficha_previa": [
+    "portada"
+  ]
 }
