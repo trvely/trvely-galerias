@@ -26,7 +26,7 @@
                   border-radius:34px 34px 0 0; }
   .hero-caja { max-width:1220px; margin:0 auto; padding:26px 22px 58px; display:grid;
                 grid-template-columns:minmax(0,1fr) 300px; gap:16px; align-items:end; }
-  .logo { height:44px; opacity:.97; }
+  .logo { height:34px; opacity:.97; }
   .eyebrow { margin:30px 0 10px; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
               color:var(--beige); font-weight:700; }
   /* Extenda es una display muy alta: con line-height < 1 los remates se cortan arriba. */
@@ -86,8 +86,14 @@
   .marca-video { position:absolute; left:10px; bottom:10px; background:rgba(28,27,26,.72); color:#fff;
                   font-size:10.5px; font-weight:700; letter-spacing:.06em; padding:5px 9px;
                   border-radius:20px; backdrop-filter:blur(4px); }
-  .ficha-foto.exp { display:grid; place-content:center; text-align:center; gap:4px;
-                     background:linear-gradient(135deg,var(--burg) 0%,var(--burg-hondo) 100%); color:#fff; }
+  .ficha-foto.exp { display:grid; place-content:center; text-align:center; gap:4px; color:#fff;
+                     background:linear-gradient(135deg,var(--burg) 0%,var(--burg-hondo) 100%);
+                     background-size:cover; background-position:center; }
+  .ficha-foto.exp::before { content:''; position:absolute; inset:0;
+                     background:linear-gradient(165deg,rgba(180,18,65,.38) 0%,rgba(124,12,44,.72) 100%); }
+  .ficha-foto.exp > * { position:relative; z-index:1;
+                     text-shadow:0 2px 4px rgba(0,0,0,.55), 0 6px 24px rgba(0,0,0,.5); }
+  .ficha:hover .ficha-foto.exp::before { background:linear-gradient(165deg,rgba(180,18,65,.26) 0%,rgba(124,12,44,.6) 100%); }
   .exp-rotulo { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--beige);
                  font-weight:700; }
   .exp-destino { font-family:'Extenda','Montserrat',sans-serif; font-weight:400; font-size:30px;
@@ -138,7 +144,7 @@
 <header class="hero">
   <div class="hero-caja">
     <div>
-      <img class="logo" src="assets/logo-trvely.png" alt="Trvely">
+      <img class="logo" src="assets/logo-beige.png" alt="Trvely">
       <p class="eyebrow">74 galerías · 4 destinos de experiencias · 3,436 fotos</p>
       <h1>VITRINA</h1>
       <p class="firma">todo lo que puedes mostrar</p>
@@ -190,7 +196,7 @@
       <div class="rejilla">
       <article class="ficha ficha-exp" data-buscar="experiencias cartagena cartagena"
         data-destino="cartagena" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/cartagena/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/cartagena/_hero/ciudad-amurallada-soleada)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Cartagena</span>
         </a>
         <div class="ficha-cuerpo">
@@ -204,7 +210,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias leticia leticia"
         data-destino="leticia" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/leticia/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/leticia/_hero/amazonas)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Leticia</span>
         </a>
         <div class="ficha-cuerpo">
@@ -218,7 +224,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias medellín medellin"
         data-destino="medellin" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/medellin/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/medellin/_hero/medellin)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Medellín</span>
         </a>
         <div class="ficha-cuerpo">
@@ -232,7 +238,7 @@
       </article>
       <article class="ficha ficha-exp" data-buscar="experiencias perú peru"
         data-destino="peru" data-tipo="experiencia" data-video="0" data-fotos="999">
-        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener">
+        <a class="ficha-foto exp" href="https://experiencias.trvely.com.co/peru/" target="_blank" rel="noopener" style="background-image:url(https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/e_improve:outdoor,e_vibrance:35/experiencias/peru/machu-picchu-circuito-2/imagenes/01-portada)">
           <span class="exp-rotulo">Experiencias</span><span class="exp-destino">Perú</span>
         </a>
         <div class="ficha-cuerpo">
@@ -251,7 +257,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="acantilado de la tierra acantilado-de-la-tierra san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="42">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/acantilado-de-la-tierra/imagenes/acantilado-de-la-tierra_001" alt="Acantilado de la Tierra"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/acantilado-de-la-tierra/imagenes/acantilado-de-la-tierra_012" alt="Acantilado de la Tierra"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/acantilado-de-la-tierra/" target="_blank" rel="noopener">Acantilado de la Tierra</a></h3>
@@ -263,7 +269,7 @@
       </article>
       <article class="ficha" data-buscar="apartamentos turísticos faviles apartamentos-turisticos-faviles san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="13">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/apartamentos-turisticos-faviles/imagenes/apartamentos-turisticos-faviles_001" alt="Apartamentos Turísticos Faviles"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/apartamentos-turisticos-faviles/imagenes/apartamentos-turisticos-faviles_009" alt="Apartamentos Turísticos Faviles"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 13 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/apartamentos-turisticos-faviles/" target="_blank" rel="noopener">Apartamentos Turísticos Faviles</a></h3>
@@ -275,7 +281,7 @@
       </article>
       <article class="ficha" data-buscar="aquamare aquamare san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="55">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/aquamare/imagenes/aquamare_001" alt="Aquamare"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/aquamare/imagenes/aquamare_010" alt="Aquamare"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 55 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/aquamare/" target="_blank" rel="noopener">Aquamare</a></h3>
@@ -287,7 +293,7 @@
       </article>
       <article class="ficha" data-buscar="arena blanca arena-blanca san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/arena-blanca/imagenes/arena-blanca_001" alt="Arena Blanca"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/arena-blanca/imagenes/arena-blanca_013" alt="Arena Blanca"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/arena-blanca/" target="_blank" rel="noopener">Arena Blanca</a></h3>
@@ -299,7 +305,7 @@
       </article>
       <article class="ficha" data-buscar="azure lofts &amp; pool azure-lofts-pool san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="46">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/azure-lofts-pool/imagenes/azure-lofts-pool_001" alt="Azure Lofts &amp; Pool"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/azure-lofts-pool/imagenes/azure-lofts-pool_006" alt="Azure Lofts &amp; Pool"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 46 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/azure-lofts-pool/" target="_blank" rel="noopener">Azure Lofts &amp; Pool</a></h3>
@@ -311,7 +317,7 @@
       </article>
       <article class="ficha" data-buscar="blue cove by on vacation blue-cove-by-on-vacation san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="40">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-cove-by-on-vacation/imagenes/blue-cove-by-on-vacation_001" alt="Blue Cove by On Vacation"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-cove-by-on-vacation/imagenes/blue-cove-by-on-vacation_011" alt="Blue Cove by On Vacation"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 40 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-cove-by-on-vacation/" target="_blank" rel="noopener">Blue Cove by On Vacation</a></h3>
@@ -323,7 +329,7 @@
       </article>
       <article class="ficha" data-buscar="blue island hotel blue-island-hotel san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="13">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-island-hotel/imagenes/blue-island-hotel_001" alt="Blue Island Hotel"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-island-hotel/imagenes/blue-island-hotel_012" alt="Blue Island Hotel"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 13 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-island-hotel/" target="_blank" rel="noopener">Blue Island Hotel</a></h3>
@@ -335,7 +341,7 @@
       </article>
       <article class="ficha" data-buscar="blue reef blue-reef san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="26">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-reef/imagenes/blue-reef_001" alt="Blue Reef"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/blue-reef/imagenes/blue-reef_014" alt="Blue Reef"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 26 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/blue-reef/" target="_blank" rel="noopener">Blue Reef</a></h3>
@@ -347,7 +353,7 @@
       </article>
       <article class="ficha" data-buscar="calypso beach calipso san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="45">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/calipso/imagenes/calipso_003" alt="Calypso Beach"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/calipso/imagenes/calipso_008" alt="Calypso Beach"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/calipso/" target="_blank" rel="noopener">Calypso Beach</a></h3>
@@ -359,7 +365,7 @@
       </article>
       <article class="ficha" data-buscar="caribbean corals hotel boutique caribbean-corals-hotel-boutique san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="57">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/caribbean-corals-hotel-boutique/imagenes/caribbean-corals-hotel-boutique_001" alt="Caribbean Corals Hotel Boutique"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/caribbean-corals-hotel-boutique/imagenes/caribbean-corals-hotel-boutique_005" alt="Caribbean Corals Hotel Boutique"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 57 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/caribbean-corals-hotel-boutique/" target="_blank" rel="noopener">Caribbean Corals Hotel Boutique</a></h3>
@@ -371,7 +377,7 @@
       </article>
       <article class="ficha" data-buscar="decameron aquarium - all inclusive decameron-aquarium-all-inclusive san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-aquarium-all-inclusive/imagenes/decameron-aquarium-all-inclusive_001" alt="Decameron Aquarium - All Inclusive"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-aquarium-all-inclusive/imagenes/decameron-aquarium-all-inclusive_013" alt="Decameron Aquarium - All Inclusive"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-aquarium-all-inclusive/" target="_blank" rel="noopener">Decameron Aquarium - All Inclusive</a></h3>
@@ -383,7 +389,7 @@
       </article>
       <article class="ficha" data-buscar="decameron isleño - all inclusive decameron-isleno-all-inclusive san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="59">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-isleno-all-inclusive/imagenes/decameron-isleno-all-inclusive_001" alt="Decameron Isleño - All Inclusive"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-isleno-all-inclusive/imagenes/decameron-isleno-all-inclusive_014" alt="Decameron Isleño - All Inclusive"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 59 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-isleno-all-inclusive/" target="_blank" rel="noopener">Decameron Isleño - All Inclusive</a></h3>
@@ -395,7 +401,7 @@
       </article>
       <article class="ficha" data-buscar="decameron los delfines - all inclusive decameron-los-delfines-all-inclusive san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="30">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-los-delfines-all-inclusive/imagenes/decameron-los-delfines-all-inclusive_001" alt="Decameron Los Delfines - All Inclusive"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-los-delfines-all-inclusive/imagenes/decameron-los-delfines-all-inclusive_003" alt="Decameron Los Delfines - All Inclusive"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 30 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-los-delfines-all-inclusive/" target="_blank" rel="noopener">Decameron Los Delfines - All Inclusive</a></h3>
@@ -407,7 +413,7 @@
       </article>
       <article class="ficha" data-buscar="decameron marazul - all inclusive decameron-marazul-all-inclusive san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="45">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-marazul-all-inclusive/imagenes/decameron-marazul-all-inclusive_001" alt="Decameron Marazul - All Inclusive"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-marazul-all-inclusive/imagenes/decameron-marazul-all-inclusive_004" alt="Decameron Marazul - All Inclusive"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-marazul-all-inclusive/" target="_blank" rel="noopener">Decameron Marazul - All Inclusive</a></h3>
@@ -419,7 +425,7 @@
       </article>
       <article class="ficha" data-buscar="decameron san luis - all inclusive decameron-san-luis-all-inclusive san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="32">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-san-luis-all-inclusive/imagenes/decameron-san-luis-all-inclusive_001" alt="Decameron San Luis - All Inclusive"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/decameron-san-luis-all-inclusive/imagenes/decameron-san-luis-all-inclusive_002" alt="Decameron San Luis - All Inclusive"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 32 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/decameron-san-luis-all-inclusive/" target="_blank" rel="noopener">Decameron San Luis - All Inclusive</a></h3>
@@ -431,7 +437,7 @@
       </article>
       <article class="ficha" data-buscar="el dorado el-dorado san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="71">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/el-dorado/imagenes/el-dorado_001" alt="El Dorado"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/el-dorado/imagenes/el-dorado_013" alt="El Dorado"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 71 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/el-dorado/" target="_blank" rel="noopener">El Dorado</a></h3>
@@ -443,7 +449,7 @@
       </article>
       <article class="ficha" data-buscar="ghl relax sunrise ghl-relax-sunrise san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="1" data-fotos="52">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_001" alt="GHL Relax Sunrise"><span class="marca-video">▶ video</span></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ghl-relax-sunrise/imagenes/ghl-relax-sunrise_047" alt="GHL Relax Sunrise"><span class="marca-video">▶ video</span></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 52 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/ghl-relax-sunrise/" target="_blank" rel="noopener">GHL Relax Sunrise</a></h3>
@@ -455,7 +461,7 @@
       </article>
       <article class="ficha" data-buscar="grand sirenis san andrés grand-sirenis-san-andres san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="48">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/grand-sirenis-san-andres/imagenes/grand-sirenis-san-andres_001" alt="Grand Sirenis San Andrés"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/grand-sirenis-san-andres/imagenes/grand-sirenis-san-andres_013" alt="Grand Sirenis San Andrés"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 48 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/grand-sirenis-san-andres/" target="_blank" rel="noopener">Grand Sirenis San Andrés</a></h3>
@@ -467,7 +473,7 @@
       </article>
       <article class="ficha" data-buscar="henry by portofino henry-by-portofino san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="27">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/henry-by-portofino/imagenes/henry-by-portofino_001" alt="Henry By Portofino"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/henry-by-portofino/imagenes/henry-by-portofino_010" alt="Henry By Portofino"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/henry-by-portofino/" target="_blank" rel="noopener">Henry By Portofino</a></h3>
@@ -479,7 +485,7 @@
       </article>
       <article class="ficha" data-buscar="hostería mar y sol hosteria-mar-y-sol san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="157">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/hosteria-mar-y-sol/imagenes/hosteria-mar-y-sol_001" alt="Hostería Mar y Sol"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/hosteria-mar-y-sol/imagenes/hosteria-mar-y-sol_010" alt="Hostería Mar y Sol"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 157 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hosteria-mar-y-sol/" target="_blank" rel="noopener">Hostería Mar y Sol</a></h3>
@@ -491,7 +497,7 @@
       </article>
       <article class="ficha" data-buscar="isla bonita isla-bonita san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="42">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/isla-bonita/imagenes/isla-bonita_001" alt="Isla Bonita"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/isla-bonita/imagenes/isla-bonita_007" alt="Isla Bonita"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/isla-bonita/" target="_blank" rel="noopener">Isla Bonita</a></h3>
@@ -503,7 +509,7 @@
       </article>
       <article class="ficha" data-buscar="koray koray san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="53">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/koray/imagenes/koray_001" alt="Koray"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/koray/imagenes/koray_013" alt="Koray"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 53 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/koray/" target="_blank" rel="noopener">Koray</a></h3>
@@ -515,7 +521,7 @@
       </article>
       <article class="ficha" data-buscar="lord pierre lord-pierre san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="27">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/lord-pierre/imagenes/lord-pierre_001" alt="Lord Pierre"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/lord-pierre/imagenes/lord-pierre_004" alt="Lord Pierre"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/lord-pierre/" target="_blank" rel="noopener">Lord Pierre</a></h3>
@@ -527,7 +533,7 @@
       </article>
       <article class="ficha" data-buscar="ocean blue ocean-blue san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="28">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ocean-blue/imagenes/ocean-blue_002" alt="Ocean Blue"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/ocean-blue/imagenes/ocean-blue_012" alt="Ocean Blue"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 28 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/ocean-blue/" target="_blank" rel="noopener">Ocean Blue</a></h3>
@@ -539,7 +545,7 @@
       </article>
       <article class="ficha" data-buscar="on vacation blue tone on-vacation-blue-tone san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="22">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-blue-tone/imagenes/on-vacation-blue-tone_001" alt="On Vacation Blue Tone"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/on-vacation-blue-tone/imagenes/on-vacation-blue-tone_012" alt="On Vacation Blue Tone"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 22 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/on-vacation-blue-tone/" target="_blank" rel="noopener">On Vacation Blue Tone</a></h3>
@@ -563,7 +569,7 @@
       </article>
       <article class="ficha" data-buscar="portobelo convention center portobelo-convention-center san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="34">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_001" alt="Portobelo Convention Center"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-convention-center/imagenes/portobelo-convention-center_007" alt="Portobelo Convention Center"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 34 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobelo-convention-center/" target="_blank" rel="noopener">Portobelo Convention Center</a></h3>
@@ -575,7 +581,7 @@
       </article>
       <article class="ficha" data-buscar="portobelo plaza de las américas portobelo-plaza-de-las-americas san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="34">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-plaza-de-las-americas/imagenes/portobelo-plaza-de-las-americas_001" alt="Portobelo Plaza de las Américas"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portobelo-plaza-de-las-americas/imagenes/portobelo-plaza-de-las-americas_013" alt="Portobelo Plaza de las Américas"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 34 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobelo-plaza-de-las-americas/" target="_blank" rel="noopener">Portobelo Plaza de las Américas</a></h3>
@@ -587,7 +593,7 @@
       </article>
       <article class="ficha" data-buscar="portofino caribe portofino-caribe san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="50">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portofino-caribe/imagenes/portofino-caribe_001" alt="Portofino Caribe"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portofino-caribe/imagenes/portofino-caribe_009" alt="Portofino Caribe"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 50 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portofino-caribe/" target="_blank" rel="noopener">Portofino Caribe</a></h3>
@@ -599,7 +605,7 @@
       </article>
       <article class="ficha" data-buscar="posada magic hill on vacation posada-magic-hill-on-vacation san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="33">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/posada-magic-hill-on-vacation/imagenes/posada-magic-hill-on-vacation_001" alt="Posada Magic Hill On Vacation"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/posada-magic-hill-on-vacation/imagenes/posada-magic-hill-on-vacation_010" alt="Posada Magic Hill On Vacation"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 33 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/posada-magic-hill-on-vacation/" target="_blank" rel="noopener">Posada Magic Hill On Vacation</a></h3>
@@ -611,7 +617,7 @@
       </article>
       <article class="ficha" data-buscar="reina del mar reina-del-mar san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="20">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/reina-del-mar/imagenes/reina-del-mar_001" alt="Reina del Mar"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/reina-del-mar/imagenes/reina-del-mar_010" alt="Reina del Mar"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 20 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/reina-del-mar/" target="_blank" rel="noopener">Reina del Mar</a></h3>
@@ -623,7 +629,7 @@
       </article>
       <article class="ficha" data-buscar="samawi samawi san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="91">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/samawi/imagenes/samawi_001" alt="Samawi"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/samawi/imagenes/samawi_011" alt="Samawi"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 91 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/samawi/" target="_blank" rel="noopener">Samawi</a></h3>
@@ -635,7 +641,7 @@
       </article>
       <article class="ficha" data-buscar="san luis beach house san-luis-beach-house san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="62">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_001" alt="San Luis Beach House"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/san-luis-beach/imagenes/san-luis-beach_049" alt="San Luis Beach House"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 62 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/san-luis-beach-house/" target="_blank" rel="noopener">San Luis Beach House</a></h3>
@@ -647,7 +653,7 @@
       </article>
       <article class="ficha" data-buscar="sol caribe campo sol-caribe-campo san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="37">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-campo/imagenes/sol-caribe-campo_001" alt="Sol Caribe Campo"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-campo/imagenes/sol-caribe-campo_005" alt="Sol Caribe Campo"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 37 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-campo/" target="_blank" rel="noopener">Sol Caribe Campo</a></h3>
@@ -659,7 +665,7 @@
       </article>
       <article class="ficha" data-buscar="sol caribe centro sol-caribe-centro san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="26">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-centro/imagenes/sol-caribe-centro_001" alt="Sol Caribe Centro"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-centro/imagenes/sol-caribe-centro_011" alt="Sol Caribe Centro"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 26 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-centro/" target="_blank" rel="noopener">Sol Caribe Centro</a></h3>
@@ -671,7 +677,7 @@
       </article>
       <article class="ficha" data-buscar="sol caribe sea flower sol-caribe-sea-flower san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="28">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-sea-flower/imagenes/sol-caribe-sea-flower_001" alt="Sol Caribe Sea Flower"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sol-caribe-sea-flower/imagenes/sol-caribe-sea-flower_008" alt="Sol Caribe Sea Flower"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 28 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sol-caribe-sea-flower/" target="_blank" rel="noopener">Sol Caribe Sea Flower</a></h3>
@@ -683,7 +689,7 @@
       </article>
       <article class="ficha" data-buscar="sweet caribbean sweet-caribbean san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="23">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sweet-caribbean/imagenes/sweet-caribbean_001" alt="Sweet Caribbean"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/sweet-caribbean/imagenes/sweet-caribbean_008" alt="Sweet Caribbean"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 23 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sweet-caribbean/" target="_blank" rel="noopener">Sweet Caribbean</a></h3>
@@ -695,7 +701,7 @@
       </article>
       <article class="ficha" data-buscar="tiuna tiuna san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="36">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/tiuna/imagenes/tiuna_001" alt="Tiuna"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/tiuna/imagenes/tiuna_025" alt="Tiuna"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/tiuna/" target="_blank" rel="noopener">Tiuna</a></h3>
@@ -707,7 +713,7 @@
       </article>
       <article class="ficha" data-buscar="verde mar verde-mar san andrés"
         data-destino="san-andres" data-tipo="hotel" data-video="0" data-fotos="46">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_001" alt="Verde Mar"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/verde-mar/imagenes/verde-mar_036" alt="Verde Mar"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">San Andrés · 46 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/verde-mar/" target="_blank" rel="noopener">Verde Mar</a></h3>
@@ -724,7 +730,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="arena beach arena-beach cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="51">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/arena-beach/imagenes/arena-beach_001" alt="Arena Beach"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/arena-beach/imagenes/arena-beach_011" alt="Arena Beach"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 51 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/arena-beach/" target="_blank" rel="noopener">Arena Beach</a></h3>
@@ -736,7 +742,7 @@
       </article>
       <article class="ficha" data-buscar="atlantic lux atlantic-lux cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="34">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_001" alt="Atlantic Lux"><span class="marca-video">▶ video</span></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/atlantic-lux/imagenes/atlantic-lux_017" alt="Atlantic Lux"><span class="marca-video">▶ video</span></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 34 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/atlantic-lux/" target="_blank" rel="noopener">Atlantic Lux</a></h3>
@@ -748,7 +754,7 @@
       </article>
       <article class="ficha" data-buscar="bahía cartagena bahia-cartagena cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="15">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/bahia-cartagena/imagenes/bahia-cartagena_001" alt="Bahía Cartagena"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/bahia-cartagena/imagenes/bahia-cartagena_003" alt="Bahía Cartagena"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 15 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/bahia-cartagena/" target="_blank" rel="noopener">Bahía Cartagena</a></h3>
@@ -760,7 +766,7 @@
       </article>
       <article class="ficha" data-buscar="cartagena dubai cartagena-dubai cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="56">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-dubai/imagenes/cartagena-dubai_002" alt="Cartagena Dubai"><span class="marca-video">▶ video</span></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-dubai/imagenes/cartagena-dubai_045" alt="Cartagena Dubai"><span class="marca-video">▶ video</span></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 56 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/cartagena-dubai/" target="_blank" rel="noopener">Cartagena Dubai</a></h3>
@@ -772,7 +778,7 @@
       </article>
       <article class="ficha" data-buscar="cartagena premium cartagena-premium cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="45">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-premium/imagenes/cartagena-premium_001" alt="Cartagena Premium"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/cartagena-premium/imagenes/cartagena-premium_010" alt="Cartagena Premium"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 45 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/cartagena-premium/" target="_blank" rel="noopener">Cartagena Premium</a></h3>
@@ -784,7 +790,7 @@
       </article>
       <article class="ficha" data-buscar="corales de indias corales-de-indias cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="23">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/corales-de-indias/imagenes/corales-de-indias_001" alt="Corales de Indias"><span class="marca-video">▶ video</span></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/corales-de-indias/imagenes/corales-de-indias_008" alt="Corales de Indias"><span class="marca-video">▶ video</span></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 23 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/corales-de-indias/" target="_blank" rel="noopener">Corales de Indias</a></h3>
@@ -796,7 +802,7 @@
       </article>
       <article class="ficha" data-buscar="costa del sol costa-del-sol cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="1" data-fotos="71">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/costa-del-sol/imagenes/costa-del-sol_001" alt="Costa del Sol"><span class="marca-video">▶ video</span></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/costa-del-sol/imagenes/costa-del-sol_004" alt="Costa del Sol"><span class="marca-video">▶ video</span></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 71 fotos · video</p>
           <h3><a href="https://galerias.trvely.com.co/costa-del-sol/" target="_blank" rel="noopener">Costa del Sol</a></h3>
@@ -808,7 +814,7 @@
       </article>
       <article class="ficha" data-buscar="dorado plaza bocagrande dorado-plaza-bocagrande cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="83">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_001" alt="Dorado Plaza Bocagrande"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/dorado-plaza-bocagrande/imagenes/dorado-plaza-bocagrande_068" alt="Dorado Plaza Bocagrande"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 83 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/dorado-plaza-bocagrande/" target="_blank" rel="noopener">Dorado Plaza Bocagrande</a></h3>
@@ -832,7 +838,7 @@
       </article>
       <article class="ficha" data-buscar="toledo fl toledo-fl cartagena"
         data-destino="cartagena" data-tipo="hotel" data-video="0" data-fotos="27">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_001" alt="Toledo Fl"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/cartagena/toledo-fl/imagenes/toledo-fl_015" alt="Toledo Fl"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Cartagena · 27 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/toledo-fl/" target="_blank" rel="noopener">Toledo Fl</a></h3>
@@ -849,7 +855,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="delfin delfin santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="15">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/delfin/imagenes/delfin_001" alt="Delfin"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/delfin/imagenes/delfin_007" alt="Delfin"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 15 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/delfin/" target="_blank" rel="noopener">Delfin</a></h3>
@@ -861,7 +867,7 @@
       </article>
       <article class="ficha" data-buscar="los veleros los-veleros santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="48">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/los-veleros/imagenes/los-veleros_001" alt="Los Veleros"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/los-veleros/imagenes/los-veleros_004" alt="Los Veleros"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 48 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/los-veleros/" target="_blank" rel="noopener">Los Veleros</a></h3>
@@ -873,7 +879,7 @@
       </article>
       <article class="ficha" data-buscar="medellin rodadero medellin-rodadero santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="36">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/medellin-rodadero/imagenes/medellin-rodadero_001" alt="Medellin Rodadero"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/medellin-rodadero/imagenes/medellin-rodadero_019" alt="Medellin Rodadero"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 36 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/medellin-rodadero/" target="_blank" rel="noopener">Medellin Rodadero</a></h3>
@@ -885,7 +891,7 @@
       </article>
       <article class="ficha" data-buscar="portobahia portobahia santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="8">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_001" alt="Portobahia"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_008" alt="Portobahia"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 8 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portobahia/" target="_blank" rel="noopener">Portobahia</a></h3>
@@ -897,7 +903,7 @@
       </article>
       <article class="ficha" data-buscar="sanha plus sanha-plus santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="7">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_002" alt="Sanha Plus"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sanha-plus/imagenes/sanha-plus_004" alt="Sanha Plus"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 7 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sanha-plus/" target="_blank" rel="noopener">Sanha Plus</a></h3>
@@ -909,7 +915,7 @@
       </article>
       <article class="ficha" data-buscar="sansiraka sansiraka santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="61">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sansiraka/imagenes/sansiraka_001" alt="Sansiraka"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sansiraka/imagenes/sansiraka_007" alt="Sansiraka"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 61 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sansiraka/" target="_blank" rel="noopener">Sansiraka</a></h3>
@@ -921,7 +927,7 @@
       </article>
       <article class="ficha" data-buscar="taybo beach taybo-beach santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="50">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_001" alt="Taybo Beach"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/taybo-beach/imagenes/taybo-beach_039" alt="Taybo Beach"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 50 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/taybo-beach/" target="_blank" rel="noopener">Taybo Beach</a></h3>
@@ -933,7 +939,7 @@
       </article>
       <article class="ficha" data-buscar="vadamar vadamar santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="20">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/vadamar/imagenes/vadamar_001" alt="Vadamar"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/vadamar/imagenes/vadamar_011" alt="Vadamar"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santa Marta · 20 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/vadamar/" target="_blank" rel="noopener">Vadamar</a></h3>
@@ -950,7 +956,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="green green coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="39">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/green/imagenes/green_001" alt="Green"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/green/imagenes/green_002" alt="Green"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 39 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/green/" target="_blank" rel="noopener">Green</a></h3>
@@ -962,7 +968,7 @@
       </article>
       <article class="ficha" data-buscar="kpre kpre coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="5">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/kpre/imagenes/kpre_002" alt="Kpre"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/kpre/imagenes/kpre_003" alt="Kpre"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 5 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/kpre/" target="_blank" rel="noopener">Kpre</a></h3>
@@ -986,7 +992,7 @@
       </article>
       <article class="ficha" data-buscar="palmalinda palmalinda coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="5">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_001" alt="Palmalinda"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_004" alt="Palmalinda"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 5 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/palmalinda/" target="_blank" rel="noopener">Palmalinda</a></h3>
@@ -998,7 +1004,7 @@
       </article>
       <article class="ficha" data-buscar="playa divina playa-divina coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="118">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/playa-divina/imagenes/playa-divina_001" alt="Playa Divina"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/playa-divina/imagenes/playa-divina_002" alt="Playa Divina"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 118 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/playa-divina/" target="_blank" rel="noopener">Playa Divina</a></h3>
@@ -1010,7 +1016,7 @@
       </article>
       <article class="ficha" data-buscar="poblado poblado coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="88">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/poblado/imagenes/poblado_001" alt="Poblado"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/covenas/poblado/imagenes/poblado_002" alt="Poblado"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 88 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/poblado/" target="_blank" rel="noopener">Poblado</a></h3>
@@ -1022,7 +1028,7 @@
       </article>
       <article class="ficha" data-buscar="portoalegre portoalegre coveñas"
         data-destino="covenas" data-tipo="hotel" data-video="0" data-fotos="141">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_001" alt="Portoalegre"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/san-andres/portoalegre/imagenes/portoalegre_088" alt="Portoalegre"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Coveñas · 141 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/portoalegre/" target="_blank" rel="noopener">Portoalegre</a></h3>
@@ -1039,7 +1045,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="anaconda anaconda leticia"
         data-destino="leticia" data-tipo="hotel" data-video="0" data-fotos="85">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/anaconda/imagenes/anaconda_001" alt="Anaconda"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/anaconda/imagenes/anaconda_005" alt="Anaconda"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Leticia · 85 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/anaconda/" target="_blank" rel="noopener">Anaconda</a></h3>
@@ -1051,7 +1057,7 @@
       </article>
       <article class="ficha" data-buscar="utuane utuane leticia"
         data-destino="leticia" data-tipo="hotel" data-video="0" data-fotos="64">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/utuane/imagenes/utuane_001" alt="Utuane"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/leticia/utuane/imagenes/utuane_007" alt="Utuane"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Leticia · 64 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/utuane/" target="_blank" rel="noopener">Utuane</a></h3>
@@ -1068,7 +1074,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="hm alma de bayahibe hm-alma-de-bayahibe punta cana"
         data-destino="punta-cana" data-tipo="hotel" data-video="0" data-fotos="11">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_001" alt="HM Alma de Bayahibe"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_011" alt="HM Alma de Bayahibe"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Punta Cana · 11 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hm-alma-de-bayahibe/" target="_blank" rel="noopener">HM Alma de Bayahibe</a></h3>
@@ -1080,7 +1086,7 @@
       </article>
       <article class="ficha" data-buscar="whala bavaro whala-bavaro punta cana"
         data-destino="punta-cana" data-tipo="hotel" data-video="0" data-fotos="55">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/punta-cana/whala-bavaro/imagenes/whala-bavaro_001" alt="Whala Bavaro"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/punta-cana/whala-bavaro/imagenes/whala-bavaro_010" alt="Whala Bavaro"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Punta Cana · 55 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/whala-bavaro/" target="_blank" rel="noopener">Whala Bavaro</a></h3>
@@ -1097,7 +1103,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="kevins kevins tolú"
         data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="42">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/tolu/kevins/imagenes/kevins_001" alt="Kevins"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/tolu/kevins/imagenes/kevins_007" alt="Kevins"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Tolú · 42 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener">Kevins</a></h3>
@@ -1143,7 +1149,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="sauces del estadio sauces-del-estadio medellín"
         data-destino="medellin" data-tipo="hotel" data-video="0" data-fotos="63">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_002" alt="Sauces del Estadio"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/medellin/sauces-del-estadio/imagenes/sauces-del-estadio_061" alt="Sauces del Estadio"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Medellín · 63 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/sauces-del-estadio/" target="_blank" rel="noopener">Sauces del Estadio</a></h3>
@@ -1160,7 +1166,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="gimaura gimaura riohacha"
         data-destino="riohacha" data-tipo="hotel" data-video="0" data-fotos="18">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/riohacha/gimaura/imagenes/gimaura_001" alt="Gimaura"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/riohacha/gimaura/imagenes/gimaura_003" alt="Gimaura"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Riohacha · 18 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/gimaura/" target="_blank" rel="noopener">Gimaura</a></h3>
@@ -1177,7 +1183,7 @@
       <div class="rejilla">
       <article class="ficha" data-buscar="whala bocachica whala-bocachica santo domingo"
         data-destino="santo-domingo" data-tipo="hotel" data-video="0" data-fotos="47">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bocachica/whala-bocachica/imagenes/whala-bocachica_001" alt="Whala Bocachica"></a>
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/bocachica/whala-bocachica/imagenes/whala-bocachica_005" alt="Whala Bocachica"></a>
         <div class="ficha-cuerpo">
           <p class="kicker">Santo Domingo · 47 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/whala-bocachica/" target="_blank" rel="noopener">Whala Bocachica</a></h3>
@@ -1194,7 +1200,7 @@
 
 <footer>
   <p class="firma-pie">Viaja Fácil, Viaja Trvely</p>
-  <p>74 galerías de hoteles · 4 destinos de experiencias · actualizado 22/07/2026 · 10:54<br>
+  <p>74 galerías de hoteles · 4 destinos de experiencias · actualizado 22/07/2026 · 11:42<br>
   Material comercial interno — no compartir esta página con clientes.</p>
 </footer>
 
