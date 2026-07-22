@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tamaca-beach-resort",
+  "titulo": "TAMACA BEACH RESORT",
+  "destino": "santa-marta",
+  "cloudinary": "tamaca-beach-resort",
+  "fotos": 60,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/tamaca-beach-resort/imagenes/tamaca-beach-resort_026",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

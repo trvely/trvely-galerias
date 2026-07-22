@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tayrona-del-mar",
+  "titulo": "TAYRONA DEL MAR",
+  "destino": "santa-marta",
+  "cloudinary": "tayrona-del-mar",
+  "fotos": 52,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/tayrona-del-mar/imagenes/tayrona-del-mar_024",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

@@ -4,9 +4,9 @@
   "titulo": "PORTOBAHIA",
   "destino": "santa-marta",
   "cloudinary": "portobahia",
-  "fotos": 8,
+  "fotos": 76,
   "video": false,
-  "portada": "trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_008",
+  "portada": "trvely/hoteles/santa-marta/portobahia/imagenes/portobahia_037",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
   "generado": "2026-07-22"
 }

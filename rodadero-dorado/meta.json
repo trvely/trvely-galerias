@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "rodadero-dorado",
+  "titulo": "RODADERO DORADO",
+  "destino": "santa-marta",
+  "cloudinary": "rodadero-dorado",
+  "fotos": 15,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/rodadero-dorado/imagenes/rodadero-dorado_014",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

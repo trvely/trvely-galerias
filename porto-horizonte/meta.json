@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "porto-horizonte",
+  "titulo": "PORTO HORIZONTE",
+  "destino": "santa-marta",
+  "cloudinary": "porto-horizonte",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/porto-horizonte/imagenes/porto-horizonte_022",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

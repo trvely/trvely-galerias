@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "blu-by-tamaca",
+  "titulo": "BLU BY TAMACA",
+  "destino": "santa-marta",
+  "cloudinary": "blu-by-tamaca",
+  "fotos": 36,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/blu-by-tamaca/imagenes/blu-by-tamaca_024",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}
