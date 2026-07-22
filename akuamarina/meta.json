@@ -8,5 +8,8 @@
   "video": false,
   "portada": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_001",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-07-22"
+  "generado": "2026-07-22",
+  "conservado_de_ficha_previa": [
+    "portada"
+  ]
 }

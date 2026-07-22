@@ -1,172 +1,274 @@
 {
-  "ac-by-marriott-santa-marta": {
+  "akuamarina": {
     "destino": "santa-marta",
-    "titulo": "AC BY MARRIOTT SANTA MARTA",
-    "actual": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_001",
-    "propuesta": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_016",
+    "titulo": "AKUAMARINA",
+    "actual": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_001",
+    "propuesta": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_007",
     "cambia": true,
     "candidatas": [
       {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_016",
-        "puntos": 81.5
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_007",
+        "puntos": 76.6
       },
       {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_021",
-        "puntos": 79.0
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_042",
+        "puntos": 76.3
       },
       {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_028",
-        "puntos": 79.0
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_015",
+        "puntos": 74.6
       },
       {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_042",
-        "puntos": 78.2
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_026",
+        "puntos": 74.4
       },
       {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_011",
-        "puntos": 72.9
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/ac-by-marriott-santa-marta/imagenes/ac-by-marriott-santa-marta_039",
-        "puntos": 72.2
-      }
-    ],
-    "puntos_actual": 69.0
-  },
-  "edmar-santa-marta": {
-    "destino": "santa-marta",
-    "titulo": "EDMAR SANTA MARTA",
-    "actual": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_001",
-    "propuesta": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_013",
-    "cambia": true,
-    "candidatas": [
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_013",
-        "puntos": 76.8
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_006",
-        "puntos": 73.5
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_011",
-        "puntos": 73.4
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_015",
-        "puntos": 69.0
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_001",
-        "puntos": 68.5
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/edmar-santa-marta/imagenes/edmar-santa-marta_010",
-        "puntos": 67.6
-      }
-    ],
-    "puntos_actual": 68.5
-  },
-  "hilton-garden-inn-santa-marta": {
-    "destino": "santa-marta",
-    "titulo": "HILTON GARDEN INN SANTA MARTA",
-    "actual": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_001",
-    "propuesta": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_013",
-    "cambia": true,
-    "candidatas": [
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_013",
-        "puntos": 84.0
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_049",
-        "puntos": 80.4
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_011",
-        "puntos": 74.1
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_042",
-        "puntos": 71.1
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_004",
-        "puntos": 70.6
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/hilton-garden-inn-santa-marta/imagenes/hilton-garden-inn-santa-marta_052",
-        "puntos": 69.8
-      }
-    ],
-    "puntos_actual": 69.6
-  },
-  "irotama-resort": {
-    "destino": "santa-marta",
-    "titulo": "IROTAMA RESORT",
-    "actual": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_001",
-    "propuesta": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_004",
-    "cambia": true,
-    "candidatas": [
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_004",
-        "puntos": 70.5
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_008",
-        "puntos": 64.6
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_003",
-        "puntos": 61.9
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_001",
-        "puntos": 59.6
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_006",
-        "puntos": 58.7
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/irotama-resort/imagenes/irotama-resort_009",
-        "puntos": 49.4
-      }
-    ],
-    "puntos_actual": 59.6
-  },
-  "mercure-santa-marta-emile": {
-    "destino": "santa-marta",
-    "titulo": "MERCURE SANTA MARTA EMILE",
-    "actual": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_001",
-    "propuesta": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
-    "cambia": true,
-    "candidatas": [
-      {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_004",
         "puntos": 73.9
       },
       {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_026",
-        "puntos": 66.6
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_017",
-        "puntos": 63.8
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_008",
-        "puntos": 63.5
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_039",
-        "puntos": 62.8
-      },
-      {
-        "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_042",
-        "puntos": 61.9
+        "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_045",
+        "puntos": 73.8
       }
     ],
-    "puntos_actual": 53.6
+    "puntos_actual": 71.5
+  },
+  "decameron-galeon": {
+    "destino": "santa-marta",
+    "titulo": "DECAMERON GALEON - ALL INCLUSIVE",
+    "actual": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_001",
+    "propuesta": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_004",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_004",
+        "puntos": 80.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_008",
+        "puntos": 77.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_028",
+        "puntos": 75.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_020",
+        "puntos": 73.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_036",
+        "puntos": 73.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_013",
+        "puntos": 72.7
+      }
+    ],
+    "puntos_actual": 59.5
+  },
+  "estelar-santamar": {
+    "destino": "santa-marta",
+    "titulo": "ESTELAR SANTAMAR",
+    "actual": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_001",
+    "propuesta": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_030",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_030",
+        "puntos": 82.3
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_018",
+        "puntos": 81.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_029",
+        "puntos": 80.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_002",
+        "puntos": 72.3
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_007",
+        "puntos": 71.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_014",
+        "puntos": 70.4
+      }
+    ],
+    "puntos_actual": 50.1
+  },
+  "ghl-relax-costa-azul": {
+    "destino": "santa-marta",
+    "titulo": "GHL RELAX COSTA AZUL",
+    "actual": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_001",
+    "propuesta": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_054",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_054",
+        "puntos": 90.7
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_043",
+        "puntos": 84.9
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_014",
+        "puntos": 83.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_017",
+        "puntos": 83.1
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_047",
+        "puntos": 81.7
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_019",
+        "puntos": 81.1
+      }
+    ],
+    "puntos_actual": 79.5
+  },
+  "la-riviera": {
+    "destino": "santa-marta",
+    "titulo": "LA RIVIERA",
+    "actual": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_001",
+    "propuesta": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_006",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_006",
+        "puntos": 84.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_009",
+        "puntos": 70.1
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_003",
+        "puntos": 57.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_002",
+        "puntos": 56.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_005",
+        "puntos": 52.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_011",
+        "puntos": 33.2
+      }
+    ],
+    "puntos_actual": 22.4
+  },
+  "taybo-kai": {
+    "destino": "santa-marta",
+    "titulo": "TAYBO KAI",
+    "actual": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_001",
+    "propuesta": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_014",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_014",
+        "puntos": 73.6
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_007",
+        "puntos": 71.3
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_015",
+        "puntos": 67.3
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_005",
+        "puntos": 65.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_009",
+        "puntos": 65.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_019",
+        "puntos": 62.9
+      }
+    ],
+    "puntos_actual": 51.7
+  },
+  "tayrona-rodadero": {
+    "destino": "santa-marta",
+    "titulo": "TAYRONA RODADERO",
+    "actual": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_001",
+    "propuesta": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_008",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_008",
+        "puntos": 81.3
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_014",
+        "puntos": 74.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_021",
+        "puntos": 71.2
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_016",
+        "puntos": 68.7
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_011",
+        "puntos": 67.0
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_023",
+        "puntos": 62.6
+      }
+    ],
+    "puntos_actual": 54.0
+  },
+  "zuana": {
+    "destino": "santa-marta",
+    "titulo": "ZUANA BEACH RESORT",
+    "actual": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_001",
+    "propuesta": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_027",
+    "cambia": true,
+    "candidatas": [
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_027",
+        "puntos": 79.8
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_021",
+        "puntos": 79.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_047",
+        "puntos": 79.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_005",
+        "puntos": 76.4
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_042",
+        "puntos": 74.5
+      },
+      {
+        "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_036",
+        "puntos": 73.9
+      }
+    ],
+    "puntos_actual": 67.5
   }
 }

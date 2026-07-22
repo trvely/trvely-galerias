@@ -148,5 +148,45 @@
     "pid": "trvely/hoteles/santa-marta/mercure-santa-marta-emile/imagenes/mercure-santa-marta-emile_015",
     "por_que": "piscina infinita frente al mar",
     "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "akuamarina": {
+    "pid": "trvely/hoteles/santa-marta/akuamarina/imagenes/akuamarina_015",
+    "por_que": "piscina interior con mosaico (las demas son habitaciones)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "decameron-galeon": {
+    "pid": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_028",
+    "por_que": "la piscina grande con palmeras",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "estelar-santamar": {
+    "pid": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_030",
+    "por_que": "vista aerea del mar y el resort",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "ghl-relax-costa-azul": {
+    "pid": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_054",
+    "por_que": "piscina con fuentes iluminada",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "la-riviera": {
+    "pid": "trvely/hoteles/santa-marta/la-riviera/imagenes/la-riviera_006",
+    "por_que": "piscina-spa del hotel",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "taybo-kai": {
+    "pid": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_015",
+    "por_que": "fachada de noche con el letrero (no hay exteriores de dia)",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "tayrona-rodadero": {
+    "pid": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_008",
+    "por_que": "piscina del hotel",
+    "elegida_por": "Claude (revision visual 22-jul)"
+  },
+  "zuana": {
+    "pid": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_027",
+    "por_que": "vista aerea de la piscina y el mar",
+    "elegida_por": "Claude (revision visual 22-jul)"
   }
 }
