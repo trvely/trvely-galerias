@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tayrona-rodadero",
+  "titulo": "TAYRONA RODADERO",
+  "destino": "santa-marta",
+  "cloudinary": "tayrona-rodadero",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/tayrona-rodadero/imagenes/tayrona-rodadero_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

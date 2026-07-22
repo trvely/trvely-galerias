@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ghl-relax-costa-azul",
+  "titulo": "GHL RELAX COSTA AZUL",
+  "destino": "santa-marta",
+  "cloudinary": "ghl-relax-costa-azul",
+  "fotos": 65,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/ghl-relax-costa-azul/imagenes/ghl-relax-costa-azul_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

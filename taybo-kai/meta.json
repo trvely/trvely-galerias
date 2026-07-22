@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "taybo-kai",
+  "titulo": "TAYBO KAI",
+  "destino": "santa-marta",
+  "cloudinary": "taybo-kai",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/taybo-kai/imagenes/taybo-kai_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

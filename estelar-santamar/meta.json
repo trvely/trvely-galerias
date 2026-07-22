@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "estelar-santamar",
+  "titulo": "ESTELAR SANTAMAR",
+  "destino": "santa-marta",
+  "cloudinary": "estelar-santamar",
+  "fotos": 45,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/estelar-santamar/imagenes/estelar-santamar_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

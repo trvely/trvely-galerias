@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-galeon",
+  "titulo": "DECAMERON GALEON - ALL INCLUSIVE",
+  "destino": "santa-marta",
+  "cloudinary": "decameron-galeon",
+  "fotos": 56,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/decameron-galeon/imagenes/decameron-galeon_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

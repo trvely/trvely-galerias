@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "zuana",
+  "titulo": "ZUANA BEACH RESORT",
+  "destino": "santa-marta",
+  "cloudinary": "zuana",
+  "fotos": 53,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/zuana/imagenes/zuana_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}
