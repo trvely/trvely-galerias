@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sg-castillo-aqua",
+  "titulo": "SG CASTILLO AQUA",
+  "destino": "santa-marta",
+  "cloudinary": "sg-castillo-aqua",
+  "fotos": 12,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/sg-castillo-aqua/imagenes/sg-castillo-aqua_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

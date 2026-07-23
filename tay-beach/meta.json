@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tay-beach",
+  "titulo": "TAY BEACH",
+  "destino": "santa-marta",
+  "cloudinary": "tay-beach",
+  "fotos": 78,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/tay-beach/imagenes/tay-beach_001",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-22"
+}

@@ -72,7 +72,7 @@
                     display:flex; align-items:baseline; gap:10px; }
   .titulo-bloque .cuenta { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700;
                             color:var(--gris); }
-  .rejilla { display:grid; grid-template-columns:repeat(auto-fill,minmax(248px,1fr)); gap:20px; }
+  .rejilla { display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:20px; }
   .ficha { background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--sombra);
             display:flex; flex-direction:column; transition:transform .22s ease, box-shadow .22s ease; }
   .ficha:hover { transform:translateY(-5px); box-shadow:var(--sombra-alta); }
@@ -105,13 +105,15 @@
   .ficha h3 a { text-decoration:none; }
   .ficha h3 a:hover { color:var(--burg); }
   .acciones { display:flex; gap:8px; }
-  .btn-copiar { flex:1; background:var(--burg); color:#fff; border:0; border-radius:22px;
-                 padding:10px 8px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  /* min-height 40px: cómodo para el dedo en TODOS los tamaños (antes 35px en tablet/desktop) */
+  .btn-copiar { flex:1; min-height:40px; background:var(--burg); color:#fff; border:0; border-radius:22px;
+                 padding:9px 8px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
                  transition:filter .15s, background .2s; }
   .btn-copiar:hover { filter:brightness(1.09); }
   .btn-copiar.ok { background:#1C7C4A; }
   .btn-copiar.falla { background:#8a6d1f; }
-  .btn-abrir { border:1.5px solid var(--linea); border-radius:22px; padding:9px 13px; font-size:12.5px;
+  .btn-abrir { display:grid; place-items:center; min-height:40px; border:1.5px solid var(--linea);
+                border-radius:22px; padding:0 15px; font-size:12.5px;
                 font-weight:700; text-decoration:none; color:var(--gris); }
   .btn-abrir:hover { border-color:var(--burg); color:var(--burg); }
   .nada { display:none; text-align:center; padding:56px 0; color:var(--gris); }
@@ -131,6 +133,15 @@
                 font-size:11.5px; opacity:.9; text-align:left; }
   .pie-sede { font-size:12.5px; opacity:.95; margin:54px 0 14px; }
 
+  /* TABLET (iPad y similares): la franja que antes quedaba en tierra de nadie con solo 2 columnas.
+     3 columnas fijas aprovechan el ancho, y el trato tactil (botones 44px) también aplica aquí. */
+  @media (min-width:761px) and (max-width:1024px) {
+    .rejilla { grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .btn-copiar, .btn-abrir { min-height:44px; }
+    .hero-caja { grid-template-columns:minmax(0,1fr) 240px; }
+    .triana { width:240px; }
+  }
+  /* MÓVIL */
   @media (max-width:760px) {
     .hero-caja { grid-template-columns:1fr; padding-bottom:38px; }
     .triana { display:none; }
@@ -140,8 +151,13 @@
     .ficha-cuerpo { padding:11px 12px 13px; }
     /* 44px de alto: el minimo comodo para el pulgar */
     .btn-copiar { min-height:44px; font-size:13px; }
-    .btn-abrir { min-height:44px; display:grid; place-items:center; }
+    .btn-abrir { min-height:44px; }
     .orden { margin-left:0; }
+  }
+  /* PANTALLAS MUY ANCHAS: la rejilla no pasa de 5 columnas para que las tarjetas no queden
+     minúsculas ni la foto pierda protagonismo. */
+  @media (min-width:1600px) {
+    .rejilla { grid-template-columns:repeat(5, 1fr); }
   }
   @media (prefers-reduced-motion:reduce) {
     * { transition:none !important; animation:none !important; scroll-behavior:auto !important; }
@@ -153,7 +169,7 @@
   <div class="hero-caja">
     <div>
       <img class="logo" src="assets/logo-beige.png" alt="Trvely">
-      <p class="eyebrow">96 galerías · 4 destinos de experiencias · 4,336 fotos</p>
+      <p class="eyebrow">96 galerías · 4 destinos de experiencias · 4,426 fotos</p>
       <h1>VITRINA</h1>
       <p class="firma">todo lo que puedes mostrar</p>
       <div class="buscar">
@@ -175,13 +191,12 @@
       <button class="chip activo" data-filtro-destino="todos">Todos <span>100</span></button>
       <button class="chip" data-filtro-destino="experiencias">Experiencias <span>4</span></button>
       <button class="chip" data-filtro-destino="san-andres">San Andrés <span>39</span></button>
-      <button class="chip" data-filtro-destino="santa-marta">Santa Marta <span>28</span></button>
+      <button class="chip" data-filtro-destino="santa-marta">Santa Marta <span>30</span></button>
       <button class="chip" data-filtro-destino="cartagena">Cartagena <span>10</span></button>
       <button class="chip" data-filtro-destino="covenas">Coveñas <span>7</span></button>
       <button class="chip" data-filtro-destino="leticia">Leticia <span>2</span></button>
       <button class="chip" data-filtro-destino="punta-cana">Punta Cana <span>2</span></button>
       <button class="chip" data-filtro-destino="tolu">Tolú <span>2</span></button>
-      <button class="chip" data-filtro-destino="_sin-clasificar">_Sin Clasificar <span>2</span></button>
       <button class="chip" data-filtro-destino="juan-dolio">Juan Dolio <span>1</span></button>
       <button class="chip" data-filtro-destino="medellin">Medellín <span>1</span></button>
       <button class="chip" data-filtro-destino="riohacha">Riohacha <span>1</span></button>
@@ -735,7 +750,7 @@
       </div>
     </section>
     <section class="bloque" data-seccion="santa-marta">
-      <h2 class="titulo-bloque">Santa Marta <span class="cuenta">28</span></h2>
+      <h2 class="titulo-bloque">Santa Marta <span class="cuenta">30</span></h2>
       <div class="rejilla">
       <article class="ficha" data-buscar="ac by marriott santa marta ac-by-marriott-santa-marta santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="70">
@@ -977,6 +992,18 @@
           </div>
         </div>
       </article>
+      <article class="ficha" data-buscar="sg castillo aqua sg-castillo-aqua santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="12">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/sg-castillo-aqua/imagenes/sg-castillo-aqua_001" alt="Sg Castillo Aqua"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 12 fotos</p>
+          <h3><a href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener">Sg Castillo Aqua</a></h3>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sg-castillo-aqua/" data-nombre="Sg Castillo Aqua" data-msg="hotel">Copiar mensaje</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
       <article class="ficha" data-buscar="tama santa marta tama-santa-marta santa marta"
         data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="34">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/tama-santa-marta/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/tama-santa-marta/imagenes/tama-santa-marta_029" alt="Tama Santa Marta"></a>
@@ -998,6 +1025,18 @@
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/tamaca-beach-resort/" data-nombre="Tamaca Beach Resort" data-msg="hotel">Copiar mensaje</button>
             <a class="btn-abrir" href="https://galerias.trvely.com.co/tamaca-beach-resort/" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+      <article class="ficha" data-buscar="tay beach tay-beach santa marta"
+        data-destino="santa-marta" data-tipo="hotel" data-video="0" data-fotos="78">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener"><img loading="lazy" src="https://res.cloudinary.com/trvely/image/upload/c_fill,g_auto,w_560,h_420,q_auto,f_auto/trvely/hoteles/santa-marta/tay-beach/imagenes/tay-beach_001" alt="Tay Beach"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Santa Marta · 78 fotos</p>
+          <h3><a href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener">Tay Beach</a></h3>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/tay-beach/" data-nombre="Tay Beach" data-msg="hotel">Copiar mensaje</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener">Abrir</a>
           </div>
         </div>
       </article>
@@ -1376,35 +1415,6 @@
       </article>
       </div>
     </section>
-    <section class="bloque" data-seccion="_sin-clasificar">
-      <h2 class="titulo-bloque">_Sin Clasificar <span class="cuenta">2</span></h2>
-      <div class="rejilla">
-      <article class="ficha" data-buscar="sg castillo aqua sg-castillo-aqua _sin clasificar"
-        data-destino="_sin-clasificar" data-tipo="hotel" data-video="0" data-fotos="0">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener"><span class="sin-foto">trvely</span></a>
-        <div class="ficha-cuerpo">
-          <p class="kicker">_Sin Clasificar · 0 fotos</p>
-          <h3><a href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener">Sg Castillo Aqua</a></h3>
-          <div class="acciones">
-            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/sg-castillo-aqua/" data-nombre="Sg Castillo Aqua" data-msg="hotel">Copiar mensaje</button>
-            <a class="btn-abrir" href="https://galerias.trvely.com.co/sg-castillo-aqua/" target="_blank" rel="noopener">Abrir</a>
-          </div>
-        </div>
-      </article>
-      <article class="ficha" data-buscar="tay beach tay-beach _sin clasificar"
-        data-destino="_sin-clasificar" data-tipo="hotel" data-video="0" data-fotos="0">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener"><span class="sin-foto">trvely</span></a>
-        <div class="ficha-cuerpo">
-          <p class="kicker">_Sin Clasificar · 0 fotos</p>
-          <h3><a href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener">Tay Beach</a></h3>
-          <div class="acciones">
-            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/tay-beach/" data-nombre="Tay Beach" data-msg="hotel">Copiar mensaje</button>
-            <a class="btn-abrir" href="https://galerias.trvely.com.co/tay-beach/" target="_blank" rel="noopener">Abrir</a>
-          </div>
-        </div>
-      </article>
-      </div>
-    </section>
     <section class="bloque" data-seccion="juan-dolio">
       <h2 class="titulo-bloque">Juan Dolio <span class="cuenta">1</span></h2>
       <div class="rejilla">
@@ -1481,7 +1491,7 @@
   <p class="pie-sede">Bogotá, Colombia</p>
   <div class="pie-legal">
     <span>Trvely S.A.S. · NIT: 901902687-9</span>
-    <span>96 galerías · 4 destinos de experiencias · actualizado 22/07/2026 · 18:35</span>
+    <span>96 galerías · 4 destinos de experiencias · actualizado 22/07/2026 · 19:24</span>
     <span>Copyright © 2026. Todos los derechos reservados.</span>
   </div>
 </footer>

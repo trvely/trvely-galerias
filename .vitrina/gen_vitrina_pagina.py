@@ -246,7 +246,7 @@ def construir_pagina(doc, hoy=None):
                     display:flex; align-items:baseline; gap:10px; }}
   .titulo-bloque .cuenta {{ font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700;
                             color:var(--gris); }}
-  .rejilla {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(248px,1fr)); gap:20px; }}
+  .rejilla {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:20px; }}
   .ficha {{ background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--sombra);
             display:flex; flex-direction:column; transition:transform .22s ease, box-shadow .22s ease; }}
   .ficha:hover {{ transform:translateY(-5px); box-shadow:var(--sombra-alta); }}
@@ -279,13 +279,15 @@ def construir_pagina(doc, hoy=None):
   .ficha h3 a {{ text-decoration:none; }}
   .ficha h3 a:hover {{ color:var(--burg); }}
   .acciones {{ display:flex; gap:8px; }}
-  .btn-copiar {{ flex:1; background:var(--burg); color:#fff; border:0; border-radius:22px;
-                 padding:10px 8px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  /* min-height 40px: cómodo para el dedo en TODOS los tamaños (antes 35px en tablet/desktop) */
+  .btn-copiar {{ flex:1; min-height:40px; background:var(--burg); color:#fff; border:0; border-radius:22px;
+                 padding:9px 8px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
                  transition:filter .15s, background .2s; }}
   .btn-copiar:hover {{ filter:brightness(1.09); }}
   .btn-copiar.ok {{ background:#1C7C4A; }}
   .btn-copiar.falla {{ background:#8a6d1f; }}
-  .btn-abrir {{ border:1.5px solid var(--linea); border-radius:22px; padding:9px 13px; font-size:12.5px;
+  .btn-abrir {{ display:grid; place-items:center; min-height:40px; border:1.5px solid var(--linea);
+                border-radius:22px; padding:0 15px; font-size:12.5px;
                 font-weight:700; text-decoration:none; color:var(--gris); }}
   .btn-abrir:hover {{ border-color:var(--burg); color:var(--burg); }}
   .nada {{ display:none; text-align:center; padding:56px 0; color:var(--gris); }}
@@ -305,6 +307,15 @@ def construir_pagina(doc, hoy=None):
                 font-size:11.5px; opacity:.9; text-align:left; }}
   .pie-sede {{ font-size:12.5px; opacity:.95; margin:54px 0 14px; }}
 
+  /* TABLET (iPad y similares): la franja que antes quedaba en tierra de nadie con solo 2 columnas.
+     3 columnas fijas aprovechan el ancho, y el trato tactil (botones 44px) también aplica aquí. */
+  @media (min-width:761px) and (max-width:1024px) {{
+    .rejilla {{ grid-template-columns:repeat(3, 1fr); gap:16px; }}
+    .btn-copiar, .btn-abrir {{ min-height:44px; }}
+    .hero-caja {{ grid-template-columns:minmax(0,1fr) 240px; }}
+    .triana {{ width:240px; }}
+  }}
+  /* MÓVIL */
   @media (max-width:760px) {{
     .hero-caja {{ grid-template-columns:1fr; padding-bottom:38px; }}
     .triana {{ display:none; }}
@@ -314,8 +325,13 @@ def construir_pagina(doc, hoy=None):
     .ficha-cuerpo {{ padding:11px 12px 13px; }}
     /* 44px de alto: el minimo comodo para el pulgar */
     .btn-copiar {{ min-height:44px; font-size:13px; }}
-    .btn-abrir {{ min-height:44px; display:grid; place-items:center; }}
+    .btn-abrir {{ min-height:44px; }}
     .orden {{ margin-left:0; }}
+  }}
+  /* PANTALLAS MUY ANCHAS: la rejilla no pasa de 5 columnas para que las tarjetas no queden
+     minúsculas ni la foto pierda protagonismo. */
+  @media (min-width:1600px) {{
+    .rejilla {{ grid-template-columns:repeat(5, 1fr); }}
   }}
   @media (prefers-reduced-motion:reduce) {{
     * {{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }}
