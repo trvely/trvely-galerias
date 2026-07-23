@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "nickelodeon-punta-cana",
+  "titulo": "NICKELODEON PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "nickelodeon-hotels-resorts-punta-cana",
+  "fotos": 95,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/nickelodeon-hotels-resorts-punta-cana/imagenes/nickelodeon-hotels-resorts-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

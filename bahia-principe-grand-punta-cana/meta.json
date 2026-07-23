@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bahia-principe-grand-punta-cana",
+  "titulo": "BAHIA PRINCIPE GRAND PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "bahia-principe-grand-punta-cana",
+  "fotos": 83,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/bahia-principe-grand-punta-cana/imagenes/bahia-principe-grand-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

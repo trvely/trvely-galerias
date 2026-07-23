@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "vista-sol-punta-cana",
+  "titulo": "VISTA SOL PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "vista-sol-punta-cana",
+  "fotos": 89,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/vista-sol-punta-cana/imagenes/vista-sol-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

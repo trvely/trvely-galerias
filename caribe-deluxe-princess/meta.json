@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "caribe-deluxe-princess",
+  "titulo": "CARIBE DELUXE PRINCESS",
+  "destino": "punta-cana",
+  "cloudinary": "caribe-deluxe-princess",
+  "fotos": 44,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/caribe-deluxe-princess/imagenes/caribe-deluxe-princess_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "occidental-caribe",
+  "titulo": "OCCIDENTAL CARIBE",
+  "destino": "punta-cana",
+  "cloudinary": "occidental-caribe",
+  "fotos": 36,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/occidental-caribe/imagenes/occidental-caribe_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

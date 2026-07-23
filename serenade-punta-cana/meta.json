@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "serenade-punta-cana",
+  "titulo": "SERENADE PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "serenade-punta-cana-beach-spa-resort",
+  "fotos": 43,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/serenade-punta-cana-beach-spa-resort/imagenes/serenade-punta-cana-beach-spa-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

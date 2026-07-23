@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bahia-principe-grand-turquesa",
+  "titulo": "BAHIA PRINCIPE GRAND TURQUESA",
+  "destino": "punta-cana",
+  "cloudinary": "bahia-principe-grand-turquesa",
+  "fotos": 41,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/bahia-principe-grand-turquesa/imagenes/bahia-principe-grand-turquesa_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

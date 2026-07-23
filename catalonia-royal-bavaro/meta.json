@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-royal-bavaro",
+  "titulo": "CATALONIA ROYAL BAVARO",
+  "destino": "punta-cana",
+  "cloudinary": "catalonia-royal-bavaro",
+  "fotos": 44,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/catalonia-royal-bavaro/imagenes/catalonia-royal-bavaro_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

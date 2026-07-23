@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-punta-cana",
+  "titulo": "CATALONIA PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "catalonia-punta-cana",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/catalonia-punta-cana/imagenes/catalonia-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
