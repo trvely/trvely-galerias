@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "presidential-suites",
+  "titulo": "PRESIDENTIAL SUITES",
+  "destino": "punta-cana",
+  "cloudinary": "presidential-suites",
+  "fotos": 34,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/presidential-suites/imagenes/presidential-suites_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

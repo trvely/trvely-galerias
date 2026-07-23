@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-palace-punta-cana",
+  "titulo": "RIU PALACE PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "riu-palace-punta-cana",
+  "fotos": 73,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/riu-palace-punta-cana/imagenes/riu-palace-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

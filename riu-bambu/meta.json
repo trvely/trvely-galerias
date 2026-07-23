@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-bambu",
+  "titulo": "RIU BAMBU",
+  "destino": "punta-cana",
+  "cloudinary": "riu-bambu",
+  "fotos": 95,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/riu-bambu/imagenes/riu-bambu_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

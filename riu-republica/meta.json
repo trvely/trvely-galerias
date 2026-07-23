@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-republica",
+  "titulo": "RIU REPUBLICA",
+  "destino": "punta-cana",
+  "cloudinary": "riu-republica",
+  "fotos": 90,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/riu-republica/imagenes/riu-republica_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

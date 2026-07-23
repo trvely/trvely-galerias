@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "barcelo-bavaro-beach",
+  "titulo": "BARCELO BAVARO BEACH",
+  "destino": "punta-cana",
+  "cloudinary": "barcelo-bavaro-beach",
+  "fotos": 103,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/barcelo-bavaro-beach/imagenes/barcelo-bavaro-beach_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
