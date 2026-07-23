@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sunscape-coco-punta-cana",
+  "titulo": "SUNSCAPE COCO PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "sunscape-coco-punta-cana",
+  "fotos": 41,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/sunscape-coco-punta-cana/imagenes/sunscape-coco-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
