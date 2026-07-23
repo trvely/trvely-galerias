@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-avexi-suite",
+  "titulo": "HOTEL AVEXI SUITE",
+  "destino": "cartagena",
+  "cloudinary": "hotel-avexi-suite",
+  "fotos": 23,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/hotel-avexi-suite/imagenes/hotel-avexi-suite_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "casa-amanzi",
+  "titulo": "CASA AMANZI",
+  "destino": "cartagena",
+  "cloudinary": "casa-amanzi",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/casa-amanzi/imagenes/casa-amanzi_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-marina-suites",
+  "titulo": "HOTEL MARINA SUITES",
+  "destino": "cartagena",
+  "cloudinary": "hotel-marina-suites",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/hotel-marina-suites/imagenes/hotel-marina-suites_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

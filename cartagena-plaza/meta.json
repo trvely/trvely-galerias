@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "cartagena-plaza",
+  "titulo": "CARTAGENA PLAZA",
+  "destino": "cartagena",
+  "cloudinary": "cartagena-plaza",
+  "fotos": 71,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/cartagena-plaza/imagenes/cartagena-plaza_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

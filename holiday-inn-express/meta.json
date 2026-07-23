@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "holiday-inn-express",
+  "titulo": "HOLIDAY INN EXPRESS",
+  "destino": "cartagena",
+  "cloudinary": "holiday-inn-express",
+  "fotos": 5,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/holiday-inn-express/imagenes/holiday-inn-express_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

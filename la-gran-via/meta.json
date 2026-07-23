@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "la-gran-via",
+  "titulo": "LA GRAN VIA",
+  "destino": "cartagena",
+  "cloudinary": "la-gran-via",
+  "fotos": 87,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/la-gran-via/imagenes/la-gran-via_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

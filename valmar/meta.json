@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "valmar",
+  "titulo": "VALMAR",
+  "destino": "cartagena",
+  "cloudinary": "valmar",
+  "fotos": 16,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/valmar/imagenes/valmar_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ibis-marbella",
+  "titulo": "IBIS MARBELLA",
+  "destino": "cartagena",
+  "cloudinary": "ibis-marbella",
+  "fotos": 45,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/ibis-marbella/imagenes/ibis-marbella_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}

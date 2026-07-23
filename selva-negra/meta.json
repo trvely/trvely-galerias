@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "selva-negra",
+  "titulo": "SELVA NEGRA",
+  "destino": "cartagena",
+  "cloudinary": "selva-negra",
+  "fotos": 19,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/selva-negra/imagenes/selva-negra_001",
+  "generado_por": "descarga-portal priceagencies + meta",
+  "generado": "2026-07-22"
+}
