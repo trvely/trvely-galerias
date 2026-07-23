@@ -4,9 +4,9 @@
   "titulo": "PALMALINDA",
   "destino": "covenas",
   "cloudinary": "palmalinda",
-  "fotos": 5,
+  "fotos": 36,
   "video": false,
   "portada": "trvely/hoteles/covenas/palmalinda/imagenes/palmalinda_001",
-  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado_por": "generar-galeria-repo.py",
   "generado": "2026-07-22"
 }

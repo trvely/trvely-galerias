@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "talam-house",
+  "titulo": "TALAM HOUSE",
+  "destino": "covenas",
+  "cloudinary": "talam-house",
+  "fotos": 78,
+  "video": false,
+  "portada": "trvely/hoteles/covenas/talam-house/imagenes/talam-house_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
