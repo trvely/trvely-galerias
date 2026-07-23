@@ -4,9 +4,9 @@
   "titulo": "KPRE",
   "destino": "covenas",
   "cloudinary": "kpre",
-  "fotos": 5,
+  "fotos": 12,
   "video": false,
-  "portada": "trvely/hoteles/covenas/kpre/imagenes/kpre_002",
-  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "portada": "trvely/hoteles/covenas/kpre/imagenes/kpre_001",
+  "generado_por": "generar-galeria-repo.py",
   "generado": "2026-07-22"
 }
