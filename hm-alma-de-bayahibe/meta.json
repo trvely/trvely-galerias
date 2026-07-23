@@ -4,10 +4,10 @@
   "titulo": "HM ALMA DE BAYAHIBE",
   "destino": "punta-cana",
   "cloudinary": "hm-alma-de-bayahibe",
-  "fotos": 11,
+  "fotos": 80,
   "video": false,
   "portada": "trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_001",
-  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado_por": "descarga-portal priceagencies (actualizacion fotos)",
   "generado": "2026-07-22",
   "destino_media": "bayahibe"
 }

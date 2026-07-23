@@ -4,7 +4,7 @@
   "titulo": "OCCIDENTAL PUNTA CANA",
   "destino": "punta-cana",
   "cloudinary": "occidental-punta-cana",
-  "fotos": 7,
+  "fotos": 30,
   "video": false,
   "portada": "trvely/hoteles/punta-cana/occidental-punta-cana/imagenes/occidental-punta-cana_001",
   "generado_por": "generar-galeria-repo.py",
