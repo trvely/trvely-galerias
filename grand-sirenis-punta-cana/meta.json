@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "grand-sirenis-punta-cana",
+  "titulo": "GRAND SIRENIS PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "grand-sirenis-punta-cana",
+  "fotos": 48,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/grand-sirenis-punta-cana/imagenes/grand-sirenis-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

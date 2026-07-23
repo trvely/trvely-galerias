@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "grand-bavaro-princess",
+  "titulo": "GRAND BAVARO PRINCESS",
+  "destino": "punta-cana",
+  "cloudinary": "grand-bavaro-princess",
+  "fotos": 44,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/grand-bavaro-princess/imagenes/grand-bavaro-princess_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "impressive-punta-cana",
+  "titulo": "IMPRESSIVE PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "impressive-punta-cana",
+  "fotos": 33,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/impressive-punta-cana/imagenes/impressive-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

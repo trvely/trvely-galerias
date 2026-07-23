@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "jewel-punta-cana",
+  "titulo": "JEWEL PUNTA CANA",
+  "destino": "punta-cana",
+  "cloudinary": "jewel-punta-cana",
+  "fotos": 10,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/jewel-punta-cana/imagenes/jewel-punta-cana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
