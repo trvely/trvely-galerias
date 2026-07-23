@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-baru",
+  "titulo": "DECAMERON BARU",
+  "destino": "cartagena",
+  "cloudinary": "decameron-baru",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/decameron-baru/imagenes/decameron-baru_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
