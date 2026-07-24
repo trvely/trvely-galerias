@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "flamingo-cancun",
+  "titulo": "FLAMINGO CANCUN",
+  "destino": "cancun",
+  "cloudinary": "flamingo-cancun",
+  "fotos": 108,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/flamingo-cancun/imagenes/flamingo-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

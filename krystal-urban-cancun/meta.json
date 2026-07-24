@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "krystal-urban-cancun",
+  "titulo": "KRYSTAL URBAN CANCUN",
+  "destino": "cancun",
+  "cloudinary": "krystal-urban-cancun",
+  "fotos": 57,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/krystal-urban-cancun/imagenes/krystal-urban-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "royal-solaris-cancun",
+  "titulo": "ROYAL SOLARIS CANCUN",
+  "destino": "cancun",
+  "cloudinary": "royal-solaris-cancun",
+  "fotos": 45,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/royal-solaris-cancun/imagenes/royal-solaris-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

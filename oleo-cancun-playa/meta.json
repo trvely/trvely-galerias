@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "oleo-cancun-playa",
+  "titulo": "OLEO CANCUN PLAYA",
+  "destino": "cancun",
+  "cloudinary": "oleo-cancun-playa",
+  "fotos": 94,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/oleo-cancun-playa/imagenes/oleo-cancun-playa_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
