@@ -7,6 +7,6 @@
   "fotos": 29,
   "video": false,
   "portada": "trvely/hoteles/cancun/imperial-laguna-faranda-cancun/imagenes/imperial-laguna-faranda-cancun_001",
-  "generado_por": "generar-galeria-repo.py",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-24"
 }

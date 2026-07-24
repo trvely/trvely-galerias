@@ -9,10 +9,6 @@
       "nombre": "Cartagena",
       "prod": "CARTAGENA"
     },
-    "cancun": {
-      "nombre": "Cancún",
-      "prod": "CANCUN"
-    },
     "santa-marta": {
       "nombre": "Santa Marta",
       "prod": "SANTA_MARTA"

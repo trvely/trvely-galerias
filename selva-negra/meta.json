@@ -7,6 +7,6 @@
   "fotos": 19,
   "video": false,
   "portada": "trvely/hoteles/cartagena/selva-negra/imagenes/selva-negra_001",
-  "generado_por": "descarga-portal priceagencies + meta",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-24"
 }

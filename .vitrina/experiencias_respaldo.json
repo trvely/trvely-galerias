@@ -30,5 +30,11 @@
     "titulo": "Experiencias Perú",
     "http": 200,
     "vivo": true
+  },
+  {
+    "slug": "santa-marta",
+    "url": "https://experiencias.trvely.com.co/santa-marta/",
+    "http": 200,
+    "vivo": true
   }
 ]

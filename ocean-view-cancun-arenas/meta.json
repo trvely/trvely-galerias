@@ -7,6 +7,6 @@
   "fotos": 19,
   "video": false,
   "portada": "trvely/hoteles/cancun/ocean-view-cancun-arenas/imagenes/ocean-view-cancun-arenas_001",
-  "generado_por": "generar-galeria-repo.py",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-24"
 }

@@ -7,6 +7,6 @@
   "fotos": 105,
   "video": false,
   "portada": "trvely/hoteles/cancun/viva-wyndham-azteca/imagenes/viva-wyndham-azteca_001",
-  "generado_por": "generar-galeria-repo.py",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-24"
 }
