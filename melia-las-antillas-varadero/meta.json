@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "melia-las-antillas-varadero",
+  "titulo": "MELIA LAS ANTILLAS VARADERO",
+  "destino": "cuba",
+  "cloudinary": "melia-las-antillas-varadero",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/melia-las-antillas-varadero/imagenes/melia-las-antillas-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

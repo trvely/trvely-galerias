@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "starfish-varadero",
+  "titulo": "STARFISH VARADERO",
+  "destino": "cuba",
+  "cloudinary": "starfish-varadero",
+  "fotos": 28,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/starfish-varadero/imagenes/starfish-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

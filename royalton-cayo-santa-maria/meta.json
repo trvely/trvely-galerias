@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "royalton-cayo-santa-maria",
+  "titulo": "ROYALTON CAYO SANTA MARIA",
+  "destino": "cuba",
+  "cloudinary": "royalton-cayo-santa-maria",
+  "fotos": 18,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/royalton-cayo-santa-maria/imagenes/royalton-cayo-santa-maria_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

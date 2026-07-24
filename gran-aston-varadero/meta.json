@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "gran-aston-varadero",
+  "titulo": "GRAN ASTON VARADERO",
+  "destino": "cuba",
+  "cloudinary": "gran-aston-varadero",
+  "fotos": 13,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/gran-aston-varadero/imagenes/gran-aston-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

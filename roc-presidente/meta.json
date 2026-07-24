@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "roc-presidente",
+  "titulo": "ROC PRESIDENTE",
+  "destino": "cuba",
+  "cloudinary": "roc-presidente",
+  "fotos": 13,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/roc-presidente/imagenes/roc-presidente_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "selectum-family-resort-varadero",
+  "titulo": "SELECTUM FAMILY RESORT VARADERO",
+  "destino": "cuba",
+  "cloudinary": "selectum-family-resort-varadero",
+  "fotos": 6,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/selectum-family-resort-varadero/imagenes/selectum-family-resort-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

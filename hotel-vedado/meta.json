@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-vedado",
+  "titulo": "HOTEL VEDADO",
+  "destino": "cuba",
+  "cloudinary": "hotel-vedado",
+  "fotos": 6,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/hotel-vedado/imagenes/hotel-vedado_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

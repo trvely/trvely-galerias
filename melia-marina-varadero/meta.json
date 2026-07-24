@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "melia-marina-varadero",
+  "titulo": "MELIA MARINA VARADERO",
+  "destino": "cuba",
+  "cloudinary": "melia-marina-varadero",
+  "fotos": 26,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/melia-marina-varadero/imagenes/melia-marina-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

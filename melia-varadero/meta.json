@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "melia-varadero",
+  "titulo": "MELIA VARADERO",
+  "destino": "cuba",
+  "cloudinary": "melia-varadero",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/melia-varadero/imagenes/melia-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

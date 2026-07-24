@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sirenis-tropical-varadero",
+  "titulo": "SIRENIS TROPICAL VARADERO",
+  "destino": "cuba",
+  "cloudinary": "sirenis-tropical-varadero",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/sirenis-tropical-varadero/imagenes/sirenis-tropical-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-kawama",
+  "titulo": "HOTEL KAWAMA",
+  "destino": "cuba",
+  "cloudinary": "hotel-kawama",
+  "fotos": 7,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/hotel-kawama/imagenes/hotel-kawama_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

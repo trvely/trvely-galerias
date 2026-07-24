@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "iberostar-parque-central",
+  "titulo": "IBEROSTAR PARQUE CENTRAL",
+  "destino": "cuba",
+  "cloudinary": "iberostar-parque-central",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/iberostar-parque-central/imagenes/iberostar-parque-central_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

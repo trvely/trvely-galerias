@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "melia-cohiba",
+  "titulo": "MELIA COHIBA",
+  "destino": "cuba",
+  "cloudinary": "melia-cohiba",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/melia-cohiba/imagenes/melia-cohiba_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

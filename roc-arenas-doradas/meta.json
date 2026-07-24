@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "roc-arenas-doradas",
+  "titulo": "ROC ARENAS DORADAS",
+  "destino": "cuba",
+  "cloudinary": "roc-arenas-doradas",
+  "fotos": 18,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/roc-arenas-doradas/imagenes/roc-arenas-doradas_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

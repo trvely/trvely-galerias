@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "memories-miramar-habana",
+  "titulo": "MEMORIES MIRAMAR HABANA",
+  "destino": "cuba",
+  "cloudinary": "memories-miramar-habana",
+  "fotos": 11,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/memories-miramar-habana/imagenes/memories-miramar-habana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

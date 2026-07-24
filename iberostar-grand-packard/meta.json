@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "iberostar-grand-packard",
+  "titulo": "IBEROSTAR GRAND PACKARD",
+  "destino": "cuba",
+  "cloudinary": "iberostar-grand-packard",
+  "fotos": 19,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/iberostar-grand-packard/imagenes/iberostar-grand-packard_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

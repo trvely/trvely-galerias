@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tryp-habana-libre",
+  "titulo": "TRYP HABANA LIBRE",
+  "destino": "cuba",
+  "cloudinary": "tryp-habana-libre",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/tryp-habana-libre/imagenes/tryp-habana-libre_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

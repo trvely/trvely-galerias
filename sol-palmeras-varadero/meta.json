@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sol-palmeras-varadero",
+  "titulo": "SOL PALMERAS VARADERO",
+  "destino": "cuba",
+  "cloudinary": "sol-palmeras-varadero",
+  "fotos": 33,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/sol-palmeras-varadero/imagenes/sol-palmeras-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

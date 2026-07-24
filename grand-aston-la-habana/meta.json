@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "grand-aston-la-habana",
+  "titulo": "GRAND ASTON LA HABANA",
+  "destino": "cuba",
+  "cloudinary": "grand-aston-la-habana",
+  "fotos": 28,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/grand-aston-la-habana/imagenes/grand-aston-la-habana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

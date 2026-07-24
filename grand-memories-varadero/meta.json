@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "grand-memories-varadero",
+  "titulo": "GRAND MEMORIES VARADERO",
+  "destino": "cuba",
+  "cloudinary": "grand-memories-varadero",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/grand-memories-varadero/imagenes/grand-memories-varadero_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

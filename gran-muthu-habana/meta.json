@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "gran-muthu-habana",
+  "titulo": "GRAN MUTHU HABANA",
+  "destino": "cuba",
+  "cloudinary": "gran-muthu-habana",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/cuba/gran-muthu-habana/imagenes/gran-muthu-habana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
