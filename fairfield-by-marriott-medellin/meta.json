@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "fairfield-by-marriott-medellin",
+  "titulo": "FAIRFIELD BY MARRIOTT MEDELLIN",
+  "destino": "medellin",
+  "cloudinary": "fairfield-by-marriott-medellin",
+  "fotos": 5,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/fairfield-by-marriott-medellin/imagenes/fairfield-by-marriott-medellin_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

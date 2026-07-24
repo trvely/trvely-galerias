@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "med-colombia",
+  "titulo": "MED COLOMBIA",
+  "destino": "medellin",
+  "cloudinary": "med-colombia",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/med-colombia/imagenes/med-colombia_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "47-medellin-street",
+  "titulo": "47 MEDELLIN STREET",
+  "destino": "medellin",
+  "cloudinary": "47-medellin-street",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/47-medellin-street/imagenes/47-medellin-street_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

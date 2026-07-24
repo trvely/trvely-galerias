@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "greenview",
+  "titulo": "GREENVIEW",
+  "destino": "medellin",
+  "cloudinary": "greenview",
+  "fotos": 41,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/greenview/imagenes/greenview_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

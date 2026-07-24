@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dorado-la-70",
+  "titulo": "DORADO LA 70",
+  "destino": "medellin",
+  "cloudinary": "dorado-la-70",
+  "fotos": 131,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/dorado-la-70/imagenes/dorado-la-70_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

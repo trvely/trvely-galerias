@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "viaggio-medellin",
+  "titulo": "VIAGGIO MEDELLIN",
+  "destino": "medellin",
+  "cloudinary": "viaggio-medellin",
+  "fotos": 38,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/viaggio-medellin/imagenes/viaggio-medellin_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

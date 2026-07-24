@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "casa-laureles",
+  "titulo": "CASA LAURELES",
+  "destino": "medellin",
+  "cloudinary": "casa-laureles",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/casa-laureles/imagenes/casa-laureles_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

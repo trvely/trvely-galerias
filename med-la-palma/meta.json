@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "med-la-palma",
+  "titulo": "MED LA PALMA",
+  "destino": "medellin",
+  "cloudinary": "med-la-palma",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/med-la-palma/imagenes/med-la-palma_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

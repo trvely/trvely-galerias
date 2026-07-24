@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tryp-medellin",
+  "titulo": "TRYP MEDELLIN",
+  "destino": "medellin",
+  "cloudinary": "tryp-medellin",
+  "fotos": 134,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/tryp-medellin/imagenes/tryp-medellin_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

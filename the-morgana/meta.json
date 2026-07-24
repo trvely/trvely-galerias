@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "the-morgana",
+  "titulo": "THE MORGANA POBLADO SUITES",
+  "destino": "medellin",
+  "cloudinary": "the-morgana",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/the-morgana/imagenes/the-morgana_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

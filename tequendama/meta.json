@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "tequendama",
+  "titulo": "TEQUENDAMA",
+  "destino": "medellin",
+  "cloudinary": "tequendama",
+  "fotos": 75,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/tequendama/imagenes/tequendama_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

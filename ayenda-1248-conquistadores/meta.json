@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ayenda-1248-conquistadores",
+  "titulo": "AYENDA 1248 CONQUISTADORES",
+  "destino": "medellin",
+  "cloudinary": "ayenda-1248-conquistadores",
+  "fotos": 28,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/ayenda-1248-conquistadores/imagenes/ayenda-1248-conquistadores_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

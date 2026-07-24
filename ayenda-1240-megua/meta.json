@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ayenda-1240-megua",
+  "titulo": "AYENDA 1240 MEGUA",
+  "destino": "medellin",
+  "cloudinary": "ayenda-1240-megua",
+  "fotos": 28,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/ayenda-1240-megua/imagenes/ayenda-1240-megua_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

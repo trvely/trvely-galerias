@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "lleras-express",
+  "titulo": "LLERAS EXPRESS",
+  "destino": "medellin",
+  "cloudinary": "lleras-express",
+  "fotos": 37,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/lleras-express/imagenes/lleras-express_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

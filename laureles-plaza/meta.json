@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "laureles-plaza",
+  "titulo": "LAURELES PLAZA",
+  "destino": "medellin",
+  "cloudinary": "laureles-plaza",
+  "fotos": 32,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/laureles-plaza/imagenes/laureles-plaza_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

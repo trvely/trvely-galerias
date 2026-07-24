@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bh-el-poblado",
+  "titulo": "BH EL POBLADO",
+  "destino": "medellin",
+  "cloudinary": "bh-el-poblado",
+  "fotos": 106,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/bh-el-poblado/imagenes/bh-el-poblado_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

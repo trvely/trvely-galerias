@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mediterraneo",
+  "titulo": "MEDITERRÁNEO",
+  "destino": "medellin",
+  "cloudinary": "mediterraneo",
+  "fotos": 39,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/mediterraneo/imagenes/mediterraneo_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

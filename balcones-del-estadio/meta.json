@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "balcones-del-estadio",
+  "titulo": "BALCONES DEL ESTADIO",
+  "destino": "medellin",
+  "cloudinary": "balcones-del-estadio",
+  "fotos": 51,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/balcones-del-estadio/imagenes/balcones-del-estadio_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

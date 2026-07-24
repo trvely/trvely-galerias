@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bolivariana-plaza",
+  "titulo": "BOLIVARIANA PLAZA",
+  "destino": "medellin",
+  "cloudinary": "bolivariana-plaza",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/bolivariana-plaza/imagenes/bolivariana-plaza_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

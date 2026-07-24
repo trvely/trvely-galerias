@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "nutibara",
+  "titulo": "NUTIBARA",
+  "destino": "medellin",
+  "cloudinary": "nutibara",
+  "fotos": 65,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/nutibara/imagenes/nutibara_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
