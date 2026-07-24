@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "grand-oasis-cancun",
+  "titulo": "GRAND OASIS CANCUN",
+  "destino": "cancun",
+  "cloudinary": "grand-oasis-cancun",
+  "fotos": 116,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/grand-oasis-cancun/imagenes/grand-oasis-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

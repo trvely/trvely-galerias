@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "imperial-las-perlas",
+  "titulo": "IMPERIAL LAS PERLAS",
+  "destino": "cancun",
+  "cloudinary": "imperial-las-perlas",
+  "fotos": 16,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/imperial-las-perlas/imagenes/imperial-las-perlas_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

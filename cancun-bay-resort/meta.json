@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "cancun-bay-resort",
+  "titulo": "CANCUN BAY RESORT",
+  "destino": "cancun",
+  "cloudinary": "cancun-bay-resort",
+  "fotos": 54,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/cancun-bay-resort/imagenes/cancun-bay-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

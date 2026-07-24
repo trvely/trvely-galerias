@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "park-royal-beach",
+  "titulo": "PARK ROYAL BEACH",
+  "destino": "cancun",
+  "cloudinary": "park-royal-beach",
+  "fotos": 93,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/park-royal-beach/imagenes/park-royal-beach_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

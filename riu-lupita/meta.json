@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-lupita",
+  "titulo": "RIU LUPITA",
+  "destino": "cancun",
+  "cloudinary": "riu-lupita",
+  "fotos": 65,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/riu-lupita/imagenes/riu-lupita_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

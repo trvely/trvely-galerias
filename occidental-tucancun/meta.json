@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "occidental-tucancun",
+  "titulo": "OCCIDENTAL TUCANCUN",
+  "destino": "cancun",
+  "cloudinary": "occidental-tucancun",
+  "fotos": 39,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/occidental-tucancun/imagenes/occidental-tucancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

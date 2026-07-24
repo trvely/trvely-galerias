@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "suites-gaby",
+  "titulo": "SUITES GABY",
+  "destino": "cancun",
+  "cloudinary": "suites-gaby",
+  "fotos": 26,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/suites-gaby/imagenes/suites-gaby_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

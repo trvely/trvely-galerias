@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "moon-palace-cancun",
+  "titulo": "MOON PALACE CANCUN",
+  "destino": "cancun",
+  "cloudinary": "moon-palace-cancun",
+  "fotos": 142,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/moon-palace-cancun/imagenes/moon-palace-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

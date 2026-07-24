@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "emporio-cancun",
+  "titulo": "EMPORIO CANCUN",
+  "destino": "cancun",
+  "cloudinary": "emporio-cancun",
+  "fotos": 93,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/emporio-cancun/imagenes/emporio-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

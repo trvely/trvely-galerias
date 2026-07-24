@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-cancun",
+  "titulo": "RIU CANCUN",
+  "destino": "cancun",
+  "cloudinary": "riu-cancun",
+  "fotos": 64,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/riu-cancun/imagenes/riu-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

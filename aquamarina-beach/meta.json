@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "aquamarina-beach",
+  "titulo": "AQUAMARINA BEACH",
+  "destino": "cancun",
+  "cloudinary": "aquamarina-beach",
+  "fotos": 58,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/aquamarina-beach/imagenes/aquamarina-beach_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

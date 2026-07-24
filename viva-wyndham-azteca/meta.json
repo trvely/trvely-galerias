@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "viva-wyndham-azteca",
+  "titulo": "VIVA WYNDHAM AZTECA",
+  "destino": "cancun",
+  "cloudinary": "viva-wyndham-azteca",
+  "fotos": 105,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/viva-wyndham-azteca/imagenes/viva-wyndham-azteca_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "nyx-cancun",
+  "titulo": "NYX CANCUN",
+  "destino": "cancun",
+  "cloudinary": "nyx-cancun",
+  "fotos": 55,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/nyx-cancun/imagenes/nyx-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "selina-cancun-laguna-hotel-zone",
+  "titulo": "SELINA CANCUN LAGUNA",
+  "destino": "cancun",
+  "cloudinary": "selina-cancun-laguna-hotel-zone",
+  "fotos": 55,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/selina-cancun-laguna-hotel-zone/imagenes/selina-cancun-laguna-hotel-zone_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

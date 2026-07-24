@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "the-pyramid-at-grand-oasis",
+  "titulo": "THE PYRAMID AT GRAND OASIS",
+  "destino": "cancun",
+  "cloudinary": "the-pyramid-at-grand-oasis",
+  "fotos": 125,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/the-pyramid-at-grand-oasis/imagenes/the-pyramid-at-grand-oasis_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "seadust-cancun-family-resort",
+  "titulo": "SEADUST CANCUN FAMILY RESORT",
+  "destino": "cancun",
+  "cloudinary": "seadust-cancun-family-resort",
+  "fotos": 179,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/seadust-cancun-family-resort/imagenes/seadust-cancun-family-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

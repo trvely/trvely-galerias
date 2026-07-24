@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "occidental-costa-cancun",
+  "titulo": "OCCIDENTAL COSTA CANCUN",
+  "destino": "cancun",
+  "cloudinary": "occidental-costa-cancun",
+  "fotos": 35,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/occidental-costa-cancun/imagenes/occidental-costa-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

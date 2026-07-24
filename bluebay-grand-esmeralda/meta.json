@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "bluebay-grand-esmeralda",
+  "titulo": "BLUEBAY GRAND ESMERALDA",
+  "destino": "cancun",
+  "cloudinary": "bluebay-grand-esmeralda",
+  "fotos": 72,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/bluebay-grand-esmeralda/imagenes/bluebay-grand-esmeralda_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

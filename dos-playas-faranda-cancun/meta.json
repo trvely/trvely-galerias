@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dos-playas-faranda-cancun",
+  "titulo": "DOS PLAYAS FARANDA CANCUN",
+  "destino": "cancun",
+  "cloudinary": "dos-playas-faranda-cancun",
+  "fotos": 53,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/dos-playas-faranda-cancun/imagenes/dos-playas-faranda-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

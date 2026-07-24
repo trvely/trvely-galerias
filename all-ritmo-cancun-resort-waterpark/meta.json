@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "all-ritmo-cancun-resort-waterpark",
+  "titulo": "ALL RITMO CANCUN RESORT & WATERPARK",
+  "destino": "cancun",
+  "cloudinary": "all-ritmo-cancun-resort-waterpark",
+  "fotos": 138,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/all-ritmo-cancun-resort-waterpark/imagenes/all-ritmo-cancun-resort-waterpark_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

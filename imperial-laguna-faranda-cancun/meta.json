@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "imperial-laguna-faranda-cancun",
+  "titulo": "IMPERIAL LAGUNA FARANDA CANCUN",
+  "destino": "cancun",
+  "cloudinary": "imperial-laguna-faranda-cancun",
+  "fotos": 29,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/imperial-laguna-faranda-cancun/imagenes/imperial-laguna-faranda-cancun_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

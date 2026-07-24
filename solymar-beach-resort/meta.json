@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "solymar-beach-resort",
+  "titulo": "SOLYMAR BEACH RESORT",
+  "destino": "cancun",
+  "cloudinary": "solymar-beach-resort",
+  "fotos": 52,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/solymar-beach-resort/imagenes/solymar-beach-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

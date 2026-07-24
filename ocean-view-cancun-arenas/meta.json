@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ocean-view-cancun-arenas",
+  "titulo": "OCEAN VIEW CANCUN ARENAS",
+  "destino": "cancun",
+  "cloudinary": "ocean-view-cancun-arenas",
+  "fotos": 19,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/ocean-view-cancun-arenas/imagenes/ocean-view-cancun-arenas_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

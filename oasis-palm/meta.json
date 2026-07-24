@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "oasis-palm",
+  "titulo": "OASIS PALM",
+  "destino": "cancun",
+  "cloudinary": "oasis-palm",
+  "fotos": 98,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/oasis-palm/imagenes/oasis-palm_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
