@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "3h",
+  "titulo": "3H",
+  "destino": "medellin",
+  "cloudinary": "3h",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/3h/imagenes/3h_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

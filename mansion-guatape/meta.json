@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mansion-guatape",
+  "titulo": "MANSION GUATAPE",
+  "destino": "medellin",
+  "cloudinary": "mansion-guatape",
+  "fotos": 92,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/mansion-guatape/imagenes/mansion-guatape_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

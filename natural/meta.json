@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "natural",
+  "titulo": "NATURAL",
+  "destino": "medellin",
+  "cloudinary": "natural",
+  "fotos": 56,
+  "video": false,
+  "portada": "trvely/hoteles/medellin/natural/imagenes/natural_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
