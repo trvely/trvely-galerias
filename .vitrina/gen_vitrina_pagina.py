@@ -221,7 +221,7 @@ def construir_pagina(doc, hoy=None):
   .filtros {{ position:sticky; top:0; z-index:20; background:rgba(250,247,242,.94);
               backdrop-filter:blur(10px); border-bottom:1px solid var(--linea); }}
   .filtros-caja {{ max-width:1220px; margin:0 auto; padding:12px 22px; }}
-  .chips {{ display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }}
+  .chips {{ display:flex; flex-wrap:wrap; gap:8px; padding-bottom:2px; }}
   .chips::-webkit-scrollbar {{ display:none; }}
   .chip {{ flex:0 0 auto; border:1.5px solid var(--linea); background:#fff; color:var(--tinta);
            border-radius:22px; padding:9px 15px; font:inherit; font-size:13px; font-weight:700;
