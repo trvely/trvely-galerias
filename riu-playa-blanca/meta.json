@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-playa-blanca",
+  "titulo": "RIU PLAYA BLANCA",
+  "destino": "panama",
+  "cloudinary": "riu-playa-blanca",
+  "fotos": 48,
+  "video": false,
+  "portada": "trvely/hoteles/panama/riu-playa-blanca/imagenes/riu-playa-blanca_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -64,6 +64,10 @@
     "lima": {
       "nombre": "Lima",
       "prod": "LIMA"
+    },
+    "panama": {
+      "nombre": "Panamá",
+      "prod": "PANAMA"
     }
   }
 }

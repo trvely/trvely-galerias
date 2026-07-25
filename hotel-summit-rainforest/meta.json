@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-summit-rainforest",
+  "titulo": "HOTEL SUMMIT & RAINFOREST",
+  "destino": "panama",
+  "cloudinary": "hotel-summit-rainforest",
+  "fotos": 45,
+  "video": false,
+  "portada": "trvely/hoteles/panama/hotel-summit-rainforest/imagenes/hotel-summit-rainforest_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

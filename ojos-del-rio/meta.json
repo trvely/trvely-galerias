@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ojos-del-rio",
+  "titulo": "OJOS DEL RIO",
+  "destino": "panama",
+  "cloudinary": "ojos-del-rio",
+  "fotos": 58,
+  "video": false,
+  "portada": "trvely/hoteles/panama/ojos-del-rio/imagenes/ojos-del-rio_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

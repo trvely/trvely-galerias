@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sheraton-bijao",
+  "titulo": "SHERATON BIJAO",
+  "destino": "panama",
+  "cloudinary": "sheraton-bijao",
+  "fotos": 37,
+  "video": false,
+  "portada": "trvely/hoteles/panama/sheraton-bijao/imagenes/sheraton-bijao_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

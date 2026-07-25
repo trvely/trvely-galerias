@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dreams-playa-bonita",
+  "titulo": "DREAMS PLAYA BONITA",
+  "destino": "panama",
+  "cloudinary": "dreams-playa-bonita",
+  "fotos": 45,
+  "video": false,
+  "portada": "trvely/hoteles/panama/dreams-playa-bonita/imagenes/dreams-playa-bonita_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

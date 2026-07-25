@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hilton-garden-inn-panama",
+  "titulo": "HILTON GARDEN INN PANAMA",
+  "destino": "panama",
+  "cloudinary": "hilton-garden-inn-panama",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/panama/hilton-garden-inn-panama/imagenes/hilton-garden-inn-panama_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
