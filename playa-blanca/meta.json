@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "playa-blanca",
+  "titulo": "PLAYA BLANCA",
+  "destino": "panama",
+  "cloudinary": "playa-blanca",
+  "fotos": 35,
+  "video": false,
+  "portada": "trvely/hoteles/panama/playa-blanca/imagenes/playa-blanca_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

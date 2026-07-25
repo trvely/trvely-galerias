@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "gran-evenia-panama",
+  "titulo": "GRAN EVENIA PANAMA",
+  "destino": "panama",
+  "cloudinary": "gran-evenia-panama",
+  "fotos": 60,
+  "video": false,
+  "portada": "trvely/hoteles/panama/gran-evenia-panama/imagenes/gran-evenia-panama_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
