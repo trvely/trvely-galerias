@@ -35,6 +35,7 @@
     "slug": "santa-marta",
     "url": "https://experiencias.trvely.com.co/santa-marta/",
     "http": 200,
-    "vivo": true
+    "vivo": true,
+    "fondo": "experiencias/santa-marta/cabo-san-juan/imagenes/01-portada"
   }
 ]
