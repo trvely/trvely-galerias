@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "room-007-ventura-hostel",
+  "titulo": "ROOM 007 VENTURA HOSTEL",
+  "destino": "madrid",
+  "cloudinary": "room-007-ventura-hostel",
+  "fotos": 62,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/room-007-ventura-hostel/imagenes/room-007-ventura-hostel_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

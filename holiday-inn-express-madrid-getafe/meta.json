@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "holiday-inn-express-madrid-getafe",
+  "titulo": "HOLIDAY INN EXPRESS MADRID GETAFE",
+  "destino": "madrid",
+  "cloudinary": "holiday-inn-express-madrid-getafe",
+  "fotos": 41,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/holiday-inn-express-madrid-getafe/imagenes/holiday-inn-express-madrid-getafe_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

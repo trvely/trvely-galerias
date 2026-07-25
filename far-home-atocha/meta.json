@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "far-home-atocha",
+  "titulo": "HOTEL FAR HOME ATOCHA",
+  "destino": "madrid",
+  "cloudinary": "far-home-atocha",
+  "fotos": 34,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/far-home-atocha/imagenes/far-home-atocha_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

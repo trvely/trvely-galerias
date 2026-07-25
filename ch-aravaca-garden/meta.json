@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ch-aravaca-garden",
+  "titulo": "C&H ARAVACA GARDEN",
+  "destino": "madrid",
+  "cloudinary": "ch-aravaca-garden",
+  "fotos": 29,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/ch-aravaca-garden/imagenes/ch-aravaca-garden_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

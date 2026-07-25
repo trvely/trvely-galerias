@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "petit-hostel",
+  "titulo": "PETIT HOSTEL",
+  "destino": "madrid",
+  "cloudinary": "petit-hostel",
+  "fotos": 69,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/petit-hostel/imagenes/petit-hostel_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

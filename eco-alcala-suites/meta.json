@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "eco-alcala-suites",
+  "titulo": "ECO ALCALA SUITES",
+  "destino": "madrid",
+  "cloudinary": "eco-alcala-suites",
+  "fotos": 40,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/eco-alcala-suites/imagenes/eco-alcala-suites_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

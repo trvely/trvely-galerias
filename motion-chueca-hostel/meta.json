@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "motion-chueca-hostel",
+  "titulo": "MOTION CHUECA HOSTEL",
+  "destino": "madrid",
+  "cloudinary": "motion-chueca-hostel",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/motion-chueca-hostel/imagenes/motion-chueca-hostel_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

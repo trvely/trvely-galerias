@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hostel-myd-la-latina",
+  "titulo": "HOSTEL MYD LA LATINA",
+  "destino": "madrid",
+  "cloudinary": "hostel-myd-la-latina",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/hostel-myd-la-latina/imagenes/hostel-myd-la-latina_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

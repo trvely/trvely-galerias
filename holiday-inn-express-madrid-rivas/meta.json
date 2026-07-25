@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "holiday-inn-express-madrid-rivas",
+  "titulo": "HOLIDAY INN EXPRESS MADRID RIVAS",
+  "destino": "madrid",
+  "cloudinary": "holiday-inn-express-madrid-rivas",
+  "fotos": 40,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/holiday-inn-express-madrid-rivas/imagenes/holiday-inn-express-madrid-rivas_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

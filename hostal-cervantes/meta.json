@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hostal-cervantes",
+  "titulo": "HOSTAL CERVANTES",
+  "destino": "madrid",
+  "cloudinary": "hostal-cervantes",
+  "fotos": 6,
+  "video": false,
+  "portada": "trvely/hoteles/madrid/hostal-cervantes/imagenes/hostal-cervantes_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -68,6 +68,10 @@
     "panama": {
       "nombre": "Panamá",
       "prod": "PANAMA"
+    },
+    "madrid": {
+      "nombre": "Madrid",
+      "prod": "MADRID"
     }
   }
 }
