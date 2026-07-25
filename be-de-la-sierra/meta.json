@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "be-de-la-sierra",
+  "titulo": "BE DE LA SIERRA",
+  "destino": "santa-marta",
+  "cloudinary": "be-de-la-sierra",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/be-de-la-sierra/imagenes/be-de-la-sierra_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
