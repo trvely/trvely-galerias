@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "suites-ambassador",
+  "titulo": "SUITES AMBASSADOR",
+  "destino": "panama",
+  "cloudinary": "suites-ambassador",
+  "fotos": 16,
+  "video": false,
+  "portada": "trvely/hoteles/panama/suites-ambassador/imagenes/suites-ambassador_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

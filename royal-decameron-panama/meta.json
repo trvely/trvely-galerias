@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "royal-decameron-panama",
+  "titulo": "ROYAL DECAMERON PANAMA",
+  "destino": "panama",
+  "cloudinary": "royal-decameron-panama",
+  "fotos": 148,
+  "video": false,
+  "portada": "trvely/hoteles/panama/royal-decameron-panama/imagenes/royal-decameron-panama_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

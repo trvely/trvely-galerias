@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "las-americas-golden-tower",
+  "titulo": "LAS AMERICAS GOLDEN TOWER",
+  "destino": "panama",
+  "cloudinary": "las-americas-golden-tower",
+  "fotos": 29,
+  "video": false,
+  "portada": "trvely/hoteles/panama/las-americas-golden-tower/imagenes/las-americas-golden-tower_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
