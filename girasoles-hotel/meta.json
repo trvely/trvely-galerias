@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "girasoles-hotel",
+  "titulo": "GIRASOLES HOTEL",
+  "destino": "peru",
+  "cloudinary": "girasoles-hotel",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/peru/girasoles-hotel/imagenes/girasoles-hotel_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

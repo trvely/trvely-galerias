@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "raymi-hotel-cusco",
+  "titulo": "RAYMI HOTEL CUSCO",
+  "destino": "peru",
+  "cloudinary": "raymi-hotel-cusco",
+  "fotos": 48,
+  "video": false,
+  "portada": "trvely/hoteles/peru/raymi-hotel-cusco/imagenes/raymi-hotel-cusco_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

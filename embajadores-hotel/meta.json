@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "embajadores-hotel",
+  "titulo": "EMBAJADORES",
+  "destino": "peru",
+  "cloudinary": "embajadores-hotel",
+  "fotos": 36,
+  "video": false,
+  "portada": "trvely/hoteles/peru/embajadores-hotel/imagenes/embajadores-hotel_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

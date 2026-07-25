@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ibis-lima-reducto-miraflores",
+  "titulo": "IBIS LIMA REDUCTO MIRAFLORES",
+  "destino": "peru",
+  "cloudinary": "ibis-lima-reducto-miraflores",
+  "fotos": 118,
+  "video": false,
+  "portada": "trvely/hoteles/peru/ibis-lima-reducto-miraflores/imagenes/ibis-lima-reducto-miraflores_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

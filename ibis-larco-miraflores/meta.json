@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ibis-larco-miraflores",
+  "titulo": "IBIS LIMA LARCO MIRAFLORES",
+  "destino": "peru",
+  "cloudinary": "ibis-larco-miraflores",
+  "fotos": 120,
+  "video": false,
+  "portada": "trvely/hoteles/peru/ibis-larco-miraflores/imagenes/ibis-larco-miraflores_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

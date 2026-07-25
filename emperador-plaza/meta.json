@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "emperador-plaza",
+  "titulo": "EMPERADOR PLAZA",
+  "destino": "peru",
+  "cloudinary": "emperador-plaza",
+  "fotos": 37,
+  "video": false,
+  "portada": "trvely/hoteles/peru/emperador-plaza/imagenes/emperador-plaza_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

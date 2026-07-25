@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "polo-santa-monica",
+  "titulo": "POLO SANTA MONICA",
+  "destino": "peru",
+  "cloudinary": "polo-santa-monica",
+  "fotos": 25,
+  "video": false,
+  "portada": "trvely/hoteles/peru/polo-santa-monica/imagenes/polo-santa-monica_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

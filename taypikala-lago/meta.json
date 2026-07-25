@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "taypikala-lago",
+  "titulo": "TAYPIKALA HOTEL LAGO",
+  "destino": "peru",
+  "cloudinary": "taypikala-lago",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/peru/taypikala-lago/imagenes/taypikala-lago_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
