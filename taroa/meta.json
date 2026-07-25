@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "taroa",
+  "titulo": "TAROA",
+  "destino": "riohacha",
+  "cloudinary": "taroa",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/riohacha/taroa/imagenes/taroa_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

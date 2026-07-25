@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "wayira-beach",
+  "titulo": "WAYIRA BEACH",
+  "destino": "riohacha",
+  "cloudinary": "wayira-beach",
+  "fotos": 34,
+  "video": false,
+  "portada": "trvely/hoteles/riohacha/wayira-beach/imagenes/wayira-beach_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

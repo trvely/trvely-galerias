@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-arimaca",
+  "titulo": "HOTEL ARIMACA RIOHACHA",
+  "destino": "riohacha",
+  "cloudinary": "hotel-arimaca",
+  "fotos": 12,
+  "video": false,
+  "portada": "trvely/hoteles/riohacha/hotel-arimaca/imagenes/hotel-arimaca_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

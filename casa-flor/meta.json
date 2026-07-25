@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "casa-flor",
+  "titulo": "CASA FLOR",
+  "destino": "riohacha",
+  "cloudinary": "casa-flor",
+  "fotos": 4,
+  "video": false,
+  "portada": "trvely/hoteles/riohacha/casa-flor/imagenes/casa-flor_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

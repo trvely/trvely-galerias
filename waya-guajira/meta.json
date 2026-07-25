@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "waya-guajira",
+  "titulo": "WAYA GUAJIRA",
+  "destino": "riohacha",
+  "cloudinary": "waya-guajira",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/riohacha/waya-guajira/imagenes/waya-guajira_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
