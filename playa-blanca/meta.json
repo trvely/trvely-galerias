@@ -1,10 +1,10 @@
 {
   "version": 1,
   "slug": "playa-blanca",
-  "titulo": "PLAYA BLANCA",
+  "titulo": "PLAYA BLANCA ALL INCLUSIVE",
   "destino": "panama",
   "cloudinary": "playa-blanca",
-  "fotos": 35,
+  "fotos": 41,
   "video": false,
   "portada": "trvely/hoteles/panama/playa-blanca/imagenes/playa-blanca_001",
   "generado_por": "generar-galeria-repo.py",
