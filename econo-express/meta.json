@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "econo-express",
+  "titulo": "ECONO EXPRESS",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "econo-express",
+  "fotos": 18,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/econo-express/imagenes/econo-express_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

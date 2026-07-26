@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "del-principado",
+  "titulo": "DEL PRINCIPADO",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "del-principado",
+  "fotos": 23,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/del-principado/imagenes/del-principado_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

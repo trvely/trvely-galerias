@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "abastos-plaza",
+  "titulo": "ABASTOS PLAZA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "abastos-plaza",
+  "fotos": 104,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/abastos-plaza/imagenes/abastos-plaza_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

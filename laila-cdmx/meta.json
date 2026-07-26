@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "laila-cdmx",
+  "titulo": "LAILA CDMX",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "laila-cdmx",
+  "fotos": 119,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/laila-cdmx/imagenes/laila-cdmx_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

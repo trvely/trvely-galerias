@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "el-ejecutivo-by-reforma",
+  "titulo": "EL EJECUTIVO BY REFORMA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "el-ejecutivo-by-reforma",
+  "fotos": 103,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/el-ejecutivo-by-reforma/imagenes/el-ejecutivo-by-reforma_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

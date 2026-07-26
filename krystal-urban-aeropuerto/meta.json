@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "krystal-urban-aeropuerto",
+  "titulo": "KRYSTAL URBAN AEROPUERTO CDMX",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "krystal-urban-aeropuerto",
+  "fotos": 30,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/krystal-urban-aeropuerto/imagenes/krystal-urban-aeropuerto_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

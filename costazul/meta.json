@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "costazul",
+  "titulo": "COSTAZUL",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "costazul",
+  "fotos": 32,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/costazul/imagenes/costazul_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
