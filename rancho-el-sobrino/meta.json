@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "rancho-el-sobrino",
+  "titulo": "RANCHO EL SOBRINO",
+  "destino": "curazao",
+  "cloudinary": "rancho-el-sobrino",
+  "fotos": 78,
+  "video": false,
+  "portada": "trvely/hoteles/curazao/rancho-el-sobrino/imagenes/rancho-el-sobrino_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

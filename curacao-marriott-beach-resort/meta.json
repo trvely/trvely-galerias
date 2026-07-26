@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "curacao-marriott-beach-resort",
+  "titulo": "CURACAO MARRIOTT BEACH RESORT",
+  "destino": "curazao",
+  "cloudinary": "curacao-marriott-beach-resort",
+  "fotos": 164,
+  "video": false,
+  "portada": "trvely/hoteles/curazao/curacao-marriott-beach-resort/imagenes/curacao-marriott-beach-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
