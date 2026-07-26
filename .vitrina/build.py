@@ -45,8 +45,6 @@ def galerias_del_repo(repo):
         if not os.path.isfile(os.path.join(d, "index.html")):
             continue
         ficha = _json(os.path.join(d, "meta.json"), {})
-        if ficha.get("oculto"):   # hotel fuera de operacion (mantenimiento): no mostrar (reversible)
-            continue
         out.append((n, ficha))
     return out
 

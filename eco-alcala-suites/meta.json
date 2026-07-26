@@ -7,6 +7,6 @@
   "fotos": 40,
   "video": false,
   "portada": "trvely/hoteles/madrid/eco-alcala-suites/imagenes/eco-alcala-suites_001",
-  "generado_por": "generar-galeria-repo.py",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-26"
 }

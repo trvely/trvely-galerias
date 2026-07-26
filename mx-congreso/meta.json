@@ -7,6 +7,6 @@
   "fotos": 31,
   "video": false,
   "portada": "trvely/hoteles/ciudad-de-mexico/mx-congreso/imagenes/mx-congreso_001",
-  "generado_por": "generar-galeria-repo.py",
-  "generado": "2026-07-22"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-07-26"
 }

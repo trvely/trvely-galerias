@@ -64,18 +64,6 @@
     "lima": {
       "nombre": "Lima",
       "prod": "LIMA"
-    },
-    "panama": {
-      "nombre": "Panamá",
-      "prod": "PANAMA"
-    },
-    "madrid": {
-      "nombre": "Madrid",
-      "prod": "MADRID"
-    },
-    "curazao": {
-      "nombre": "Curaçao",
-      "prod": "CURACAO"
     }
   }
 }

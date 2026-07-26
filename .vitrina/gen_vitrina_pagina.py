@@ -15,6 +15,7 @@ Assets que espera en el repo: assets/extenda.ttf · assets/whitestar.otf · asse
 Uso: py -3.13 gen_vitrina_pagina.py [--json vitrina.json] [--salida index.html] [--publicar <repo>]
 """
 import os
+import re
 import sys
 import json
 import html
@@ -23,7 +24,8 @@ import datetime
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 import portada as _portada   # una sola funcion decide la portada (misma que usa el mapa)
-CLOUD = "https://res.cloudinary.com/trvely/image/upload"
+CLOUD = "https://res.cloudinary.com/trvely/image/upload"   # solo respaldo, ya no es el hogar
+MEDIA = "https://media.trvely.com.co"                      # Cloudflare R2 (desde 26-jul-2026)
 LOGO = "assets/logo-beige.png"   # hv1 (beige #FDEEDB) recortado: el SVG venia en lienzo cuadrado
 def _tabla_destinos():
     """Los destinos viven en destinos.json, no en el codigo: uno nuevo se agrega alli y entra solo."""
@@ -79,7 +81,22 @@ def titulo_parejo(t):
 
 
 def portada(pid, w=560, h=420):
-    return f"{CLOUD}/c_fill,g_auto,w_{w},h_{h},q_auto,f_auto/{pid}" if pid else None
+    """La portada 560x420, ya servida desde Cloudflare R2 (media.trvely.com.co).
+
+    R2 no transforma al vuelo: el archivo 560x420 esta pre-generado y se pide por su nombre.
+    Se bajo de Cloudinary CON su tratamiento (recorte g_auto + e_improve:outdoor), asi que la
+    imagen es identica a la de antes — no hay cambio visual (migracion 26-jul-2026).
+    Si el pid no encaja con la convencion, cae a Cloudinary para no dejar la tarjeta sin foto.
+    """
+    if not pid:
+        return None
+    m = re.match(r"trvely/hoteles/([^/]+)/([^/]+)/imagenes/(.+)$", pid)
+    if m:
+        return f"{MEDIA}/hoteles/{m.group(1)}/{m.group(2)}/portada/{m.group(3)}.jpg"
+    m = re.match(r"experiencias/([^/]+)/([^/]+)/(?:.*/)?([^/]+)$", pid)
+    if m:
+        return f"{MEDIA}/experiencias/{m.group(1)}/{m.group(2)}/portada/{m.group(3)}.jpg"
+    return f"{CLOUD}/c_fill,g_auto,w_{w},h_{h},q_auto,f_auto/{pid}"
 
 
 def agrupar(doc):
@@ -121,8 +138,8 @@ def tarjeta_hotel(g, destino, curadas=None):
 def tarjeta_exp(e):
     d = bonito(e["slug"])
     pid = e.get("fondo") or FONDO_EXP.get(e["slug"])
-    fondo = (f' style="background-image:url({CLOUD}/c_fill,g_auto,w_560,h_420,q_auto,f_auto/'
-             f'e_improve:outdoor/{pid})"' if pid else "")
+    u = portada(pid)          # misma funcion: R2 con la portada ya tratada, Cloudinary de respaldo
+    fondo = f' style="background-image:url({u})"' if u else ""
     return f"""      <article class="ficha ficha-exp" data-buscar="experiencias {html.escape(d.lower())} {html.escape(e['slug'])}"
         data-destino="{html.escape(e['slug'])}" data-tipo="experiencia" data-video="0" data-fotos="999">
         <a class="ficha-foto exp" href="{e['url']}" target="_blank" rel="noopener"{fondo}>
@@ -221,12 +238,12 @@ def construir_pagina(doc, hoy=None):
   .filtros {{ position:sticky; top:0; z-index:20; background:rgba(250,247,242,.94);
               backdrop-filter:blur(10px); border-bottom:1px solid var(--linea); }}
   .filtros-caja {{ max-width:1220px; margin:0 auto; padding:12px 22px; }}
-  .chips {{ display:flex; flex-wrap:wrap; gap:6px; padding-bottom:2px; }}
+  .chips {{ display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }}
   .chips::-webkit-scrollbar {{ display:none; }}
   .chip {{ flex:0 0 auto; border:1.5px solid var(--linea); background:#fff; color:var(--tinta);
-           border-radius:22px; padding:8px 11px; font:inherit; font-size:12.5px; font-weight:700;
+           border-radius:22px; padding:9px 15px; font:inherit; font-size:13px; font-weight:700;
            cursor:pointer; transition:background .18s, color .18s, border-color .18s; }}
-  .chip span {{ font-weight:600; opacity:.5; font-size:11px; margin-left:2px; }}
+  .chip span {{ font-weight:600; opacity:.5; font-size:11.5px; margin-left:3px; }}
   .chip:hover {{ border-color:var(--burg); color:var(--burg); }}
   .chip.activo {{ background:var(--burg); border-color:var(--burg); color:#fff; }}
   .chip.activo span {{ opacity:.72; }}
