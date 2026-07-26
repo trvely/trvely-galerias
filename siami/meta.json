@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "siami",
+  "titulo": "SIAMI",
+  "destino": "leticia",
+  "cloudinary": "siami",
+  "fotos": 19,
+  "video": false,
+  "portada": "trvely/hoteles/leticia/siami/imagenes/siami_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

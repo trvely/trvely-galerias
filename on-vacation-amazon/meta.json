@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "on-vacation-amazon",
+  "titulo": "ON VACATION AMAZON",
+  "destino": "leticia",
+  "cloudinary": "on-vacation-amazon",
+  "fotos": 61,
+  "video": false,
+  "portada": "trvely/hoteles/leticia/on-vacation-amazon/imagenes/on-vacation-amazon_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

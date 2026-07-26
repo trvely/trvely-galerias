@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-decalodge-ticuna",
+  "titulo": "DECAMERON DECALODGE TICUNA",
+  "destino": "leticia",
+  "cloudinary": "decameron-decalodge-ticuna",
+  "fotos": 40,
+  "video": false,
+  "portada": "trvely/hoteles/leticia/decameron-decalodge-ticuna/imagenes/decameron-decalodge-ticuna_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
