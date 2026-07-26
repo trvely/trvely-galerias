@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mx-condesa",
+  "titulo": "MX CONDESA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "mx-condesa",
+  "fotos": 58,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/mx-condesa/imagenes/mx-condesa_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "valle-de-mexico-toreo",
+  "titulo": "VALLE DE MEXICO TOREO",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "valle-de-mexico-toreo",
+  "fotos": 66,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/valle-de-mexico-toreo/imagenes/valle-de-mexico-toreo_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

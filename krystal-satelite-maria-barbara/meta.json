@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "krystal-satelite-maria-barbara",
+  "titulo": "KRYSTAL SATELITE MARIA BARBARA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "krystal-satelite-maria-barbara",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/krystal-satelite-maria-barbara/imagenes/krystal-satelite-maria-barbara_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

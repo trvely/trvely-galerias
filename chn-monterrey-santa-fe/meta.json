@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "chn-monterrey-santa-fe",
+  "titulo": "CHN MONTERREY SANTA FE",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "chn-monterrey-santa-fe",
+  "fotos": 32,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/chn-monterrey-santa-fe/imagenes/chn-monterrey-santa-fe_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

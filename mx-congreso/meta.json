@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mx-congreso",
+  "titulo": "MX CONGRESO",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "mx-congreso",
+  "fotos": 31,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/mx-congreso/imagenes/mx-congreso_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mx-lagunilla",
+  "titulo": "MX LAGUNILLA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "mx-lagunilla",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/mx-lagunilla/imagenes/mx-lagunilla_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

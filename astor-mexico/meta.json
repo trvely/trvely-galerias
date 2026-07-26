@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "astor-mexico",
+  "titulo": "ASTOR",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "astor-mexico",
+  "fotos": 43,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/astor-mexico/imagenes/astor-mexico_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
