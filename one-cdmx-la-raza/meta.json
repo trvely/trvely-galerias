@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "one-cdmx-la-raza",
+  "titulo": "ONE CIUDAD DE MEXICO LA RAZA",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "one-cdmx-la-raza",
+  "fotos": 34,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/one-cdmx-la-raza/imagenes/one-cdmx-la-raza_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

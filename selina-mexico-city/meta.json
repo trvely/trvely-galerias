@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "selina-mexico-city",
+  "titulo": "SELINA MEXICO CITY",
+  "destino": "ciudad-de-mexico",
+  "cloudinary": "selina-mexico-city",
+  "fotos": 102,
+  "video": false,
+  "portada": "trvely/hoteles/ciudad-de-mexico/selina-mexico-city/imagenes/selina-mexico-city_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}
