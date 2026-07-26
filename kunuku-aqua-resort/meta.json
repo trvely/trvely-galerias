@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "kunuku-aqua-resort",
+  "titulo": "KUNUKU AQUA RESORT",
+  "destino": "curazao",
+  "cloudinary": "kunuku-aqua-resort",
+  "fotos": 158,
+  "video": false,
+  "portada": "trvely/hoteles/curazao/kunuku-aqua-resort/imagenes/kunuku-aqua-resort_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

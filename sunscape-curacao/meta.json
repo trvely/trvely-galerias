@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sunscape-curacao",
+  "titulo": "SUNSCAPE CURACAO RESORT SPA CASINO",
+  "destino": "curazao",
+  "cloudinary": "sunscape-curacao",
+  "fotos": 76,
+  "video": false,
+  "portada": "trvely/hoteles/curazao/sunscape-curacao/imagenes/sunscape-curacao_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

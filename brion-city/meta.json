@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "brion-city",
+  "titulo": "BRION CITY",
+  "destino": "curazao",
+  "cloudinary": "brion-city",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/curazao/brion-city/imagenes/brion-city_001",
+  "generado_por": "generar-galeria-repo.py",
+  "generado": "2026-07-22"
+}

@@ -72,6 +72,10 @@
     "madrid": {
       "nombre": "Madrid",
       "prod": "MADRID"
+    },
+    "curazao": {
+      "nombre": "Curaçao",
+      "prod": "CURACAO"
     }
   }
 }
