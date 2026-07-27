@@ -24,6 +24,13 @@ import datetime
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 import portada as _portada   # una sola funcion decide la portada (misma que usa el mapa)
+
+# El contador de visitas de Trvely vive en UN solo sitio (analitica_web.py): un token
+# copiado en varios generadores se desincroniza. Ver 00_GOBIERNO/ANALITICA_WEB_TRVELY_v1.md
+# Vive en `ProcesosTrvely/Python`, no aqui: hay que enseñarle a Python donde buscarlo.
+sys.path.insert(0, os.path.normpath(os.path.join(AQUI, "..", "..", "..", "Python")))
+import analitica_web
+_ANALITICA = analitica_web.snippet("galerias.trvely.com.co")
 CLOUD = "https://res.cloudinary.com/trvely/image/upload"   # solo respaldo, ya no es el hogar
 MEDIA = "https://media.trvely.com.co"                      # Cloudflare R2 (desde 26-jul-2026)
 LOGO = "assets/logo-beige.png"   # hv1 (beige #FDEEDB) recortado: el SVG venia en lienzo cuadrado
@@ -510,7 +517,7 @@ def construir_pagina(doc, hoy=None):
     }});
   }});
 </script>
-</body></html>"""
+{_ANALITICA}</body></html>"""
     return pagina
 
 
