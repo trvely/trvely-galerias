@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-las-heliconias",
+  "titulo": "DECAMERON LAS HELICONIAS",
+  "destino": "armenia",
+  "cloudinary": "decameron-las-heliconias",
+  "fotos": 46,
+  "video": false,
+  "portada": "trvely/hoteles/armenia/decameron-las-heliconias/imagenes/decameron-las-heliconias_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

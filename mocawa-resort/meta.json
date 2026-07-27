@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "mocawa-resort",
+  "titulo": "MOCAWA RESORT",
+  "destino": "armenia",
+  "cloudinary": "mocawa-resort",
+  "fotos": 44,
+  "video": false,
+  "portada": "trvely/hoteles/armenia/mocawa-resort/imagenes/mocawa-resort_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

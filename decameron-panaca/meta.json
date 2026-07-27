@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "decameron-panaca",
+  "titulo": "DECAMERON PANACA",
+  "destino": "armenia",
+  "cloudinary": "decameron-panaca",
+  "fotos": 55,
+  "video": false,
+  "portada": "trvely/hoteles/armenia/decameron-panaca/imagenes/decameron-panaca_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

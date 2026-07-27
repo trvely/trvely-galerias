@@ -64,6 +64,10 @@
     "lima": {
       "nombre": "Lima",
       "prod": "LIMA"
+    },
+    "armenia": {
+      "nombre": "Armenia",
+      "prod": "ARMENIA"
     }
   }
 }

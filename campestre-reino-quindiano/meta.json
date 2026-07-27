@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "campestre-reino-quindiano",
+  "titulo": "CAMPESTRE REINO QUINDIANO",
+  "destino": "armenia",
+  "cloudinary": "campestre-reino-quindiano",
+  "fotos": 26,
+  "video": false,
+  "portada": "trvely/hoteles/armenia/campestre-reino-quindiano/imagenes/campestre-reino-quindiano_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}
