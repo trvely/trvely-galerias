@@ -8,5 +8,7 @@
   "video": false,
   "portada": "trvely/hoteles/tolu/kevins/imagenes/kevins_001",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-07-26"
+  "generado": "2026-07-26",
+  "oculto": true,
+  "oculto_motivo": "Mantenimiento indefinido (25-jul-2026) — reactivar quitando este flag"
 }
