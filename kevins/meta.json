@@ -10,5 +10,9 @@
   "generado_por": "gen_vitrina_fichas.py (backfill)",
   "generado": "2026-07-26",
   "oculto": true,
-  "oculto_motivo": "Mantenimiento indefinido (25-jul-2026) — reactivar quitando este flag"
+  "oculto_motivo": "Mantenimiento indefinido (25-jul-2026) — reactivar quitando este flag",
+  "conservado_de_ficha_previa": [
+    "oculto",
+    "oculto_motivo"
+  ]
 }
