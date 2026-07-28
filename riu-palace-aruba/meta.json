@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "riu-palace-aruba",
+  "titulo": "RIU PALACE ARUBA",
+  "destino": "aruba",
+  "cloudinary": "riu-palace-aruba",
+  "fotos": 24,
+  "video": false,
+  "portada": "trvely/hoteles/aruba/riu-palace-aruba/imagenes/riu-palace-aruba_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "eagle-aruba-resort",
+  "titulo": "EAGLE ARUBA RESORT",
+  "destino": "aruba",
+  "cloudinary": "eagle-aruba-resort",
+  "fotos": 23,
+  "video": false,
+  "portada": "trvely/hoteles/aruba/eagle-aruba-resort/imagenes/eagle-aruba-resort_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

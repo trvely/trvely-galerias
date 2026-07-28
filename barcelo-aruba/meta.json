@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "barcelo-aruba",
+  "titulo": "BARCELÓ ARUBA",
+  "destino": "aruba",
+  "cloudinary": "barcelo-aruba",
+  "fotos": 115,
+  "video": false,
+  "portada": "trvely/hoteles/aruba/barcelo-aruba/imagenes/barcelo-aruba_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}

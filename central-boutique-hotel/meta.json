@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "central-boutique-hotel",
+  "titulo": "CENTRAL BOUTIQUE HOTEL",
+  "destino": "aruba",
+  "cloudinary": "central-boutique-hotel",
+  "fotos": 59,
+  "video": false,
+  "portada": "trvely/hoteles/aruba/central-boutique-hotel/imagenes/central-boutique-hotel_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-27"
+}
