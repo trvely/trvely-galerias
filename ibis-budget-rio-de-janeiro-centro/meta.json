@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ibis-budget-rio-de-janeiro-centro",
+  "titulo": "IBIS BUDGET RIO DE JANEIRO CENTRO",
+  "destino": "rio-de-janeiro",
+  "cloudinary": "ibis-budget-rio-de-janeiro-centro",
+  "fotos": 47,
+  "video": false,
+  "portada": "trvely/hoteles/rio-de-janeiro/ibis-budget-rio-de-janeiro-centro/imagenes/ibis-budget-rio-de-janeiro-centro_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

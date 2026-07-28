@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "atlantico-rio",
+  "titulo": "ATLÁNTICO RIO",
+  "destino": "rio-de-janeiro",
+  "cloudinary": "atlantico-rio",
+  "fotos": 41,
+  "video": false,
+  "portada": "trvely/hoteles/rio-de-janeiro/atlantico-rio/imagenes/atlantico-rio_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

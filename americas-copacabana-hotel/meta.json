@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "americas-copacabana-hotel",
+  "titulo": "AMERICAS COPACABANA HOTEL",
+  "destino": "rio-de-janeiro",
+  "cloudinary": "americas-copacabana-hotel",
+  "fotos": 48,
+  "video": false,
+  "portada": "trvely/hoteles/rio-de-janeiro/americas-copacabana-hotel/imagenes/americas-copacabana-hotel_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}
