@@ -80,6 +80,10 @@
     "rio-de-janeiro": {
       "nombre": "Río de Janeiro",
       "prod": "RIO_DE_JANEIRO"
+    },
+    "barranquilla": {
+      "nombre": "Barranquilla",
+      "prod": "BARRANQUILLA"
     }
   }
 }

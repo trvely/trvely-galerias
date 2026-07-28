@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "golden-house",
+  "titulo": "GOLDEN HOUSE BARRANQUILLA",
+  "destino": "barranquilla",
+  "cloudinary": "golden-house",
+  "fotos": 40,
+  "video": false,
+  "portada": "trvely/hoteles/barranquilla/golden-house/imagenes/golden-house_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}
