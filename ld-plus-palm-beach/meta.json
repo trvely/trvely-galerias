@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ld-plus-palm-beach",
+  "titulo": "LD PLUS PALM BEACH",
+  "destino": "isla-margarita",
+  "cloudinary": "ld-plus-palm-beach",
+  "fotos": 20,
+  "video": false,
+  "portada": "trvely/hoteles/isla-margarita/ld-plus-palm-beach/imagenes/ld-plus-palm-beach_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

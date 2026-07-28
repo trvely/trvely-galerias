@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sunsol-punta-blanca",
+  "titulo": "SUNSOL PUNTA BLANCA",
+  "destino": "isla-margarita",
+  "cloudinary": "sunsol-punta-blanca",
+  "fotos": 9,
+  "video": false,
+  "portada": "trvely/hoteles/isla-margarita/sunsol-punta-blanca/imagenes/sunsol-punta-blanca_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

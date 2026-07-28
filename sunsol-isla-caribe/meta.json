@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "sunsol-isla-caribe",
+  "titulo": "SUNSOL ISLA CARIBE",
+  "destino": "isla-margarita",
+  "cloudinary": "sunsol-isla-caribe",
+  "fotos": 5,
+  "video": false,
+  "portada": "trvely/hoteles/isla-margarita/sunsol-isla-caribe/imagenes/sunsol-isla-caribe_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "ld-punta-playa",
+  "titulo": "LD PUNTA PLAYA",
+  "destino": "isla-margarita",
+  "cloudinary": "ld-punta-playa",
+  "fotos": 18,
+  "video": false,
+  "portada": "trvely/hoteles/isla-margarita/ld-punta-playa/imagenes/ld-punta-playa_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

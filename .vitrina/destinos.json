@@ -72,6 +72,10 @@
     "aruba": {
       "nombre": "Aruba",
       "prod": "ARUBA"
+    },
+    "isla-margarita": {
+      "nombre": "Isla Margarita",
+      "prod": "ISLA_MARGARITA"
     }
   }
 }
