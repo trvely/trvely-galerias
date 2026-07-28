@@ -2,11 +2,11 @@
   "version": 1,
   "slug": "ipanema-inn",
   "titulo": "IPANEMA INN",
-  "destino": "ipanema",
+  "destino": "rio-de-janeiro",
   "cloudinary": "ipanema-inn",
   "fotos": 63,
   "video": false,
-  "portada": "trvely/hoteles/ipanema/ipanema-inn/imagenes/ipanema-inn_001",
+  "portada": "trvely/hoteles/rio-de-janeiro/ipanema-inn/imagenes/ipanema-inn_001",
   "generado_por": "generar_galeria_r2.py + ficha manual",
   "generado": "2026-07-28"
 }

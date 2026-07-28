@@ -77,9 +77,9 @@
       "nombre": "Isla Margarita",
       "prod": "ISLA_MARGARITA"
     },
-    "ipanema": {
-      "nombre": "Ipanema",
-      "prod": "IPANEMA"
+    "rio-de-janeiro": {
+      "nombre": "Río de Janeiro",
+      "prod": "RIO_DE_JANEIRO"
     }
   }
 }
