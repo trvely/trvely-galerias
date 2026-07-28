@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "fairfield-by-marriott-bogota-embajada",
+  "titulo": "FAIRFIELD BY MARRIOTT BOGOTÁ EMBAJADA",
+  "destino": "bogota",
+  "cloudinary": "fairfield-by-marriott-bogota-embajada",
+  "fotos": 55,
+  "video": false,
+  "portada": "trvely/hoteles/bogota/fairfield-by-marriott-bogota-embajada/imagenes/fairfield-by-marriott-bogota-embajada_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}

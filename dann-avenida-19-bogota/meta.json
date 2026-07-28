@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "dann-avenida-19-bogota",
+  "titulo": "DANN AVENIDA 19 BOGOTÁ",
+  "destino": "bogota",
+  "cloudinary": "dann-avenida-19-bogota",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/bogota/dann-avenida-19-bogota/imagenes/dann-avenida-19-bogota_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}
