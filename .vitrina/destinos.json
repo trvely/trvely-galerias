@@ -76,6 +76,10 @@
     "isla-margarita": {
       "nombre": "Isla Margarita",
       "prod": "ISLA_MARGARITA"
+    },
+    "ipanema": {
+      "nombre": "Ipanema",
+      "prod": "IPANEMA"
     }
   }
 }

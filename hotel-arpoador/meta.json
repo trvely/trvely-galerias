@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-arpoador",
+  "titulo": "HOTEL ARPOADOR",
+  "destino": "ipanema",
+  "cloudinary": "hotel-arpoador",
+  "fotos": 70,
+  "video": false,
+  "portada": "trvely/hoteles/ipanema/hotel-arpoador/imagenes/hotel-arpoador_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-28"
+}
