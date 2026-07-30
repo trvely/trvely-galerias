@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "vdl-colonial",
+  "titulo": "VDL COLONIAL VILLA DE LEYVA",
+  "destino": "villa-de-leyva",
+  "cloudinary": "vdl-colonial",
+  "fotos": 64,
+  "video": false,
+  "portada": "trvely/hoteles/villa-de-leyva/vdl-colonial/imagenes/vdl-colonial_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-29"
+}

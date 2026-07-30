@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "azor-hotel-cali-versalles",
+  "titulo": "AZOR HOTEL CALI VERSALLES",
+  "destino": "cali",
+  "cloudinary": "azor-hotel-cali-versalles",
+  "fotos": 84,
+  "video": false,
+  "portada": "trvely/hoteles/cali/azor-hotel-cali-versalles/imagenes/azor-hotel-cali-versalles_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-29"
+}

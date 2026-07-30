@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "manantial-melgar",
+  "titulo": "MANANTIAL MELGAR",
+  "destino": "melgar",
+  "cloudinary": "manantial-melgar",
+  "fotos": 60,
+  "video": false,
+  "portada": "trvely/hoteles/melgar/manantial-melgar/imagenes/manantial-melgar_001",
+  "generado_por": "generar_galeria_r2.py + ficha manual",
+  "generado": "2026-07-29"
+}
