@@ -36,8 +36,18 @@ def _json(ruta, defecto=None):
 
 
 def galerias_del_repo(repo):
-    """Toda galería publicada (carpeta con index.html) con su ficha meta.json."""
-    out = []
+    """Toda galería publicada (carpeta con index.html) con su ficha meta.json.
+
+    RESPETA `oculto: true` — un hotel que se saca de la venta NO puede seguir ofreciéndose.
+
+    Por qué está esto aquí (01-ago-2026): el 25-jul se desactivó KEVIN'S (Tolú, mantenimiento
+    indefinido) y se marcó `oculto` en su meta.json. El filtro se puso en `gen_vitrina_mapa.py`
+    — el generador LOCAL — pero este, que es el que enciende la nube, arma la página leyendo el
+    repo desde cero y no sabía del flag. Resultado: la Vitrina pública siguió mostrando KEVIN'S
+    con su botón "Copiar mensaje" listo para WhatsApp. El pendiente estaba cerrado y el hotel
+    seguía a la venta. Dos generadores, dos verdades, y la de la nube es la que ve el cliente.
+    """
+    out, ocultas = [], []
     for n in sorted(os.listdir(repo)):
         d = os.path.join(repo, n)
         if n.startswith(".") or not os.path.isdir(d):
@@ -45,7 +55,13 @@ def galerias_del_repo(repo):
         if not os.path.isfile(os.path.join(d, "index.html")):
             continue
         ficha = _json(os.path.join(d, "meta.json"), {})
+        if ficha.get("oculto"):
+            ocultas.append(f"{n} ({ficha.get('oculto_motivo') or 'sin motivo anotado'})")
+            continue
         out.append((n, ficha))
+    # Decir CUÁNTAS se dejaron fuera: un filtro silencioso es un hotel que desaparece sin rastro.
+    if ocultas:
+        print(f"  ocultas a proposito ({len(ocultas)}): " + " · ".join(ocultas))
     return out
 
 
