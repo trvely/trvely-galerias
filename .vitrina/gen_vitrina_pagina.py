@@ -245,10 +245,8 @@ def construir_pagina(doc, hoy=None):
   .filtros {{ position:sticky; top:0; z-index:20; background:rgba(250,247,242,.94);
               backdrop-filter:blur(10px); border-bottom:1px solid var(--linea); }}
   .filtros-caja {{ max-width:1220px; margin:0 auto; padding:12px 22px; }}
-  /* En escritorio los chips se acomodan en varias lineas: sin dedo para deslizar, una sola
-     fila con scroll oculto dejaba invisibles los destinos del final. En movil siguen en una
-     fila que se desliza (ver @media max-width:760px). */
-  .chips {{ display:flex; flex-wrap:wrap; gap:8px; padding-bottom:2px; }}
+  .chips {{ display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }}
+  .chips::-webkit-scrollbar {{ display:none; }}
   .chip {{ flex:0 0 auto; border:1.5px solid var(--linea); background:#fff; color:var(--tinta);
            border-radius:22px; padding:9px 15px; font:inherit; font-size:13px; font-weight:700;
            cursor:pointer; transition:background .18s, color .18s, border-color .18s; }}
@@ -353,10 +351,6 @@ def construir_pagina(doc, hoy=None):
     .btn-copiar {{ min-height:44px; font-size:13px; }}
     .btn-abrir {{ min-height:44px; }}
     .orden {{ margin-left:0; }}
-    /* una sola fila que se desliza con el dedo: ocupa menos alto que envolver 20 chips */
-    .chips {{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
-              -webkit-overflow-scrolling:touch; }}
-    .chips::-webkit-scrollbar {{ display:none; }}
   }}
   /* PANTALLAS MUY ANCHAS: la rejilla no pasa de 5 columnas para que las tarjetas no queden
      minúsculas ni la foto pierda protagonismo. */

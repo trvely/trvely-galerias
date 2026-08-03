@@ -7,6 +7,6 @@
   "fotos": 59,
   "video": false,
   "portada": "trvely/hoteles/girardot/on-vacation-girardot-resort/imagenes/on-vacation-girardot-resort_001",
-  "generado_por": "generar_galeria_r2.py + ficha manual",
-  "generado": "2026-07-29"
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
+  "generado": "2026-08-02"
 }

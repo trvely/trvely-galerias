@@ -64,46 +64,6 @@
     "lima": {
       "nombre": "Lima",
       "prod": "LIMA"
-    },
-    "armenia": {
-      "nombre": "Armenia",
-      "prod": "ARMENIA"
-    },
-    "aruba": {
-      "nombre": "Aruba",
-      "prod": "ARUBA"
-    },
-    "isla-margarita": {
-      "nombre": "Isla Margarita",
-      "prod": "ISLA_MARGARITA"
-    },
-    "rio-de-janeiro": {
-      "nombre": "Río de Janeiro",
-      "prod": "RIO_DE_JANEIRO"
-    },
-    "barranquilla": {
-      "nombre": "Barranquilla",
-      "prod": "BARRANQUILLA"
-    },
-    "bogota": {
-      "nombre": "Bogotá",
-      "prod": "BOGOTA"
-    },
-    "girardot": {
-      "nombre": "Girardot",
-      "prod": "GIRARDOT"
-    },
-    "cali": {
-      "nombre": "Cali",
-      "prod": "CALI"
-    },
-    "melgar": {
-      "nombre": "Melgar",
-      "prod": "MELGAR"
-    },
-    "villa-de-leyva": {
-      "nombre": "Villa de Leyva",
-      "prod": "VILLA_DE_LEYVA"
     }
   }
 }

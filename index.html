@@ -47,10 +47,8 @@
   .filtros { position:sticky; top:0; z-index:20; background:rgba(250,247,242,.94);
               backdrop-filter:blur(10px); border-bottom:1px solid var(--linea); }
   .filtros-caja { max-width:1220px; margin:0 auto; padding:12px 22px; }
-  /* En escritorio los chips se acomodan en varias lineas: sin dedo para deslizar, una sola
-     fila con scroll oculto dejaba invisibles los destinos del final. En movil siguen en una
-     fila que se desliza (ver @media max-width:760px). */
-  .chips { display:flex; flex-wrap:wrap; gap:8px; padding-bottom:2px; }
+  .chips { display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }
+  .chips::-webkit-scrollbar { display:none; }
   .chip { flex:0 0 auto; border:1.5px solid var(--linea); background:#fff; color:var(--tinta);
            border-radius:22px; padding:9px 15px; font:inherit; font-size:13px; font-weight:700;
            cursor:pointer; transition:background .18s, color .18s, border-color .18s; }
@@ -155,10 +153,6 @@
     .btn-copiar { min-height:44px; font-size:13px; }
     .btn-abrir { min-height:44px; }
     .orden { margin-left:0; }
-    /* una sola fila que se desliza con el dedo: ocupa menos alto que envolver 20 chips */
-    .chips { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
-              -webkit-overflow-scrolling:touch; }
-    .chips::-webkit-scrollbar { display:none; }
   }
   /* PANTALLAS MUY ANCHAS: la rejilla no pasa de 5 columnas para que las tarjetas no queden
      minúsculas ni la foto pierda protagonismo. */
@@ -175,7 +169,7 @@
   <div class="hero-caja">
     <div>
       <img class="logo" src="assets/logo-beige.png" alt="Trvely">
-      <p class="eyebrow">305 galerías · 5 destinos de experiencias · 14,976 fotos</p>
+      <p class="eyebrow">304 galerías · 5 destinos de experiencias · 14,934 fotos</p>
       <h1>VITRINA</h1>
       <p class="firma">todo lo que puedes mostrar</p>
       <div class="buscar">
@@ -194,7 +188,7 @@
 <div class="filtros" id="filtros">
   <div class="filtros-caja">
     <div class="chips" role="group" aria-label="Filtrar por destino">
-      <button class="chip activo" data-filtro-destino="todos">Todos <span>310</span></button>
+      <button class="chip activo" data-filtro-destino="todos">Todos <span>309</span></button>
       <button class="chip" data-filtro-destino="experiencias">Experiencias <span>5</span></button>
       <button class="chip" data-filtro-destino="san-andres">San Andrés <span>39</span></button>
       <button class="chip" data-filtro-destino="santa-marta">Santa Marta <span>31</span></button>
@@ -208,7 +202,7 @@
       <button class="chip" data-filtro-destino="panama">Panama <span>11</span></button>
       <button class="chip" data-filtro-destino="covenas">Coveñas <span>8</span></button>
       <button class="chip" data-filtro-destino="peru">Perú <span>8</span></button>
-      <button class="chip" data-filtro-destino="rio-de-janeiro">Río de Janeiro <span>7</span></button>
+      <button class="chip" data-filtro-destino="rio-de-janeiro">Rio De Janeiro <span>7</span></button>
       <button class="chip" data-filtro-destino="isla-margarita">Isla Margarita <span>6</span></button>
       <button class="chip" data-filtro-destino="riohacha">Riohacha <span>6</span></button>
       <button class="chip" data-filtro-destino="aruba">Aruba <span>5</span></button>
@@ -216,14 +210,14 @@
       <button class="chip" data-filtro-destino="leticia">Leticia <span>5</span></button>
       <button class="chip" data-filtro-destino="armenia">Armenia <span>4</span></button>
       <button class="chip" data-filtro-destino="barranquilla">Barranquilla <span>2</span></button>
-      <button class="chip" data-filtro-destino="bogota">Bogotá <span>2</span></button>
+      <button class="chip" data-filtro-destino="bogota">Bogota <span>2</span></button>
       <button class="chip" data-filtro-destino="cali">Cali <span>2</span></button>
-      <button class="chip" data-filtro-destino="tolu">Tolú <span>2</span></button>
       <button class="chip" data-filtro-destino="girardot">Girardot <span>1</span></button>
       <button class="chip" data-filtro-destino="juan-dolio">Juan Dolio <span>1</span></button>
       <button class="chip" data-filtro-destino="melgar">Melgar <span>1</span></button>
       <button class="chip" data-filtro-destino="santo-domingo">Santo Domingo <span>1</span></button>
-      <button class="chip" data-filtro-destino="villa-de-leyva">Villa de Leyva <span>1</span></button>
+      <button class="chip" data-filtro-destino="tolu">Tolú <span>1</span></button>
+      <button class="chip" data-filtro-destino="villa-de-leyva">Villa De Leyva <span>1</span></button>
     </div>
     <div class="afinar">
       <label class="interruptor"><input type="checkbox" id="solo-video"> Solo con video</label>
@@ -3422,13 +3416,13 @@
       </div>
     </section>
     <section class="bloque" data-seccion="rio-de-janeiro">
-      <h2 class="titulo-bloque">Río de Janeiro <span class="cuenta">7</span></h2>
+      <h2 class="titulo-bloque">Rio De Janeiro <span class="cuenta">7</span></h2>
       <div class="rejilla">
-      <article class="ficha" data-buscar="americas copacabana hotel americas-copacabana-hotel río de janeiro"
+      <article class="ficha" data-buscar="americas copacabana hotel americas-copacabana-hotel rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="48">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/americas-copacabana-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/americas-copacabana-hotel/portada/americas-copacabana-hotel_001.jpg" alt="Americas Copacabana Hotel"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 48 fotos</p>
+          <p class="kicker">Rio De Janeiro · 48 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/americas-copacabana-hotel/" target="_blank" rel="noopener">Americas Copacabana Hotel</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/americas-copacabana-hotel/" data-nombre="Americas Copacabana Hotel" data-msg="hotel">Copiar mensaje</button>
@@ -3436,11 +3430,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="atlántico rio atlantico-rio río de janeiro"
+      <article class="ficha" data-buscar="atlántico rio atlantico-rio rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="41">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/atlantico-rio/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/atlantico-rio/portada/atlantico-rio_001.jpg" alt="Atlántico Rio"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 41 fotos</p>
+          <p class="kicker">Rio De Janeiro · 41 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/atlantico-rio/" target="_blank" rel="noopener">Atlántico Rio</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/atlantico-rio/" data-nombre="Atlántico Rio" data-msg="hotel">Copiar mensaje</button>
@@ -3448,11 +3442,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="hotel arpoador hotel-arpoador río de janeiro"
+      <article class="ficha" data-buscar="hotel arpoador hotel-arpoador rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="70">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/hotel-arpoador/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/hotel-arpoador/portada/hotel-arpoador_001.jpg" alt="Hotel Arpoador"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 70 fotos</p>
+          <p class="kicker">Rio De Janeiro · 70 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hotel-arpoador/" target="_blank" rel="noopener">Hotel Arpoador</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/hotel-arpoador/" data-nombre="Hotel Arpoador" data-msg="hotel">Copiar mensaje</button>
@@ -3460,11 +3454,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="hotel fasano rio de janeiro hotel-fasano-rio-de-janeiro río de janeiro"
+      <article class="ficha" data-buscar="hotel fasano rio de janeiro hotel-fasano-rio-de-janeiro rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="75">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/hotel-fasano-rio-de-janeiro/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/hotel-fasano-rio-de-janeiro/portada/hotel-fasano-rio-de-janeiro_001.jpg" alt="Hotel Fasano Rio de Janeiro"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 75 fotos</p>
+          <p class="kicker">Rio De Janeiro · 75 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/hotel-fasano-rio-de-janeiro/" target="_blank" rel="noopener">Hotel Fasano Rio de Janeiro</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/hotel-fasano-rio-de-janeiro/" data-nombre="Hotel Fasano Rio de Janeiro" data-msg="hotel">Copiar mensaje</button>
@@ -3472,11 +3466,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="ibis budget rio de janeiro centro ibis-budget-rio-de-janeiro-centro río de janeiro"
+      <article class="ficha" data-buscar="ibis budget rio de janeiro centro ibis-budget-rio-de-janeiro-centro rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="47">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/ibis-budget-rio-de-janeiro-centro/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/ibis-budget-rio-de-janeiro-centro/portada/ibis-budget-rio-de-janeiro-centro_001.jpg" alt="Ibis Budget Rio de Janeiro Centro"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 47 fotos</p>
+          <p class="kicker">Rio De Janeiro · 47 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/ibis-budget-rio-de-janeiro-centro/" target="_blank" rel="noopener">Ibis Budget Rio de Janeiro Centro</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/ibis-budget-rio-de-janeiro-centro/" data-nombre="Ibis Budget Rio de Janeiro Centro" data-msg="hotel">Copiar mensaje</button>
@@ -3484,11 +3478,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="ipanema inn ipanema-inn río de janeiro"
+      <article class="ficha" data-buscar="ipanema inn ipanema-inn rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="63">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/ipanema-inn/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/ipanema-inn/portada/ipanema-inn_001.jpg" alt="Ipanema Inn"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 63 fotos</p>
+          <p class="kicker">Rio De Janeiro · 63 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/ipanema-inn/" target="_blank" rel="noopener">Ipanema Inn</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/ipanema-inn/" data-nombre="Ipanema Inn" data-msg="hotel">Copiar mensaje</button>
@@ -3496,11 +3490,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="mar ipanema hotel mar-ipanema-hotel río de janeiro"
+      <article class="ficha" data-buscar="mar ipanema hotel mar-ipanema-hotel rio de janeiro"
         data-destino="rio-de-janeiro" data-tipo="hotel" data-video="0" data-fotos="105">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/mar-ipanema-hotel/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/rio-de-janeiro/mar-ipanema-hotel/portada/mar-ipanema-hotel_001.jpg" alt="Mar Ipanema Hotel"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Río de Janeiro · 105 fotos</p>
+          <p class="kicker">Rio De Janeiro · 105 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/mar-ipanema-hotel/" target="_blank" rel="noopener">Mar Ipanema Hotel</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/mar-ipanema-hotel/" data-nombre="Mar Ipanema Hotel" data-msg="hotel">Copiar mensaje</button>
@@ -3942,13 +3936,13 @@
       </div>
     </section>
     <section class="bloque" data-seccion="bogota">
-      <h2 class="titulo-bloque">Bogotá <span class="cuenta">2</span></h2>
+      <h2 class="titulo-bloque">Bogota <span class="cuenta">2</span></h2>
       <div class="rejilla">
-      <article class="ficha" data-buscar="dann avenida 19 bogotá dann-avenida-19-bogota bogotá"
+      <article class="ficha" data-buscar="dann avenida 19 bogotá dann-avenida-19-bogota bogota"
         data-destino="bogota" data-tipo="hotel" data-video="0" data-fotos="22">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/dann-avenida-19-bogota/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/bogota/dann-avenida-19-bogota/portada/dann-avenida-19-bogota_001.jpg" alt="Dann Avenida 19 Bogotá"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Bogotá · 22 fotos</p>
+          <p class="kicker">Bogota · 22 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/dann-avenida-19-bogota/" target="_blank" rel="noopener">Dann Avenida 19 Bogotá</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/dann-avenida-19-bogota/" data-nombre="Dann Avenida 19 Bogotá" data-msg="hotel">Copiar mensaje</button>
@@ -3956,11 +3950,11 @@
           </div>
         </div>
       </article>
-      <article class="ficha" data-buscar="fairfield by marriott bogotá embajada fairfield-by-marriott-bogota-embajada bogotá"
+      <article class="ficha" data-buscar="fairfield by marriott bogotá embajada fairfield-by-marriott-bogota-embajada bogota"
         data-destino="bogota" data-tipo="hotel" data-video="0" data-fotos="55">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/fairfield-by-marriott-bogota-embajada/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/bogota/fairfield-by-marriott-bogota-embajada/portada/fairfield-by-marriott-bogota-embajada_001.jpg" alt="Fairfield by Marriott Bogotá Embajada"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Bogotá · 55 fotos</p>
+          <p class="kicker">Bogota · 55 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/fairfield-by-marriott-bogota-embajada/" target="_blank" rel="noopener">Fairfield by Marriott Bogotá Embajada</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/fairfield-by-marriott-bogota-embajada/" data-nombre="Fairfield by Marriott Bogotá Embajada" data-msg="hotel">Copiar mensaje</button>
@@ -3994,35 +3988,6 @@
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/casa-santa-monica/" data-nombre="Casa Santa Mónica Cali" data-msg="hotel">Copiar mensaje</button>
             <a class="btn-abrir" href="https://galerias.trvely.com.co/casa-santa-monica/" target="_blank" rel="noopener">Abrir</a>
-          </div>
-        </div>
-      </article>
-      </div>
-    </section>
-    <section class="bloque" data-seccion="tolu">
-      <h2 class="titulo-bloque">Tolú <span class="cuenta">2</span></h2>
-      <div class="rejilla">
-      <article class="ficha" data-buscar="kevins kevins tolú"
-        data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="42">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/tolu/kevins/portada/kevins_001.jpg" alt="Kevins"></a>
-        <div class="ficha-cuerpo">
-          <p class="kicker">Tolú · 42 fotos</p>
-          <h3><a href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener">Kevins</a></h3>
-          <div class="acciones">
-            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/kevins/" data-nombre="Kevins" data-msg="hotel">Copiar mensaje</button>
-            <a class="btn-abrir" href="https://galerias.trvely.com.co/kevins/" target="_blank" rel="noopener">Abrir</a>
-          </div>
-        </div>
-      </article>
-      <article class="ficha" data-buscar="loa loa tolú"
-        data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="204">
-        <a class="ficha-foto" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/tolu/loa/portada/loa_001.jpg" alt="Loa"></a>
-        <div class="ficha-cuerpo">
-          <p class="kicker">Tolú · 204 fotos</p>
-          <h3><a href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Loa</a></h3>
-          <div class="acciones">
-            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/loa/" data-nombre="Loa" data-msg="hotel">Copiar mensaje</button>
-            <a class="btn-abrir" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Abrir</a>
           </div>
         </div>
       </article>
@@ -4096,14 +4061,31 @@
       </article>
       </div>
     </section>
+    <section class="bloque" data-seccion="tolu">
+      <h2 class="titulo-bloque">Tolú <span class="cuenta">1</span></h2>
+      <div class="rejilla">
+      <article class="ficha" data-buscar="loa loa tolú"
+        data-destino="tolu" data-tipo="hotel" data-video="0" data-fotos="204">
+        <a class="ficha-foto" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/tolu/loa/portada/loa_001.jpg" alt="Loa"></a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Tolú · 204 fotos</p>
+          <h3><a href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Loa</a></h3>
+          <div class="acciones">
+            <button class="btn-copiar" data-url="https://galerias.trvely.com.co/loa/" data-nombre="Loa" data-msg="hotel">Copiar mensaje</button>
+            <a class="btn-abrir" href="https://galerias.trvely.com.co/loa/" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
     <section class="bloque" data-seccion="villa-de-leyva">
-      <h2 class="titulo-bloque">Villa de Leyva <span class="cuenta">1</span></h2>
+      <h2 class="titulo-bloque">Villa De Leyva <span class="cuenta">1</span></h2>
       <div class="rejilla">
       <article class="ficha" data-buscar="vdl colonial villa de leyva vdl-colonial villa de leyva"
         data-destino="villa-de-leyva" data-tipo="hotel" data-video="0" data-fotos="64">
         <a class="ficha-foto" href="https://galerias.trvely.com.co/vdl-colonial/" target="_blank" rel="noopener"><img loading="lazy" src="https://media.trvely.com.co/hoteles/villa-de-leyva/vdl-colonial/portada/vdl-colonial_001.jpg" alt="Vdl Colonial Villa de Leyva"></a>
         <div class="ficha-cuerpo">
-          <p class="kicker">Villa de Leyva · 64 fotos</p>
+          <p class="kicker">Villa De Leyva · 64 fotos</p>
           <h3><a href="https://galerias.trvely.com.co/vdl-colonial/" target="_blank" rel="noopener">Vdl Colonial Villa de Leyva</a></h3>
           <div class="acciones">
             <button class="btn-copiar" data-url="https://galerias.trvely.com.co/vdl-colonial/" data-nombre="Vdl Colonial Villa de Leyva" data-msg="hotel">Copiar mensaje</button>
@@ -4121,7 +4103,7 @@
   <p class="pie-sede">Bogotá, Colombia</p>
   <div class="pie-legal">
     <span>Trvely S.A.S. · NIT: 901902687-9</span>
-    <span>305 galerías · 5 destinos de experiencias · actualizado 29/07/2026 · 22:46</span>
+    <span>304 galerías · 5 destinos de experiencias · actualizado 02/08/2026 · 22:38</span>
     <span>Copyright © 2026. Todos los derechos reservados.</span>
   </div>
 </footer>
