@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "slug": "catalonia-bayahibe",
+  "titulo": "CATALONIA BAYAHIBE",
+  "destino": "punta-cana",
+  "cloudinary": "catalonia-bayahibe",
+  "fotos": 22,
+  "video": false,
+  "portada": "trvely/hoteles/bayahibe/catalonia-bayahibe/imagenes/catalonia-bayahibe_001",
+  "generado_por": "generar_galeria_r2.py",
+  "generado": "2026-08-05",
+  "destino_media": "bayahibe"
+}
