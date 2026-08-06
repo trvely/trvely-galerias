@@ -2,12 +2,13 @@
   "version": 1,
   "slug": "hm-alma-de-bayahibe",
   "titulo": "HM ALMA DE BAYAHIBE",
-  "destino": "punta-cana",
+  "destino": "bayahibe",
   "cloudinary": "hm-alma-de-bayahibe",
   "fotos": 80,
   "video": false,
   "portada": "trvely/hoteles/bayahibe/hm-alma-de-bayahibe/imagenes/hm-alma-de-bayahibe_001",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
   "generado": "2026-08-02",
-  "destino_media": "bayahibe"
+  "destino_media": "bayahibe",
+  "nota_destino": "Corregido 6-ago-2026 por instruccion del CEO: el hotel esta en BAYAHIBE. Decia punta-cana, que es su AEROPUERTO de llegada (PUJ), no su ciudad. La ruta de R2 ya era bayahibe/hm-alma-de-bayahibe: la Vitrina era la unica que lo clasificaba mal."
 }
