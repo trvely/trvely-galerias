@@ -106,10 +106,18 @@ def construir_manifiesto(repo, repo_exp=None):
     else:
         exps = _json(os.path.join(AQUI, "experiencias_respaldo.json"), [])
 
-    return {"galerias_por_destino": por_destino, "experiencias": exps,
+    # Academia de Producto: las fichas de venta viven en OTRO repo (trvely-fichas), asi que su
+    # fuente es un JSON de config que viaja al repo en `.vitrina/` — el MISMO que lee el local.
+    # Si la nube no lo viera, regeneraria la Vitrina SIN las fichas y las borraria en silencio:
+    # es exactamente el caso KEVIN'S de arriba, al reves.
+    fichas = _json(os.path.join(AQUI, "fichas.json"), []) or []
+    for f in fichas:
+        f.setdefault("url", f"https://fichas.trvely.com.co/{f['slug']}/")
+
+    return {"galerias_por_destino": por_destino, "experiencias": exps, "fichas": fichas,
             "sin_ficha": sin_ficha,
             "totales": {"galerias": sum(len(v) for v in por_destino.values()),
-                        "experiencias": len(exps)}}
+                        "experiencias": len(exps), "fichas": len(fichas)}}
 
 
 def main():

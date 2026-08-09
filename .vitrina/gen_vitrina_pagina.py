@@ -163,6 +163,33 @@ def tarjeta_exp(e):
       </article>"""
 
 
+def tarjeta_academia(f, portada_hotel=None):
+    """Tarjeta de una ficha de la Academia de Producto (fichas.trvely.com.co).
+
+    🔴 A DIFERENCIA de hoteles y experiencias, NO lleva boton "Copiar mensaje": la ficha es
+    material INTERNO del asesor (trae lo que no se promete y sus argumentos de venta). Un boton
+    de copiar aqui invita a mandarsela al cliente. Solo "Abrir".
+    """
+    t = html.escape(f.get("titulo") or bonito(f["slug"]))
+    resumen = html.escape(f.get("resumen") or "")
+    u = portada(portada_hotel) if portada_hotel else None
+    fondo = f' style="background-image:url({u})"' if u else ""
+    dest = html.escape(bonito(f.get("destino", "")))
+    return f"""      <article class="ficha ficha-exp" data-buscar="{html.escape((t + ' ' + f['slug'] + ' academia ficha como vender ' + dest).lower())}"
+        data-destino="academia" data-tipo="ficha" data-video="0" data-fotos="999">
+        <a class="ficha-foto exp" href="{f['url']}" target="_blank" rel="noopener"{fondo}>
+          <span class="exp-rotulo">Cómo vender</span><span class="exp-destino">{t}</span>
+        </a>
+        <div class="ficha-cuerpo">
+          <p class="kicker">Academia de Producto{(' · ' + resumen) if resumen else ''}</p>
+          <h3><a href="{f['url']}" target="_blank" rel="noopener">{t}</a></h3>
+          <div class="acciones">
+            <a class="btn-abrir" href="{f['url']}" target="_blank" rel="noopener">Abrir la ficha</a>
+          </div>
+        </div>
+      </article>"""
+
+
 def construir_pagina(doc, hoy=None):
     """Arma el HTML de la Vitrina desde el manifiesto. FUNCIÓN PURA: no lee archivos externos ni
     la red, no depende del sistema operativo. La usan el generador local Y build.py (la nube):
@@ -170,18 +197,34 @@ def construir_pagina(doc, hoy=None):
     grupos = agrupar(doc)
     curadas = _portada.cargar_curadas()
     exps = [e for e in doc["experiencias"] if e.get("vivo", True)]
+    fichas = [f for f in doc.get("fichas", []) if f.get("vivo", True)]
     total = sum(len(v) for v in grupos.values())
     fotos = sum(g["fotos"] for v in grupos.values() for g in v)
     orden_dest = sorted(grupos, key=lambda x: (-len(grupos[x]), bonito(x)))
 
+    # la portada de cada ficha se toma de la galeria del MISMO hotel (si existe): una sola
+    # verdad de imagen por hotel, y una ficha nueva no obliga a elegirle foto aparte
+    portadas_hotel = {g["slug"]: g.get("portada") for v in grupos.values() for g in v}
+
     chips = ['<button class="chip activo" data-filtro-destino="todos">Todos <span>{}</span></button>'
-             .format(total + len(exps))]
+             .format(total + len(exps) + len(fichas))]
+    if fichas:
+        chips += ['<button class="chip" data-filtro-destino="academia">Cómo vender <span>{}</span></button>'
+                  .format(len(fichas))]
     chips += ['<button class="chip" data-filtro-destino="experiencias">Experiencias <span>{}</span></button>'
               .format(len(exps))]
     chips += ['<button class="chip" data-filtro-destino="{}">{} <span>{}</span></button>'
               .format(html.escape(d), html.escape(bonito(d)), len(grupos[d])) for d in orden_dest]
 
-    secciones = [f"""    <section class="bloque" data-seccion="experiencias">
+    secciones = []
+    if fichas:
+        secciones.append(f"""    <section class="bloque" data-seccion="academia">
+      <h2 class="titulo-bloque">Cómo vender · Academia de Producto <span class="cuenta">{len(fichas)}</span></h2>
+      <div class="rejilla">
+{chr(10).join(tarjeta_academia(f, portadas_hotel.get(f['slug'])) for f in sorted(fichas, key=lambda f: (f.get('titulo') or f['slug']).lower()))}
+      </div>
+    </section>""")
+    secciones += [f"""    <section class="bloque" data-seccion="experiencias">
       <h2 class="titulo-bloque">Experiencias <span class="cuenta">{len(exps)}</span></h2>
       <div class="rejilla">
 {chr(10).join(tarjeta_exp(e) for e in sorted(exps, key=lambda e: bonito(e['slug']).lower()))}
@@ -528,6 +571,18 @@ def main():
     if "verificacion" not in doc:
         sys.exit("ABORTA: el manifiesto no esta verificado. Corre antes gen_vitrina_verificar.py\n"
                  "  Publicar sin verificar es mandarle al asesor un enlace a ciegas.")
+
+    # Academia de Producto: las fichas viven en otro repo (trvely-fichas), su fuente es
+    # fichas.json — el MISMO archivo que lee build.py en la nube (cero drift).
+    if "fichas" not in doc:
+        try:
+            with open(os.path.join(AQUI, "fichas.json"), encoding="utf-8") as f:
+                doc["fichas"] = json.load(f)
+        except (OSError, ValueError):
+            doc["fichas"] = []
+    for _f in doc["fichas"]:
+        _f.setdefault("url", f"https://fichas.trvely.com.co/{_f['slug']}/")
+
     pagina = construir_pagina(doc)
 
     salida = _opt("--salida", os.path.join(AQUI, "index.html"))

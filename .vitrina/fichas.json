@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "catalonia-royal-bavaro",
+    "titulo": "Catalonia Royal Bávaro",
+    "destino": "punta-cana",
+    "resumen": "Solo adultos 18+ · 284 suites",
+    "url": "https://trvely.github.io/trvely-fichas/catalonia-royal-bavaro/",
+    "_nota_url": "URL explicita mientras el DNS de fichas.trvely.com.co no exista (falta el CNAME en Hostinger: nombre 'fichas' -> trvely.github.io). Cuando resuelva, BORRAR esta linea 'url' y la ficha tomara sola https://fichas.trvely.com.co/<slug>/"
+  }
+]
