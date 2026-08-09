@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-royal-la-romana",
+  "titulo": "CATALONIA ROYAL LA ROMANA",
+  "destino": "bayahibe",
+  "cloudinary": "catalonia-royal-la-romana",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/bayahibe/catalonia-royal-la-romana/imagenes/catalonia-royal-la-romana_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}

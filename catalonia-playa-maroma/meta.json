@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-playa-maroma",
+  "titulo": "CATALONIA PLAYA MAROMA",
+  "destino": "riviera-maya",
+  "cloudinary": "catalonia-playa-maroma",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/riviera-maya/catalonia-playa-maroma/imagenes/catalonia-playa-maroma_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}

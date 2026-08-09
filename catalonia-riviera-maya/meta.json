@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-riviera-maya",
+  "titulo": "CATALONIA RIVIERA MAYA",
+  "destino": "riviera-maya",
+  "cloudinary": "catalonia-riviera-maya",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/riviera-maya/catalonia-riviera-maya/imagenes/catalonia-riviera-maya_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}

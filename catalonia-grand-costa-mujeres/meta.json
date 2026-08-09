@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-grand-costa-mujeres",
+  "titulo": "CATALONIA GRAND COSTA MUJERES",
+  "destino": "cancun",
+  "cloudinary": "catalonia-grand-costa-mujeres",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/cancun/catalonia-grand-costa-mujeres/imagenes/catalonia-grand-costa-mujeres_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}
