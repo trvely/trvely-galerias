@@ -163,6 +163,38 @@ def tarjeta_exp(e):
       </article>"""
 
 
+def normalizar_fichas(crudas, base_url="https://fichas.trvely.com.co"):
+    """Deja `fichas.json` en un estado en el que la pagina NO puede romperse. FUNCION PURA.
+
+    Blindaje pensado para cuando lleguen muchas mas fichas (el CEO lo pidio el 9-ago-2026):
+      - una ficha SIN `slug` se descarta (no se puede construir su url) y se AVISA;
+      - los slugs duplicados se colapsan a uno (dos tarjetas iguales confunden al asesor);
+      - `url` se completa sola desde el slug si no viene;
+      - `vivo: false` apaga una ficha sin borrarla del archivo.
+    Devuelve (fichas_buenas, avisos). El que llama decide si los avisos son fatales.
+    """
+    buenas, avisos, vistos = [], [], set()
+    for i, f in enumerate(crudas or []):
+        if not isinstance(f, dict):
+            avisos.append(f"entrada #{i + 1} no es un objeto JSON: se descarta")
+            continue
+        slug = (f.get("slug") or "").strip()
+        if not slug:
+            avisos.append(f"entrada #{i + 1} sin 'slug': se descarta")
+            continue
+        if slug in vistos:
+            avisos.append(f"'{slug}' esta repetido: se deja una sola vez")
+            continue
+        if not f.get("vivo", True):
+            avisos.append(f"'{slug}' marcado vivo:false: no se publica")
+            continue
+        vistos.add(slug)
+        f = dict(f)
+        f.setdefault("url", f"{base_url}/{slug}/")
+        buenas.append(f)
+    return buenas, avisos
+
+
 def tarjeta_academia(f, portada_hotel=None):
     """Tarjeta de una ficha de la Academia de Producto (fichas.trvely.com.co).
 
@@ -170,12 +202,13 @@ def tarjeta_academia(f, portada_hotel=None):
     material INTERNO del asesor (trae lo que no se promete y sus argumentos de venta). Un boton
     de copiar aqui invita a mandarsela al cliente. Solo "Abrir".
     """
-    t = html.escape(f.get("titulo") or bonito(f["slug"]))
+    slug = f.get("slug", "")
+    t = html.escape(f.get("titulo") or bonito(slug))
     resumen = html.escape(f.get("resumen") or "")
     u = portada(portada_hotel) if portada_hotel else None
     fondo = f' style="background-image:url({u})"' if u else ""
     dest = html.escape(bonito(f.get("destino", "")))
-    return f"""      <article class="ficha ficha-exp" data-buscar="{html.escape((t + ' ' + f['slug'] + ' academia ficha como vender ' + dest).lower())}"
+    return f"""      <article class="ficha ficha-exp" data-buscar="{html.escape((t + ' ' + slug + ' academia ficha como vender ' + dest).lower())}"
         data-destino="academia" data-tipo="ficha" data-video="0" data-fotos="999">
         <a class="ficha-foto exp" href="{f['url']}" target="_blank" rel="noopener"{fondo}>
           <span class="exp-rotulo">Cómo vender</span><span class="exp-destino">{t}</span>
@@ -578,10 +611,37 @@ def main():
         try:
             with open(os.path.join(AQUI, "fichas.json"), encoding="utf-8") as f:
                 doc["fichas"] = json.load(f)
-        except (OSError, ValueError):
+        except OSError:
             doc["fichas"] = []
-    for _f in doc["fichas"]:
-        _f.setdefault("url", f"https://fichas.trvely.com.co/{_f['slug']}/")
+        except ValueError as e:
+            sys.exit(f"ABORTA: fichas.json no es JSON valido ({e}).\n"
+                     "  Con el archivo roto la Vitrina saldria SIN la Academia y nadie se enteraria.")
+    doc["fichas"], avisos = normalizar_fichas(doc["fichas"])
+    for a in avisos:
+        print(f"    OJO ficha: {a}")
+
+    # Las galerias se verifican (fase 3) y sin eso este script aborta. Las fichas viven en OTRO
+    # repo, asi que esa fase no las mira: se comprueban aqui. Una ficha muerta en la Vitrina es
+    # el mismo pecado que un enlace de galeria a ciegas.
+    if doc["fichas"] and "--sin-verificar-fichas" not in sys.argv:
+        import urllib.request
+        import urllib.error
+        muertas = []
+        for f in doc["fichas"]:
+            try:
+                req = urllib.request.Request(f["url"], method="HEAD",
+                                             headers={"User-Agent": "trvely-vitrina/1.0"})
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    if r.status >= 400:
+                        muertas.append(f"{f['slug']} -> HTTP {r.status}")
+            except Exception as e:
+                muertas.append(f"{f['slug']} -> {type(e).__name__}: {e}")
+        if muertas:
+            sys.exit("ABORTA: hay fichas de la Academia que no responden:\n  " +
+                     "\n  ".join(muertas) +
+                     "\n  Publicar una ficha muerta es mandarle al asesor a una pagina en blanco."
+                     "\n  (si es a proposito: 'vivo': false en fichas.json, o --sin-verificar-fichas)")
+        print(f"    Academia: {len(doc['fichas'])} ficha(s) verificada(s) OK")
 
     pagina = construir_pagina(doc)
 

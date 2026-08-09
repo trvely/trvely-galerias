@@ -110,9 +110,12 @@ def construir_manifiesto(repo, repo_exp=None):
     # fuente es un JSON de config que viaja al repo en `.vitrina/` — el MISMO que lee el local.
     # Si la nube no lo viera, regeneraria la Vitrina SIN las fichas y las borraria en silencio:
     # es exactamente el caso KEVIN'S de arriba, al reves.
-    fichas = _json(os.path.join(AQUI, "fichas.json"), []) or []
-    for f in fichas:
-        f.setdefault("url", f"https://fichas.trvely.com.co/{f['slug']}/")
+    # Mismo blindaje que el local: sin slug se descarta, duplicados se colapsan, `vivo:false`
+    # apaga. La nube NO verifica que la ficha responda (no debe salir a la red): eso lo hace el
+    # generador local antes de publicar.
+    fichas, avisos = pagina.normalizar_fichas(_json(os.path.join(AQUI, "fichas.json"), []) or [])
+    for a in avisos:
+        print(f"  OJO ficha: {a}")
 
     return {"galerias_por_destino": por_destino, "experiencias": exps, "fichas": fichas,
             "sin_ficha": sin_ficha,
