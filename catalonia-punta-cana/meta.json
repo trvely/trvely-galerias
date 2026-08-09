@@ -8,5 +8,7 @@
   "video": false,
   "portada": "trvely/hoteles/punta-cana/catalonia-punta-cana/imagenes/catalonia-punta-cana_001",
   "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-08-09"
+  "generado": "2026-08-09",
+  "oculto": true,
+  "oculto_motivo": "Identidad sin confirmar (9-ago-2026). No comparte NI UNA foto con catalonia-bavaro-beach y muestra campo de golf propio con lagos, que el Fact Sheet del Bavaro Beach no respalda. No esta entre los 10 Catalonia del Area, no tiene pagina publica (404) ni aparece en el cotizador. Se retira de la Vitrina hasta saber que hotel es. Reactivar = quitar estas dos claves. Los masters y la galeria NO se borraron."
 }
