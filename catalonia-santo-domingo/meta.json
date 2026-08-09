@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-santo-domingo",
+  "titulo": "CATALONIA SANTO DOMINGO",
+  "destino": "santo-domingo",
+  "cloudinary": "catalonia-santo-domingo",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/santo-domingo/catalonia-santo-domingo/imagenes/catalonia-santo-domingo_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}

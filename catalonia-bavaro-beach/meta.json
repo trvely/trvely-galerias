@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "catalonia-bavaro-beach",
+  "titulo": "CATALONIA BAVARO BEACH",
+  "destino": "punta-cana",
+  "cloudinary": "catalonia-bavaro-beach",
+  "fotos": 50,
+  "video": false,
+  "portada": "trvely/hoteles/punta-cana/catalonia-bavaro-beach/imagenes/catalonia-bavaro-beach_001",
+  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado": "2026-08-09"
+}
