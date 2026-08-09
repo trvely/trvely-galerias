@@ -7,6 +7,6 @@
   "fotos": 50,
   "video": false,
   "portada": "trvely/hoteles/punta-cana/catalonia-bavaro-beach/imagenes/catalonia-bavaro-beach_001",
-  "generado_por": "generar_galeria_r2.py + siembra manual (9-ago-2026)",
+  "generado_por": "gen_vitrina_fichas.py (backfill)",
   "generado": "2026-08-09"
 }
