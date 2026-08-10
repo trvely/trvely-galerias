@@ -16,5 +16,11 @@
   "titulo": "Catalonia Bávaro Beach",
   "destino": "punta-cana",
   "resumen": "Familiar · 682 suites · Kids Club"
+ },
+ {
+  "slug": "catalonia-riviera-maya",
+  "titulo": "Catalonia Riviera Maya",
+  "destino": "riviera-maya",
+  "resumen": "Familias y parejas · 423 hab"
  }
 ]
