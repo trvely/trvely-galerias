@@ -22,5 +22,11 @@
   "titulo": "Catalonia Riviera Maya",
   "destino": "riviera-maya",
   "resumen": "Familias y parejas · 423 hab"
+ },
+ {
+  "slug": "catalonia-bayahibe",
+  "titulo": "Catalonia Bayahíbe",
+  "destino": "bayahibe",
+  "resumen": "Familiar · Bandera Azul · 361 hab"
  }
 ]
