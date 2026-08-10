@@ -40,5 +40,17 @@
   "titulo": "Catalonia Yucatán Beach",
   "destino": "riviera-maya",
   "resumen": "Familiar · 205 hab · 4 piscinas"
+ },
+ {
+  "slug": "catalonia-playa-maroma",
+  "titulo": "Catalonia Playa Maroma",
+  "destino": "riviera-maya",
+  "resumen": "Familiar · AAA Three Diamond"
+ },
+ {
+  "slug": "catalonia-royal-tulum",
+  "titulo": "Catalonia Royal Tulum",
+  "destino": "riviera-maya",
+  "resumen": "Solo adultos 18+ · 288 hab"
  }
 ]
