@@ -1,8 +1,14 @@
 [
-  {
-    "slug": "catalonia-royal-bavaro",
-    "titulo": "Catalonia Royal Bávaro",
-    "destino": "punta-cana",
-    "resumen": "Solo adultos 18+ · 284 suites"
-  }
+ {
+  "slug": "catalonia-royal-bavaro",
+  "titulo": "Catalonia Royal Bávaro",
+  "destino": "punta-cana",
+  "resumen": "Solo adultos 18+ · 284 suites"
+ },
+ {
+  "slug": "catalonia-royal-la-romana",
+  "titulo": "Catalonia Royal La Romana",
+  "destino": "bayahibe",
+  "resumen": "Solo adultos 18+ · 211 habitaciones"
+ }
 ]
