@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "casablanca",
+  "titulo": "Casablanca",
+  "destino": "san-andres",
+  "cloudinary": "casablanca",
+  "fotos": 42,
+  "video": false,
+  "portada": "trvely/hoteles/san-andres/casablanca/imagenes/casablanca_001",
+  "generado_por": "migrar_hotel_a_r2.py + generar_galeria_r2.py",
+  "generado": "2026-09-08"
+}
