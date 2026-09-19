@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-virrey-cartagena",
+  "titulo": "HOTEL VIRREY CARTAGENA",
+  "destino": "cartagena",
+  "cloudinary": "hotel-virrey-cartagena",
+  "fotos": 120,
+  "video": false,
+  "portada": "trvely/hoteles/cartagena/hotel-virrey-cartagena/imagenes/hotel-virrey-cartagena_001",
+  "generado_por": "claude (flujo R2)",
+  "generado": "2026-09-18"
+}
