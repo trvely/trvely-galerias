@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "hotel-valladolid",
+  "titulo": "HOTEL VALLADOLID",
+  "destino": "santa-marta",
+  "cloudinary": "hotel-valladolid",
+  "fotos": 29,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/hotel-valladolid/imagenes/hotel-valladolid_001",
+  "generado_por": "generar_galeria_r2.py + meta manual",
+  "generado": "2026-09-18"
+}
