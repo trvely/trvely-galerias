@@ -4,9 +4,9 @@
   "titulo": "Seven Inn Hotel",
   "destino": "medellin",
   "cloudinary": "seven-inn-hotel",
-  "fotos": 26,
+  "fotos": 112,
   "video": false,
   "portada": "trvely/hoteles/medellin/seven-inn-hotel/imagenes/seven-inn-hotel_001",
   "generado_por": "migrar_hotel_a_r2.py + generar_galeria_r2.py",
-  "generado": "2026-09-08"
+  "generado": "2026-09-23"
 }
