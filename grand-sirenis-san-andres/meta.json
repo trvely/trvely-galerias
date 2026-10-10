@@ -4,9 +4,9 @@
   "titulo": "Grand Sirenis San Andrés",
   "destino": "san-andres",
   "cloudinary": "grand-sirenis-san-andres",
-  "fotos": 48,
+  "fotos": 64,
   "video": false,
   "portada": "trvely/hoteles/san-andres/grand-sirenis-san-andres/imagenes/grand-sirenis-san-andres_001",
-  "generado_por": "gen_vitrina_fichas.py (backfill)",
-  "generado": "2026-08-10"
+  "generado_por": "generar_galeria_r2.py (refresh PriceAgencies)",
+  "generado": "2026-10-10"
 }
