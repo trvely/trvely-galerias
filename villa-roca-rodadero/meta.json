@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "slug": "villa-roca-rodadero",
+  "titulo": "HOTEL Y CABAÑAS VILLA ROCA RODADERO",
+  "destino": "santa-marta",
+  "cloudinary": "villa-roca-rodadero",
+  "fotos": 26,
+  "video": false,
+  "portada": "trvely/hoteles/santa-marta/villa-roca-rodadero/imagenes/villa-roca-rodadero_001",
+  "generado_por": "generar_galeria_r2.py",
+  "generado": "2026-10-16"
+}
